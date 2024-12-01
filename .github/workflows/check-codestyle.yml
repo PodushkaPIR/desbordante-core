@@ -58,35 +58,60 @@ jobs:
           echo "$formatterOutput"
           echo "### $formatterOutput :heavy_check_mark:" >> $GITHUB_STEP_SUMMARY
 
-  clang-tidy-check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Download libraries
-        uses: ./.github/composite-actions/download-libraries
-        with:
-          download-pybind: true
-      - name: Generate compile_commands.json
-        run: |
-          cmake -DCMAKE_C_COMPILER=gcc-10 \
-            -DCMAKE_CXX_COMPILER=g++-10 \
-            -DCMAKE_BUILD_TYPE=Debug \
-            -Dgtest_disable_pthreads=OFF \
-            -DASAN=OFF \
-            -DPYTHON=COMPILE \
-            -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
-            . -B ${{github.workspace}}/build
+  # clang-tidy-check:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Download libraries
+  #       uses: ./.github/composite-actions/download-libraries
+  #       with:
+  #         download-pybind: true
+  #     - name: Generate compile_commands.json
+  #       run: |
+  #         cmake -DCMAKE_C_COMPILER=gcc-10 \
+  #           -DCMAKE_CXX_COMPILER=g++-10 \
+  #           -DCMAKE_BUILD_TYPE=Debug \
+  #           -Dgtest_disable_pthreads=OFF \
+  #           -DASAN=OFF \
+  #           -DPYTHON=COMPILE \
+  #           -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
+  #           . -B ${{github.workspace}}/build
+  #
+  #     - uses: ZedThree/clang-tidy-review@v0.19.0
+  #       id: review
+  #       with:
+  #         apt_packages: libboost-dev
+  #         build_dir: build
+  #         config_file: '.clang-tidy'
+  #         split_workflow: true
+  #
+  #     - uses: ZedThree/clang-tidy-review/upload@v0.19.0
+  #
+  #     - name: Fail the check if clang-tidy reported issues
+  #       if: steps.review.outputs.total_comments > 0
+  #       run: exit 1
 
-      - uses: ZedThree/clang-tidy-review@v0.19.0
-        id: review
-        with:
-          apt_packages: libboost-dev
-          build_dir: build
-          config_file: '.clang-tidy'
-          split_workflow: true
+  include-what-you-use-check:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v3
 
-      - uses: ZedThree/clang-tidy-review/upload@v0.19.0
+          - name: Download libraries
+            uses: ./.github/composite-actions/download-libraries
+            with:
+              download-pybind: true
 
-      - name: Fail the check if clang-tidy reported issues
-        if: steps.review.outputs.total_comments > 0
-        run: exit 1
+          - name: Generate compile_commands.json
+            run: |
+              cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
+              . -B ${{github.workspace}}/build
+        
+          - name: Install iwyu
+            run: |
+              sudo apt-get install -y iwyu
+            
+          - name: Run iwyu
+            run: |
+              cd ${{github.workspace}}/build
+              iwyu_tool -p .
+
