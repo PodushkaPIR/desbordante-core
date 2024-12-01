@@ -13,6 +13,19 @@ on:
       - build.*
       - pull_datasets.sh
       - pyproject.toml
+  push:
+    paths-ignore:
+      - docs/**
+      - README.md
+      - README_PYPI.md
+      - cli/**
+      - examples/**
+      - images/**
+      - .gitignore
+      - COPYING
+      - build.*
+      - pull_datasets.sh
+      - pyproject.toml
 jobs:
   clang-format-check:
     runs-on: ubuntu-latest
