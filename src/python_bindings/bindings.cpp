@@ -1,4 +1,5 @@
 #include <filesystem>
+#include <initializer_list>
 
 #include <easylogging++.h>
 #include <pybind11/pybind11.h>
@@ -15,11 +16,13 @@
 #include "fd/bind_fd_verification.h"
 #include "gfd/bind_gfd_verification.h"
 #include "ind/bind_ind.h"
+#include "ind/bind_ind_verification.h"
 #include "md/bind_md.h"
 #include "mfd/bind_mfd_verification.h"
 #include "nd/bind_nd.h"
 #include "nd/bind_nd_verification.h"
 #include "od/bind_od.h"
+#include "pfd/bind_pfd_verification.h"
 #include "sfd/bind_sfd.h"
 #include "statistics/bind_statistics.h"
 #include "ucc/bind_ucc.h"
@@ -54,13 +57,15 @@ PYBIND11_MODULE(desbordante, module, pybind11::mod_gil_not_used()) {
                            BindUccVerification,
                            BindStatistics,
                            BindInd,
+                           BindIndVerification,
                            BindGfdVerification,
                            BindSplit,
                            BindDynamicFdVerification,
                            BindNdVerification,
                            BindSFD,
                            BindMd,
-                           BindDCVerification}) {
+                           BindDCVerification,
+                           BindPfdVerification}) {
         bind_func(module);
     }
 }

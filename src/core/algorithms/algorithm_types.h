@@ -10,8 +10,8 @@ using AlgorithmTypes =
         std::tuple<Depminer, DFD, FastFDs, FDep, FdMine, Pyro, Tane, PFDTane, FUN, hyfd::HyFD, Aid,
                    Apriori, metric::MetricVerifier, DataStats, fd_verifier::FDVerifier, HyUCC,
                    PyroUCC, HPIValid, cfd::FDFirstAlgorithm, ACAlgorithm, UCCVerifier, Faida,
-                   Spider, Mind, Fastod, GfdValidation, EGfdValidation, NaiveGfdValidation,
-                   order::Order, dd::Split, Cords, hymd::HyMD>;
+                   Spider, Mind, INDVerifier, Fastod, GfdValidation, EGfdValidation,
+                   NaiveGfdValidation, order::Order, dd::Split, Cords, hymd::HyMD, PFDVerifier>;
 
 // clang-format off
 /* Enumeration of all supported non-pipeline algorithms. If you implement a new
@@ -65,6 +65,9 @@ BETTER_ENUM(AlgorithmType, char,
     spider,
     mind,
 
+/* IND verifier algorithm */
+    ind_verifier,
+
 /* Order dependency mining algorithms */
     fastod,
 
@@ -83,7 +86,10 @@ BETTER_ENUM(AlgorithmType, char,
     cords,
 
 /* MD mining algorithms */
-    hymd
+    hymd,
+
+/* PFD verifier algorithm */
+    pfd_verifier
 )
 // clang-format on
 
