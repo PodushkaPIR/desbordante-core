@@ -113,5 +113,5 @@ jobs:
           - name: Run iwyu
             run: |
               cd ${{github.workspace}}/build
-              iwyu_tool -p .
+              iwyu_tool -j 2 -p .
 
