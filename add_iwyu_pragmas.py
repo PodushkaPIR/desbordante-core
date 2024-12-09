@@ -14,14 +14,25 @@ def add_iwyu_pragmas(directories):
                         with open(file_path, 'r', encoding='utf-8') as f:
                             content = f.read()
                     except UnicodeDecodeError:
-                        with open(file_path, 'r', encoding='latin-1') as f:
-                            content = f.read()
+                        try:
+                            with open(file_path, 'r', encoding='latin-1') as f:
+                                content = f.read()
+                        except Exception as e:
+                            print(f"Warning: Could not read file {file_path}: {e}")
+                            continue
+                    except Exception as e:
+                        print(f"Warning: Could not read file {file_path}: {e}")
+                        continue
 
                     if begin_pragma not in content and end_pragma not in content:
-                        with open(file_path, 'w', encoding='utf-8') as f:
-                            f.write(f'{begin_pragma}\n')
-                            f.write(content)
-                            f.write(f'\n{end_pragma}\n')
+                        try:
+                            with open(file_path, 'w', encoding='utf-8') as f:
+                                f.write(f'{begin_pragma}\n')
+                                f.write(content)
+                                f.write(f'\n{end_pragma}\n')
+                        except Exception as e:
+                            print(f"Warning: Could not write to file {file_path}: {e}")
+                            continue
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
