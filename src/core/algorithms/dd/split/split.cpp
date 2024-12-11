@@ -33,6 +33,13 @@
 #include "option.h"                                   // for Option
 #include "string_type.h"                              // for StringType
 #include "table/column_data.h"                        // for ColumnData
+#include "table/column_layout_relation_data.h"        // for ColumnLayoutRel...
+#include "table/column_layout_typed_relation_data.h"  // for ColumnLayoutTyp...
+#include "table/idataset_stream.h"                    // for IDatasetStream
+#include "table/position_list_index.h"                // for PLI, PositionLi...
+#include "table/typed_column_data.h"                  // for TypedColumnData
+#include "tabular_data/input_table_type.h"            // for InputTable
+#include "type.h"                                     // for Type
 
 namespace algos::dd {
 
