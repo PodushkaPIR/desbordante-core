@@ -1,24 +1,38 @@
 #include "algorithms/dd/split/split.h"
 
-#include <cassert>
-#include <chrono>
-#include <cstddef>
-#include <deque>
-#include <limits>
-#include <list>
-#include <regex>
-#include <set>
-#include <utility>
-#include <vector>
+#include <algorithm>                                  // for max, min
+#include <cassert>                                    // for assert
+#include <cstddef>                                    // for size_t, byte
+#include <deque>                                      // for deque
+#include <limits>                                     // for numeric_limits
+#include <list>                                       // for list, _List_ite...
+#include <regex>                                      // for match_results
+#include <set>                                        // for set, _Rb_tree_c...
+#include <stdexcept>                                  // for invalid_argument
+#include <string>                                     // for char_traits
+#include <string_view>                                // for basic_string_view
+#include <utility>                                    // for pair, move
+#include <vector>                                     // for vector, operator==
 
+#include <bits/chrono.h>                              // for duration_cast
+#include <boost/type_index/type_index_facade.hpp>     // for operator==
 #include <easylogging++.h>
 
-#include "config/names_and_descriptions.h"
-#include "config/option_using.h"
-#include "config/tabular_data/input_table/option.h"
-#include "model/table/column_index.h"
-#include "model/types/numeric_type.h"
-#include "util/levenshtein_distance.h"
+#include "algorithm.h"                                // for Algorithm
+#include "builtin.h"                                  // for TypeId, operator+
+#include "common_option.h"                            // for CommonOption
+#include "config/option_using.h"                      // for DESBORDANTE_OPT...
+#include "config/tabular_data/input_table/option.h"   // for kTableOpt
+#include "dd/dd.h"                                    // for DFConstraint
+#include "dd/split/enums.h"                           // for Reduce, operator+
+#include "descriptions.h"                             // for kDDifferenceTable
+#include "imetrizable_type.h"                         // for IMetrizableType
+#include "mixed_type.h"                               // for MixedType
+#include "model/table/column_index.h"                 // for ColumnIndex
+#include "names.h"                                    // for kDifferenceTable
+#include "option.h"                                   // for Option
+#include "string_type.h"                              // for StringType
+#include "table/column_data.h"                        // for ColumnData
 
 namespace algos::dd {
 
