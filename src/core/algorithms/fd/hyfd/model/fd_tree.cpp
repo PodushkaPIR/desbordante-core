@@ -1,9 +1,11 @@
 #include "fd_tree.h"
 
-#include <memory>
-#include <vector>
+#include <memory>                          // for shared_ptr, __shared_ptr_a...
+#include <vector>                          // for vector
 
-#include <boost/dynamic_bitset.hpp>
+#include <assert.h>                        // for assert
+
+#include "fd/hyfd/model/fd_tree_vertex.h"  // for FDTreeVertex, LhsPair
 
 namespace algos::hyfd::fd_tree {
 

@@ -1,9 +1,12 @@
 #include "qgram_vector.h"
 
-#include <algorithm>
-#include <cassert>
-#include <cmath>
-#include <numeric>
+#include <algorithm>  // for minmax
+#include <cassert>    // for assert
+#include <cmath>      // for sqrt
+#include <numeric>    // for accumulate
+#include <utility>    // for pair
+
+#include <stddef.h>   // for size_t
 
 namespace util {
 

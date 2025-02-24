@@ -1,13 +1,22 @@
 #include "fastod.h"
 
-#include <memory>
+#include <functional>                                 // for function
+#include <memory>                                     // for shared_ptr, __s...
 
-#include <boost/unordered/unordered_map.hpp>
-#include <easylogging++.h>
+#include <boost/move/utility_core.hpp>                // for move
+#include <boost/type_index/type_index_facade.hpp>     // for operator==
+#include <boost/unordered/detail/implementation.hpp>  // for iterator
+#include <boost/unordered/unordered_map.hpp>          // for unordered_map
+#include <easylogging++.h>                            // for Writer, CDEBUG
 
-#include "config/tabular_data/input_table/option.h"
-#include "config/time_limit/option.h"
-#include "util/timed_invoke.h"
+#include "algorithm.h"                                // for Algorithm
+#include "common_option.h"                            // for CommonOption
+#include "config/tabular_data/input_table/option.h"   // for kTableOpt
+#include "config/time_limit/option.h"                 // for kTimeLimitSecon...
+#include "od/fastod/model/attribute_pair.h"           // for hash
+#include "od/fastod/model/attribute_set.h"            // for hash, DeleteAtt...
+#include "od/fastod/model/canonical_od.h"             // for CanonicalOD
+#include "util/timed_invoke.h"                        // for TimedInvoke
 
 namespace algos {
 

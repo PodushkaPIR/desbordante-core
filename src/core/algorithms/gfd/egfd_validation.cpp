@@ -1,14 +1,23 @@
 #include "egfd_validation.h"
+#include <algorithm>                                           // for find
+#include <cstddef>                                             // for size_t
+#include <iterator>                                            // for back_i...
+#include <list>                                                // for operat...
+#include <string>                                              // for operat...
 
-#include <iostream>
+#include <bits/chrono.h>                                       // for durati...
+#include <boost/graph/adjacency_list.hpp>                      // for source
+#include <boost/graph/detail/adjacency_list.hpp>               // for degree
+#include <boost/graph/detail/edge.hpp>                         // for edge_d...
+#include <boost/graph/graph_traits.hpp>                        // for graph_...
+#include <boost/iterator/detail/facade_iterator_category.hpp>  // for iterat...
+#include <boost/iterator/iterator_categories.hpp>              // for random...
+#include <boost/range/irange.hpp>                              // for intege...
+#include <boost/tuple/detail/tuple_basic.hpp>                  // for tie
+#include <boost/tuple/tuple.hpp>                               // for tie
+#include <easylogging++.h>                                     // for Writer
 
-#include <boost/graph/vf2_sub_graph_iso.hpp>
-#include <easylogging++.h>
-
-#include "config/equal_nulls/option.h"
-#include "config/names_and_descriptions.h"
-#include "config/option_using.h"
-#include "config/tabular_data/input_table/option.h"
+#include "gfd/gfd.h"                                           // for Gfd
 
 namespace {
 

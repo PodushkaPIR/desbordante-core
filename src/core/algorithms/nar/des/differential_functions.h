@@ -1,10 +1,12 @@
 #pragma once
 
-#include <enum.h>
+#include <vector>         // for vector
 
-#include "encoded_nar.h"
-#include "enums.h"
-#include "rng.h"
+#include <stddef.h>       // for size_t
+
+#include "encoded_nar.h"  // for EncodedNAR
+#include "enums.h"        // for DifferentialStrategy
+#include "rng.h"          // for RNG
 
 namespace algos::des {
 

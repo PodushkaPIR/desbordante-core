@@ -1,7 +1,8 @@
 #pragma once
 
-#include "config/common_option.h"
-#include "config/max_lhs/type.h"
+#include "config/max_lhs/type.h"  // for MaxLhsType
+
+namespace config { template <typename T> class CommonOption; }
 
 namespace config {
 extern CommonOption<MaxLhsType> const kMaxLhsOpt;

@@ -3,15 +3,16 @@
 #include <memory>
 #include <unordered_map>
 #include <unordered_set>
+#include <vector>                                   // for vector
 
-#include <boost/dynamic_bitset.hpp>
+#include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset, hash
+#include <stddef.h>                                 // for size_t
 
 #include "config/tabular_data/input_table_type.h"
 #include "fd/fd_algorithm.h"
-#include "model/table/column.h"
-#include "model/table/relational_schema.h"
-#include "model/table/vertical.h"
-#include "search_tree.h"
+
+class RelationalSchema;
+class SearchTree;
 
 namespace algos {
 

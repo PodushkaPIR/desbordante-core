@@ -1,14 +1,21 @@
 #pragma once
 
-class ProfilingContext;
+#include <memory>                             // for shared_ptr, unique_ptr
+#include <mutex>                              // for mutex
+#include <variant>                            // for variant
 
-#include <mutex>
+#include <stddef.h>                           // for size_t
 
-#include "../core/profiling_context.h"
-#include "cache_eviction_method.h"
-#include "caching_method.h"
-#include "model/table/column_layout_relation_data.h"
-#include "util/maybe_unused_private_field.h"
+#include "table/position_list_index.h"        // for PositionListIndex
+#include "util/maybe_unused_private_field.h"  // for MAYBE_UNUSED_PRIVATE_FIELD
+
+class ColumnLayoutRelationData;
+class ProfilingContext;  
+class Vertical;
+enum class CacheEvictionMethod;
+enum class CachingMethod;
+
+namespace model { template <class Value> class VerticalMap; }
 
 namespace model {
 

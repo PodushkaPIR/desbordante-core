@@ -1,7 +1,8 @@
 #include "algorithms/md/hymd/preprocessing/column_matches/smith_waterman_gotoh.h"
 
-#include <algorithm>
-#include <vector>
+#include <stddef.h>   // for size_t
+#include <algorithm>  // for max, min
+#include <vector>     // for vector, swap
 
 namespace {
 double SubstitutionCompare(char a, char b) {

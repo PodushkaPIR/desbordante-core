@@ -1,6 +1,20 @@
 #include "list_agree_set_sample.h"
 
-#include <easylogging++.h>
+#include <stddef.h>                                     // for size_t
+#include <algorithm>                                    // for min
+
+#include <boost/format.hpp>
+#include <boost/move/utility_core.hpp>                  // for move
+#include <boost/optional/optional.hpp>                  // for get_pointer
+#include <easylogging++.h>                              // for Writer, CDEBUG
+
+#include "fd/pyrocommon/model/agree_set_sample.h"       // for AgreeSetSample
+#include "table/vertical.h"                             // for Vertical
+
+class ColumnLayoutRelationData;
+class CustomRandom;
+
+namespace model { class PositionListIndex; }
 
 namespace model {
 

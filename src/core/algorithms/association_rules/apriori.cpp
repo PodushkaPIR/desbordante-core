@@ -2,8 +2,16 @@
 
 #include <algorithm>
 #include <cassert>
+#include <iterator>                                 // for next, prev
+#include <utility>                                  // for move
 
+#include <bits/chrono.h>                            // for duration_cast
 #include <easylogging++.h>
+
+#include "association_rules/ar_algorithm.h"         // for ARAlgorithm
+#include "association_rules/candidate_hash_tree.h"  // for CandidateHashTree
+#include "association_rules/node.h"                 // for Node
+#include "transaction/transactional_data.h"         // for TransactionalData
 
 namespace algos {
 

@@ -1,10 +1,13 @@
 #pragma once
 
-#include <memory>
-#include <string>
-#include <vector>
+#include <stddef.h>                                   // for size_t
+#include <memory>                                     // for shared_ptr, __s...
+#include <string>                                     // for string
+#include <utility>                                    // for pair, move
+#include <vector>                                     // for vector
 
-#include "algorithms/od/fastod/storage/data_frame.h"
+#include "algorithms/od/fastod/storage/data_frame.h"  // for DataFrame
+#include "table/column_index.h"                       // for ColumnIndex
 
 namespace algos::fastod {
 

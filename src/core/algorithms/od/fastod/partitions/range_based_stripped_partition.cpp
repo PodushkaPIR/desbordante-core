@@ -2,7 +2,12 @@
 
 #include "range_based_stripped_partition.h"
 
-#include <sstream>
+#include <algorithm>                                  // for sort, max, min
+#include <sstream>                                    // for basic_ostream
+#include <utility>                                    // for pair, move
+
+#include "od/fastod/partitions/stripped_partition.h"  // for StrippedPartition
+#include "od/fastod/storage/data_frame.h"             // for DataFrame, Rang...
 
 namespace algos::fastod {
 

@@ -1,6 +1,9 @@
 #include "type_util.h"
 
-#include <string>
+#include <compare>    // for operator<
+
+#include <string>     // for operator<=>, operator==, string
+#include "builtin.h"  // for TypeId, operator+, operator==, CompareResult
 
 namespace algos::fastod {
 

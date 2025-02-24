@@ -1,7 +1,12 @@
 #pragma once
 
-#include "algorithms/od/fastod/storage/data_frame.h"
-#include "model/types/builtin.h"
+#include <cstddef>                                    // for byte
+
+#include "algorithms/od/fastod/storage/data_frame.h"  // for DataFrame
+#include "mixed_type.h"                               // for MixedType
+#include "model/types/builtin.h"                      // for TypeId, Compare...
+#include "table/typed_column_data.h"                  // for TypedColumnData
+#include "type.h"                                     // for Type
 
 namespace algos::fastod {
 

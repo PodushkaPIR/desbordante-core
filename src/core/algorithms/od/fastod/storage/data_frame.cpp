@@ -1,10 +1,17 @@
 #include "data_frame.h"
 
-#include <memory>
-#include <stdexcept>
+#include <algorithm>                              // for sort, transform
+#include <iterator>                               // for back_insert_iterator
+#include <memory>                                 // for make_shared, __shar...
+#include <stdexcept>                              // for invalid_argument
 
-#include "algorithms/od/fastod/util/type_util.h"
-#include "csv_parser/csv_parser.h"
+#include "algorithms/od/fastod/util/type_util.h"  // for CompareData
+#include "builtin.h"                              // for CompareResult
+#include "csv_parser/csv_parser.h"                // for CSVParser
+#include "equal_nulls/type.h"                     // for EqNullsType
+#include "od/fastod/model/attribute_set.h"        // for AttributeSet, Inter...
+#include "table/typed_column_data.h"              // for TypedColumnData
+#include "tabular_data/input_table_type.h"        // for InputTable
 
 namespace algos::fastod {
 
