@@ -1,8 +1,10 @@
 #include "levenshtein_distance.h"
 
-#include <algorithm>
-#include <cassert>
-#include <vector>
+#include <algorithm>  // for min
+#include <cassert>    // for assert
+#include <vector>     // for vector, swap
+
+#include <stddef.h>   // for size_t
 
 namespace util {
 

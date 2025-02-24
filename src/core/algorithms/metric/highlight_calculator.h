@@ -1,9 +1,16 @@
 #pragma once
 
-#include "algorithms/metric/highlight.h"
-#include "algorithms/metric/points.h"
-#include "config/indices/type.h"
-#include "model/table/column_layout_typed_relation_data.h"
+#include <cstddef>                        // for byte
+#include <memory>                         // for shared_ptr
+#include <utility>                        // for move
+#include <vector>                         // for vector
+
+#include "algorithms/metric/highlight.h"  // for Highlight
+#include "config/indices/type.h"          // for IndicesType
+#include "metric/aliases.h"               // for DistanceFunction, IndexedOn...
+
+namespace algos { namespace metric { template <typename T> struct IndexedPoint; } }
+namespace model { class ColumnLayoutTypedRelationData; }
 
 namespace algos::metric {
 

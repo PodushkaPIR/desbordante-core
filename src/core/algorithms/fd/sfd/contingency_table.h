@@ -1,8 +1,15 @@
 #pragma once
-#include <vector>
 
-#include "frequency_handler.h"
-#include "sample.h"
+#include <string>                // for string
+#include <vector>                // for vector
+
+#include <stddef.h>              // for size_t
+
+#include "table/column_index.h"  // for ColumnIndex
+
+namespace algos { class FrequencyHandler; }
+namespace algos { class Sample; }
+namespace model { class TypedColumnData; }
 
 namespace algos {
 class ContingencyTable {

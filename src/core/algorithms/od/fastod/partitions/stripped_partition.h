@@ -2,14 +2,16 @@
 
 #pragma once
 
-#include <string>
-#include <vector>
+#include <string>                // for string
+#include <vector>                // for vector
 
-#include "range_based_stripped_partition.h"
+#include <stddef.h>              // for size_t
+
+#include "table/column_index.h"  // for ColumnIndex
+
+namespace algos { namespace fastod { class DataFrame; } }
 
 namespace algos::fastod {
-
-class RangeBasedStrippedPartition;
 
 class StrippedPartition {
 private:

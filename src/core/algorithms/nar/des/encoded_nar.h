@@ -1,8 +1,16 @@
 #pragma once
 
-#include "algorithms/nar/nar.h"
-#include "encoded_value_range.h"
-#include "model/table/column_layout_typed_relation_data.h"
+#include <memory>                                           // for shared_ptr
+#include <vector>                                           // for vector
+
+#include <stddef.h>                                         // for size_t
+
+#include "algorithms/nar/nar.h"                             // for NARQualities
+#include "encoded_value_range.h"                            // for EncodedVa...
+#include "model/table/column_layout_typed_relation_data.h"  // for ColumnLay...
+#include "nar/value_range.h"                                // for ValueRange
+
+namespace algos { namespace des { class RNG; } }
 
 namespace algos::des {
 using model::NAR;

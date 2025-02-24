@@ -1,7 +1,8 @@
 #pragma once
 
-#include "config/common_option.h"
-#include "config/error_measure/type.h"
+#include "config/error_measure/type.h"  // for AfdErrorMeasureType, PfdError...
+
+namespace config { template <typename T> class CommonOption; }
 
 namespace config {
 

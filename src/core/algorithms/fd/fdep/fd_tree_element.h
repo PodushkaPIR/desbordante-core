@@ -1,16 +1,18 @@
 #pragma once
 
-#include <list>
-#include <memory>
-#include <vector>
+#include <fstream>               // for ofstream
+#include <limits>                // for numeric_limits
+#include <list>                  // for list
+#include <memory>                // for unique_ptr, shared_ptr
+#include <string>                // for string
+#include <vector>                // for vector
 
-// For printing Dependencies
-#include <fstream>
-#include <string>
+#include <stddef.h>              // for size_t
 
-#include "algorithms/fd/fd.h"
-#include "model/table/relational_schema.h"
-#include "model/types/bitset.h"
+#include "model/types/bitset.h"  // for Bitset
+
+class FD;
+class RelationalSchema;
 
 class FDTreeElement {
 public:

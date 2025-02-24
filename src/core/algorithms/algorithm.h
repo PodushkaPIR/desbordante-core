@@ -1,6 +1,6 @@
 #pragma once
 
-#include <filesystem>
+#include <memory>            // for unique_ptr, make_unique
 #include <string_view>
 #include <typeindex>
 #include <unordered_map>
@@ -8,12 +8,12 @@
 #include <utility>
 #include <vector>
 
+#include <assert.h>          // for assert
 #include <boost/any.hpp>
+#include <stdint.h>          // for uint8_t
 
 #include "config/ioption.h"
 #include "config/option.h"
-#include "model/table/idataset_stream.h"
-#include "parser/csv_parser/csv_parser.h"
 #include "util/progress.h"
 
 namespace algos {

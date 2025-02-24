@@ -1,15 +1,10 @@
 #include "model/table/dynamic_position_list_index.h"
 
-#include <algorithm>
-#include <chrono>
-#include <cmath>
-#include <map>
-#include <memory>
-#include <stack>
-#include <utility>
+#include <memory>    // for shared_ptr, make_unique, unique_ptr, make_shared
+#include <utility>   // for pair, move
 
-#include <boost/dynamic_bitset.hpp>
-#include <easylogging++.h>
+#include <assert.h>  // for assert
+#include <stddef.h>  // for size_t
 
 namespace {
 // O(cluster)

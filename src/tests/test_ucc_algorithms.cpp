@@ -1,20 +1,29 @@
-#include <memory>
-#include <ostream>
-#include <string>
+#include <algorithm>                       // for sort
+#include <exception>                       // for exception
+#include <filesystem>                      // for operator<<, path
+#include <iostream>                        // for basic_ostream, operator<<
+#include <iterator>                        // for back_inserter
+#include <list>                            // for list
+#include <memory>                          // for unique_ptr
+#include <vector>                          // for vector, operator<=>, swap
 
-#include <boost/dynamic_bitset.hpp>
-#include <gmock/gmock.h>
-#include <gtest/gtest.h>
+#include <assert.h>                        // for assert
+#include <gtest/gtest.h>                   // for TypedTestSuitePState, Types
 
-#include "algorithms/algo_factory.h"
-#include "algorithms/ucc/hyucc/hyucc.h"
-#include "algorithms/ucc/ucc.h"
-#include "algorithms/ucc/ucc_algorithm.h"
-#include "all_csv_configs.h"
-#include "config/names.h"
-#include "config/thread_number/type.h"
-#include "csv_config_util.h"
-#include "test_hash_util.h"
+#include "algorithms/algo_factory.h"       // for CreateAndLoadAlgorithm
+#include "algorithms/ucc/hyucc/hyucc.h"    // for HyUCC
+#include "algorithms/ucc/ucc_algorithm.h"  // for UCCAlgorithm
+#include "all_csv_configs.h"               // for kAbalone, kAdult, kBreastC...
+#include "config/names.h"                  // for kCsvConfig, kThreads
+#include "config/thread_number/type.h"     // for ThreadNumType
+#include "csv_config_util.h"               // for CSVConfigHash
+#include "csv_parser/csv_parser.h"         // for CSVConfig
+#include "table/vertical.h"                // for Vertical
+#include "test_hash_util.h"                // for Hash
+#include "ucc/hpivalid/hpivalid.h"         // for HPIValid
+#include "ucc/pyroucc/pyroucc.h"           // for PyroUCC
+
+namespace model { class UCC; }
 
 std::ostream& operator<<(std::ostream& os, Vertical const& v) {
     os << v.ToString();

@@ -1,11 +1,11 @@
 #pragma once
 
-#include <algorithm>
-#include <memory>
-#include <queue>
-#include <vector>
+#include <stddef.h>   // for size_t
+#include <queue>      // for queue, priority_queue
+#include <utility>    // for pair
+#include <vector>     // for vector
 
-#include "cluster.h"
+#include "cluster.h"  // for Cluster
 
 namespace algos {
 

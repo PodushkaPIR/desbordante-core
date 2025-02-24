@@ -1,11 +1,16 @@
 #pragma once
 
-#include <stddef.h>
-#include <utility>
-#include <vector>
+#include <utility>                                // for move
+#include <vector>                                 // for vector
 
-#include "dc/FastADC/model/predicate.h"
-#include "dc/FastADC/providers/index_provider.h"
+#include <stddef.h>                               // for size_t
+
+#include "dc/FastADC/model/predicate.h"           // for PredicatesVector
+#include "dc/FastADC/providers/index_provider.h"  // for PredicateIndexProvider
+
+namespace algos { namespace fastadc { class ColumnOperand; } }
+namespace algos { namespace fastadc { class PredicateProvider; } }
+namespace model { class TypedColumnData; }
 
 namespace algos::fastadc {
 

@@ -2,7 +2,11 @@
 
 #include "stripped_partition.h"
 
-#include <sstream>
+#include <algorithm>                       // for sort
+#include <sstream>                         // for basic_ostream, operator<<
+#include <utility>                         // for pair, move
+
+#include "od/fastod/storage/data_frame.h"  // for DataFrame
 
 namespace algos::fastod {
 

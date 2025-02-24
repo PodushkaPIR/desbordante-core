@@ -1,9 +1,12 @@
 #pragma once
-#include <vector>
 
-#include "algorithms/algorithm.h"
-#include "algorithms/gfd/gfd_handler.h"
-#include "gfd.h"
+#include <vector>                              // for vector
+
+#include <boost/iterator/iterator_facade.hpp>  // for operator!=
+
+#include "algorithms/gfd/gfd_handler.h"        // for GfdHandler
+#include "gfd.h"                               // for Gfd
+#include "gfd/graph_descriptor.h"              // for graph_t
 
 namespace algos {
 

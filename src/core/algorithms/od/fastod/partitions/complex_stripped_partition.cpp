@@ -1,6 +1,9 @@
 #include "complex_stripped_partition.h"
 
-#include <sstream>
+#include <algorithm>                       // for sort, max, min
+#include <sstream>                         // for basic_ostream, operator<<
+
+#include "od/fastod/storage/data_frame.h"  // for DataFrame, RangeSize
 
 namespace algos::fastod {
 

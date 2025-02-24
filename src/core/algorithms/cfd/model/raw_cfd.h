@@ -2,6 +2,7 @@
 
 #include <optional>
 #include <string>
+#include <utility>   // for move
 #include <vector>
 
 namespace algos::cfd {

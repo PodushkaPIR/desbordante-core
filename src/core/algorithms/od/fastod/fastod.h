@@ -1,19 +1,23 @@
 #pragma once
 
-#include <memory>
-#include <string>
-#include <unordered_map>
-#include <unordered_set>
-#include <vector>
+#include <memory>                                          // for shared_ptr
+#include <unordered_map>                                   // for unordered_map
+#include <unordered_set>                                   // for unordered_set
+#include <utility>                                         // for move
+#include <vector>                                          // for vector
 
-#include "algorithms/algorithm.h"
-#include "algorithms/od/fastod/model/attribute_pair.h"
-#include "algorithms/od/fastod/model/attribute_set.h"
-#include "algorithms/od/fastod/model/canonical_od.h"
-#include "algorithms/od/fastod/storage/partition_cache.h"
-#include "algorithms/od/fastod/util/timer.h"
-#include "config/tabular_data/input_table_type.h"
-#include "config/time_limit/type.h"
+#include <stddef.h>                                        // for size_t
+
+#include "algorithms/algorithm.h"                          // for Algorithm
+#include "algorithms/od/fastod/model/attribute_pair.h"     // for operator==
+#include "algorithms/od/fastod/model/attribute_set.h"      // for hash, oper...
+#include "algorithms/od/fastod/model/canonical_od.h"       // for CanonicalOD
+#include "algorithms/od/fastod/storage/partition_cache.h"  // for PartitionC...
+#include "algorithms/od/fastod/util/timer.h"               // for Timer
+#include "config/tabular_data/input_table_type.h"          // for InputTable
+#include "config/time_limit/type.h"                        // for TimeLimitS...
+#include "od/fastod/storage/data_frame.h"                  // for DataFrame
+#include "table/column_index.h"                            // for ColumnIndex
 
 namespace algos {
 

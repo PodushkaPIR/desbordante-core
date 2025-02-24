@@ -1,13 +1,16 @@
 #pragma once
 
-#include <memory>
-#include <string>
-#include <unordered_map>
-#include <vector>
+#include <memory>         // for unique_ptr
+#include <string>         // for string
+#include <unordered_map>  // for unordered_map
+#include <utility>        // for move
+#include <vector>         // for vector
 
-#include "itemset.h"
-#include "model/table/idataset_stream.h"
-#include "transactional_input_format.h"
+#include <stddef.h>       // for size_t
+
+#include "itemset.h"      // for Itemset
+
+namespace model { class IDatasetStream; }
 
 namespace model {
 

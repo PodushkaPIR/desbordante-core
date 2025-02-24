@@ -1,10 +1,19 @@
 #pragma once
 
-#include <memory>
+#include <algorithm>                               // for sort
+#include <cstddef>                                 // for size_t
+#include <functional>                              // for hash
+#include <memory>                                  // for shared_ptr
+#include <string>                                  // for string
 
-#include "algorithms/od/fastod/hashing/hashing.h"
-#include "algorithms/od/fastod/storage/partition_cache.h"
-#include "attribute_pair.h"
+#include "algorithms/od/fastod/hashing/hashing.h"  // for CombineHashes
+#include "attribute_pair.h"                        // for AttributePair, hash
+#include "od/fastod/model/attribute_set.h"         // for hash, AttributeSet
+#include "table/column_index.h"                    // for ColumnIndex
+
+namespace algos { namespace fastod { class DataFrame; } }
+namespace algos { namespace fastod { class PartitionCache; } }
+namespace std { template <typename> struct hash; }
 
 namespace algos::fastod {
 

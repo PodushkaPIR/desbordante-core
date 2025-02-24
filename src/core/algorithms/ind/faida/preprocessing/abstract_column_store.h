@@ -1,14 +1,20 @@
 #pragma once
 
-#include <filesystem>
-#include <fstream>
+#include <cstddef>                                 // for size_t
+#include <filesystem>                              // for path
+#include <fstream>                              
+#include <memory>                                  // for unique_ptr
+#include <string>                                  // for string
+#include <unordered_set>                           // for unordered_set
+#include <vector>                                  // for vector
 
-#include "algorithms/ind/faida/hashing/hashing.h"
-#include "irow_iterator.h"
-#include "model/table/column_index.h"
-#include "model/table/idataset_stream.h"
-#include "model/table/relational_schema.h"
-#include "model/table/table_index.h"
+#include "algorithms/ind/faida/hashing/hashing.h"  // for CalcMurmurHash
+#include "irow_iterator.h"                         // for IRowIterator
+#include "model/table/column_index.h"              // for ColumnIndex
+#include "model/table/relational_schema.h"         // for RelationalSchema
+#include "model/table/table_index.h"               // for TableIndex
+
+namespace model { class IDatasetStream; }
 
 namespace algos::faida {
 

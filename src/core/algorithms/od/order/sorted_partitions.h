@@ -1,7 +1,9 @@
 #pragma once
 
+#include <cstddef>                    // for size_t
 #include <unordered_map>
 #include <unordered_set>
+#include <utility>                    // for move
 #include <vector>
 
 #include "model/table/tuple_index.h"
