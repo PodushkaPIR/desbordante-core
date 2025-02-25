@@ -1,11 +1,11 @@
 #pragma once
 
-#include <unordered_set>                            // for unordered_set
+#include <stddef.h>       // for size_t
+#include <unordered_set>  // for unordered_set
 
 #include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset, hash
-#include <stddef.h>                                 // for size_t
 
-#include "column_combination_list.h"                // for ColumnCombination...
+#include "column_combination_list.h"  // for ColumnCombination...
 
 namespace algos::hy {
 

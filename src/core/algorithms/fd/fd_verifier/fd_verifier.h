@@ -1,10 +1,9 @@
 #pragma once
 
-#include <cassert>                                       // for assert
-#include <memory>                                        // for unique_ptr
-#include <vector>                                        // for vector
-
-#include <stddef.h>                                      // for size_t
+#include <cassert>   // for assert
+#include <memory>    // for unique_ptr
+#include <stddef.h>  // for size_t
+#include <vector>    // for vector
 
 #include "algorithms/algorithm.h"                        // for Algorithm
 #include "algorithms/fd/fd_verifier/stats_calculator.h"  // for StatsCalculator
@@ -14,8 +13,16 @@
 #include "table/position_list_index.h"                   // for PLI
 
 class ColumnLayoutRelationData;
-namespace algos { namespace fd_verifier { class Highlight; } }
-namespace model { class ColumnLayoutTypedRelationData; }
+
+namespace algos {
+namespace fd_verifier {
+class Highlight;
+}
+}  // namespace algos
+
+namespace model {
+class ColumnLayoutTypedRelationData;
+}
 
 namespace algos::fd_verifier {
 

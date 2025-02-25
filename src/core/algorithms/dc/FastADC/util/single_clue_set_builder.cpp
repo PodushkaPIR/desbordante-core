@@ -1,8 +1,7 @@
 #include "dc/FastADC/util/single_clue_set_builder.h"
 
-#include <bitset>                                             // for bitset
-
-#include <stdint.h>                                           // for int64_t
+#include <bitset>    // for bitset
+#include <stdint.h>  // for int64_t
 
 #include "dc/FastADC/model/pli_shard.h"                       // for Pli
 #include "dc/FastADC/util/evidence_aux_structures_builder.h"  // for Predica...

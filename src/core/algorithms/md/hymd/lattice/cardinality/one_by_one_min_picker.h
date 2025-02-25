@@ -1,9 +1,9 @@
 #pragma once
 
-#include <cstddef>                                       // for size_t
-#include <vector>                                        // for vector
+#include <cstddef>  // for size_t
+#include <vector>   // for vector
 
-#include <boost/dynamic_bitset/dynamic_bitset.hpp>       // for dynamic_bitset
+#include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
 
 #include "algorithms/md/hymd/lattice/validation_info.h"  // for ValidationInfo
 #include "algorithms/md/hymd/md_lhs.h"                   // for MdLhs

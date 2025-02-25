@@ -1,14 +1,14 @@
 #pragma once
 
-#include <tuple>                               // for tuple
-#include <vector>                              // for vector
+#include <tuple>   // for tuple
+#include <vector>  // for vector
 
 #include <boost/iterator/iterator_facade.hpp>  // for operator!=
 
-#include "algorithms/gfd/gfd_handler.h"        // for GfdHandler
-#include "config/thread_number/type.h"         // for ThreadNumType
-#include "gfd.h"                               // for Gfd
-#include "gfd/graph_descriptor.h"              // for vertex_t, graph_t
+#include "algorithms/gfd/gfd_handler.h"  // for GfdHandler
+#include "config/thread_number/type.h"   // for ThreadNumType
+#include "gfd.h"                         // for Gfd
+#include "gfd/graph_descriptor.h"        // for vertex_t, graph_t
 
 namespace algos {
 

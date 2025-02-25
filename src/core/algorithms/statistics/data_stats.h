@@ -1,9 +1,9 @@
 #pragma once
 
-#include <cstddef>                                 // for size_t, byte
-#include <set>                                     // for set
-#include <string>                                  // for string
-#include <vector>                                  // for vector
+#include <cstddef>  // for size_t, byte
+#include <set>      // for set
+#include <string>   // for string
+#include <vector>   // for vector
 
 #include "algorithm.h"                             // for Algorithm
 #include "algorithms/statistics/statistic.h"       // for Statistic, ColumnS...
@@ -13,7 +13,9 @@
 #include "config/thread_number/type.h"             // for ThreadNumType
 #include "table/typed_column_data.h"               // for TypedColumnData
 
-namespace model { class INumericType; }
+namespace model {
+class INumericType;
+}
 
 namespace algos {
 

@@ -1,17 +1,20 @@
 #pragma once
 
-#include <memory>                                   // for shared_ptr
-#include <optional>                                 // for optional, nullopt
-#include <set>                                      // for set
-#include <unordered_set>                            // for unordered_set
+#include <memory>         // for shared_ptr
+#include <optional>       // for optional, nullopt
+#include <set>            // for set
+#include <unordered_set>  // for unordered_set
 
 #include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
 #include <boost/unordered/unordered_map.hpp>        // for unordered_map
 
-#include "algorithms/fd/pli_based_fd_algorithm.h"   // for PliBasedFDAlgorithm
+#include "algorithms/fd/pli_based_fd_algorithm.h"  // for PliBasedFDAlgorithm
 
 class RelationalSchema;
-namespace model { class PositionListIndex; }
+
+namespace model {
+class PositionListIndex;
+}
 
 namespace algos {
 

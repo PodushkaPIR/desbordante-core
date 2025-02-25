@@ -1,7 +1,7 @@
 #pragma once
 
 #include <unordered_map>
-#include <unordered_set>           // for unordered_set
+#include <unordered_set>  // for unordered_set
 
 #include "../node_category.h"
 #include "model/table/vertical.h"

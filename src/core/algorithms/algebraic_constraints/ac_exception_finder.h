@@ -1,13 +1,18 @@
 #pragma once
 
-#include <cstddef>         // for size_t, byte
-#include <utility>         // for pair
+#include <cstddef>  // for size_t, byte
+#include <utility>  // for pair
 #include <vector>
 
 #include "ac_exception.h"
 
-namespace algos { struct RangesCollection; }
-namespace model { class TypedColumnData; }
+namespace algos {
+struct RangesCollection;
+}
+
+namespace model {
+class TypedColumnData;
+}
 
 namespace algos {
 class ACAlgorithm;

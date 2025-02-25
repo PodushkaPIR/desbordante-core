@@ -1,6 +1,6 @@
 #include "inductor.h"
 
-#include <vector>                       // for vector
+#include <vector>  // for vector
 
 #include "fd/hyfd/model/fd_tree.h"      // for FDTree
 #include "fd/hyfd/model/non_fd_list.h"  // for NonFDList

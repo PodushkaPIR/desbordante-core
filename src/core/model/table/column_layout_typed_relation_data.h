@@ -1,16 +1,17 @@
 #pragma once
 
-#include <memory>               // for unique_ptr
-#include <vector>               // for vector
-
-#include <stddef.h>             // for size_t
+#include <memory>    // for unique_ptr
+#include <stddef.h>  // for size_t
+#include <vector>    // for vector
 
 #include "relation_data.h"      // for AbstractRelationData
 #include "typed_column_data.h"  // for TypedColumnData
 
 class RelationalSchema;
 
-namespace model { class IDatasetStream; }
+namespace model {
+class IDatasetStream;
+}
 
 namespace model {
 

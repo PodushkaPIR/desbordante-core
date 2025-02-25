@@ -1,11 +1,11 @@
-#include <list>                                             // for list, _Li...
-#include <memory>                                           // for unique_ptr
-#include <string>                                           // for hash, string
-#include <utility>                                          // for pair
-#include <vector>                                           // for vector
+#include <list>      // for list, _Li...
+#include <memory>    // for unique_ptr
+#include <stddef.h>  // for size_t
+#include <string>    // for hash, string
+#include <utility>   // for pair
+#include <vector>    // for vector
 
-#include <gtest/gtest.h>                                    // for ASSERT_EQ
-#include <stddef.h>                                         // for size_t
+#include <gtest/gtest.h>  // for ASSERT_EQ
 
 #include "algo_factory.h"                                   // for CreateAnd...
 #include "algorithms/fd/sfd/cords.h"                        // for Cords

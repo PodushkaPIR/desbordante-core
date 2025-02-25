@@ -9,9 +9,9 @@ aren't availible. */
 
 #pragma once
 
-#include <bitset>                                   // for bitset
-#include <cstddef>                                  // for size_t
-#include <vector>                                   // for vector, __cpp_lib...
+#include <bitset>   // for bitset
+#include <cstddef>  // for size_t
+#include <vector>   // for vector, __cpp_lib...
 
 #include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
 

@@ -1,15 +1,15 @@
 #include "algorithms/dc/FastADC/fastadc.h"
 
-#include <cstddef>                                            // for size_t
-#include <stdexcept>                                          // for invalid...
-#include <string>                                             // for char_tr...
-#include <string_view>                                        // for basic_s...
-#include <utility>                                            // for move
-#include <vector>                                             // for vector
+#include <bits/chrono.h>  // for duration
+#include <cstddef>        // for size_t
+#include <stdexcept>      // for invalid...
+#include <string>         // for char_tr...
+#include <string_view>    // for basic_s...
+#include <utility>        // for move
+#include <vector>         // for vector
 
-#include <bits/chrono.h>                                      // for duration
-#include <boost/type_index/type_index_facade.hpp>             // for operator==
-#include <easylogging++.h>                                    // for Writer
+#include <boost/type_index/type_index_facade.hpp>  // for operator==
+#include <easylogging++.h>                         // for Writer
 
 #include "algorithm.h"                                        // for Algorithm
 #include "builtin.h"                                          // for TypeId
@@ -28,7 +28,11 @@
 #include "table/column_index.h"                               // for ColumnI...
 #include "table/typed_column_data.h"                          // for TypedCo...
 
-namespace algos { namespace fastadc { class DenialConstraint; } }
+namespace algos {
+namespace fastadc {
+class DenialConstraint;
+}
+}  // namespace algos
 
 namespace algos::dc {
 

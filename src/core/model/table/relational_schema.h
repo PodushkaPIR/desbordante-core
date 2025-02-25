@@ -5,22 +5,25 @@
 
 #pragma once
 
-#include <functional>                               // for function
-#include <memory>                                   // for unique_ptr
-#include <string>                                   // for string, operator==
-#include <unordered_set>                            // for unordered_set
-#include <vector>                                   // for vector
+#include <functional>     // for function
+#include <memory>         // for unique_ptr
+#include <stddef.h>       // for size_t
+#include <string>         // for string, operator==
+#include <unordered_set>  // for unordered_set
+#include <vector>         // for vector
 
 #include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
-#include <stddef.h>                                 // for size_t
 
-#include "bitset_utils.h"                           // for IndicesToBitset
+#include "bitset_utils.h"  // for IndicesToBitset
 
 class Column;
 
 class Vertical;
 
-namespace boost { template <class T> class optional; }
+namespace boost {
+template <class T>
+class optional;
+}
 
 class RelationalSchema {
 private:

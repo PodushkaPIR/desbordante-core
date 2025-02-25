@@ -1,7 +1,7 @@
 #include "algorithms/metric/highlight_calculator.h"
 
-#include <algorithm>                                  // for sort, minmax_el...
-#include <unordered_map>                              // for _Node_iterator
+#include <algorithm>      // for sort, minmax_el...
+#include <unordered_map>  // for _Node_iterator
 
 #include "builtin.h"                                  // for CompareResult
 #include "metric/highlight.h"                         // for Highlight

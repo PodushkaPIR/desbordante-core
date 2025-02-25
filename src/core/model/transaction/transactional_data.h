@@ -1,16 +1,17 @@
 #pragma once
 
 #include <memory>         // for unique_ptr
+#include <stddef.h>       // for size_t
 #include <string>         // for string
 #include <unordered_map>  // for unordered_map
 #include <utility>        // for move
 #include <vector>         // for vector
 
-#include <stddef.h>       // for size_t
+#include "itemset.h"  // for Itemset
 
-#include "itemset.h"      // for Itemset
-
-namespace model { class IDatasetStream; }
+namespace model {
+class IDatasetStream;
+}
 
 namespace model {
 

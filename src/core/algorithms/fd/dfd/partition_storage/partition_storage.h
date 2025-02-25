@@ -1,10 +1,9 @@
 #pragma once
 
-#include <memory>                       // for shared_ptr, unique_ptr
-#include <mutex>                        // for mutex
-#include <variant>                      // for variant
-
-#include <stddef.h>                     // for size_t
+#include <memory>    // for shared_ptr, unique_ptr
+#include <mutex>     // for mutex
+#include <stddef.h>  // for size_t
+#include <variant>   // for variant
 
 #include "table/position_list_index.h"  // for PositionListIndex
 
@@ -12,7 +11,11 @@ class ColumnLayoutRelationData;
 class Vertical;
 enum class CacheEvictionMethod;
 enum class CachingMethod;
-namespace model { template <class Value> class VerticalMap; }
+
+namespace model {
+template <class Value>
+class VerticalMap;
+}
 
 class PartitionStorage {
 private:

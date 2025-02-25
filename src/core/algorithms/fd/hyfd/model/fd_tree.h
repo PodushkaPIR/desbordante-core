@@ -1,13 +1,13 @@
 #pragma once
 
-#include <memory>                                   // for shared_ptr, __sha...
-#include <vector>                                   // for vector
+#include <memory>    // for shared_ptr, __sha...
+#include <stddef.h>  // for size_t
+#include <vector>    // for vector
 
-#include <stddef.h>                                 // for size_t
 #include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
 
-#include "algorithms/fd/raw_fd.h"                   // for RawFD
-#include "fd_tree_vertex.h"                         // for FDTreeVertex, Lhs...
+#include "algorithms/fd/raw_fd.h"  // for RawFD
+#include "fd_tree_vertex.h"        // for FDTreeVertex, Lhs...
 
 namespace algos::hyfd::fd_tree {
 

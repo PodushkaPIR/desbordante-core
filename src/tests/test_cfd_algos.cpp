@@ -1,13 +1,13 @@
 
 // see input_data/cfd_data/LICENSE
 
-#include <memory>                               // for unique_ptr
-#include <set>                                  // for set, operator==, _Rb_...
-#include <string>                               // for basic_string, string
-#include <utility>                              // for pair
-#include <vector>                               // for vector
+#include <memory>   // for unique_ptr
+#include <set>      // for set, operator==, _Rb_...
+#include <string>   // for basic_string, string
+#include <utility>  // for pair
+#include <vector>   // for vector
 
-#include <gtest/gtest.h>                        // for Message, TestPartResult
+#include <gtest/gtest.h>  // for Message, TestPartResult
 
 #include "algorithms/algo_factory.h"            // for CreateAndLoadAlgorithm
 #include "algorithms/cfd/enums.h"               // for Substrategy

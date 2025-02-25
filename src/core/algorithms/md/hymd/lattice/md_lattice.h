@@ -1,10 +1,10 @@
 #pragma once
 
-#include <cstddef>                                            // for size_t
-#include <utility>                                            // for move
-#include <vector>                                             // for vector
+#include <cstddef>  // for size_t
+#include <utility>  // for move
+#include <vector>   // for vector
 
-#include <boost/dynamic_bitset/dynamic_bitset.hpp>            // for dynamic...
+#include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic...
 
 #include "algorithms/md/hymd/lattice/md_lattice_node_info.h"  // for MdLatti...
 #include "algorithms/md/hymd/lattice/md_node.h"               // for MdNode
@@ -17,10 +17,33 @@
 #include "md/hymd/column_classifier_value_id.h"               // for ColumnC...
 #include "model/index.h"                                      // for Index
 
-namespace algos { namespace hymd { namespace lattice { struct Md; } } }
-namespace algos { namespace hymd { namespace lattice { struct MultiMd; } } }
-namespace algos { namespace hymd { struct LhsCCVIdsInfo; } }
-namespace algos { namespace hymd { struct PairComparisonResult; } }
+namespace algos {
+namespace hymd {
+namespace lattice {
+struct Md;
+}
+}  // namespace hymd
+}  // namespace algos
+
+namespace algos {
+namespace hymd {
+namespace lattice {
+struct MultiMd;
+}
+}  // namespace hymd
+}  // namespace algos
+
+namespace algos {
+namespace hymd {
+struct LhsCCVIdsInfo;
+}
+}  // namespace algos
+
+namespace algos {
+namespace hymd {
+struct PairComparisonResult;
+}
+}  // namespace algos
 
 namespace algos::hymd::lattice {
 

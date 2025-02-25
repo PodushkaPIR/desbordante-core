@@ -1,14 +1,14 @@
-#include <cmath>                                  // for pow
-#include <cstddef>                                // for byte
-#include <limits>                                 // for numeric_limits
-#include <memory>                                 // for unique_ptr
+#include <cmath>    // for pow
+#include <cstddef>  // for byte
+#include <limits>   // for numeric_limits
+#include <memory>   // for unique_ptr
 
 #include <boost/math/special_functions/next.hpp>  // for float_next
 #include <gtest/gtest.h>                          // for Message, TestPartRe...
 
-#include "builtin.h"                              // for CompareResult, Double
-#include "double_type.h"                          // for DoubleType
-#include "numeric_type.h"                         // for INumericType
+#include "builtin.h"       // for CompareResult, Double
+#include "double_type.h"   // for DoubleType
+#include "numeric_type.h"  // for INumericType
 
 namespace tests {
 

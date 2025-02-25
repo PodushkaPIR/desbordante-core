@@ -1,12 +1,12 @@
 #pragma once
 
-#include <memory>                                   // for shared_ptr, make_...
-#include <utility>                                  // for move, pair
-#include <vector>                                   // for vector
+#include <memory>    // for shared_ptr, make_...
+#include <stddef.h>  // for size_t
+#include <utility>   // for move, pair
+#include <vector>    // for vector
 
 #include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
 #include <boost/move/utility_core.hpp>              // for move
-#include <stddef.h>                                 // for size_t
 
 struct RawFD;
 

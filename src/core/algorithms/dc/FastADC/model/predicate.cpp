@@ -1,8 +1,7 @@
 #include "dc/FastADC/model/predicate.h"
 
-#include <algorithm>                                  // for find_if
-
-#include <assert.h>                                   // for assert
+#include <algorithm>  // for find_if
+#include <assert.h>   // for assert
 
 #include "dc/FastADC/model/column_operand.h"          // for ColumnOperand
 #include "dc/FastADC/model/operator.h"                // for Operator, Opera...
@@ -10,7 +9,9 @@
 #include "model/table/column.h"                       // for Column
 #include "model/table/typed_column_data.h"            // for TypedColumnData
 
-namespace model { class Type; }
+namespace model {
+class Type;
+}
 
 namespace algos::fastadc {
 

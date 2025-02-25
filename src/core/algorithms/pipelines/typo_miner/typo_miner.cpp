@@ -1,23 +1,23 @@
 #include "typo_miner.h"
 
-#include <algorithm>                                  // for sort, stable_sort
-#include <deque>                                      // for _Deque_iterator
-#include <initializer_list>                           // for initializer_list
-#include <iterator>                                   // for back_insert_ite...
-#include <list>                                       // for list, operator==
-#include <numeric>                                    // for iota
+#include <algorithm>         // for sort, stable_sort
+#include <bits/chrono.h>     // for duration, durat...
+#include <deque>             // for _Deque_iterator
+#include <initializer_list>  // for initializer_list
+#include <iterator>          // for back_insert_ite...
+#include <list>              // for list, operator==
+#include <numeric>           // for iota
+#include <unordered_map>     // for unordered_map
 
-#include <bits/chrono.h>                              // for duration, durat...
-#include <boost/type_index.hpp>                       // for type_id
-#include <boost/type_index/type_index_facade.hpp>     // for operator==
+#include <boost/type_index.hpp>                    // for type_id
+#include <boost/type_index/type_index_facade.hpp>  // for operator==
 
-#include <unordered_map>                              // for unordered_map
 #include "algorithm.h"                                // for Algorithm
 #include "common_option.h"                            // for CommonOption
 #include "config/equal_nulls/option.h"                // for kEqualNullsOpt
 #include "config/error/option.h"                      // for kErrorOpt
 #include "config/exceptions.h"                        // for ConfigurationError
-#include "config/names_and_descriptions.h"  // lines 6-6
+#include "config/names_and_descriptions.h"            // lines 6-6
 #include "config/option_using.h"                      // for DESBORDANTE_OPT...
 #include "config/tabular_data/input_table/option.h"   // for kTableOpt
 #include "create_algorithm.h"                         // for CreateAlgorithm...

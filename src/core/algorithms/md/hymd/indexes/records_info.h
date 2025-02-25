@@ -1,14 +1,16 @@
 #pragma once
 
-#include <cstddef>                                             // for size_t
-#include <memory>                                              // for shared...
-#include <string>                                              // for string
-#include <utility>                                             // for move
-#include <vector>                                              // for vector
+#include <cstddef>  // for size_t
+#include <memory>   // for shared...
+#include <string>   // for string
+#include <utility>  // for move
+#include <vector>   // for vector
 
 #include "algorithms/md/hymd/indexes/dictionary_compressor.h"  // for Dictio...
 
-namespace model { class IDatasetStream; }
+namespace model {
+class IDatasetStream;
+}
 
 namespace algos::hymd::indexes {
 

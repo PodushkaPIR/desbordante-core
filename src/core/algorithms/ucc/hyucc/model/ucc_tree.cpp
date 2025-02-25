@@ -1,9 +1,9 @@
 #include "ucc_tree.h"
 
-#include <utility>                            // for move
+#include <assert.h>  // for assert
+#include <utility>   // for move
 
-#include <assert.h>                           // for assert
-#include <boost/move/utility_core.hpp>        // for move
+#include <boost/move/utility_core.hpp>  // for move
 
 #include "ucc/hyucc/model/ucc_tree_vertex.h"  // for UCCTreeVertex
 

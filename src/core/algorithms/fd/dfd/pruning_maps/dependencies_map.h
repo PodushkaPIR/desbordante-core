@@ -1,6 +1,6 @@
 #pragma once
 
-#include <unordered_set>           // for unordered_set
+#include <unordered_set>  // for unordered_set
 
 #include "model/table/vertical.h"  // for Vertical
 #include "pruning_map.h"           // for PruningMap

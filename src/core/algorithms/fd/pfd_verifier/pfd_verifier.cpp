@@ -1,10 +1,9 @@
 #include "algorithms/fd/pfd_verifier/pfd_verifier.h"
 
-#include <functional>                                // for function
-#include <memory>                                    // for shared_ptr, __sh...
-#include <stdexcept>                                 // for runtime_error
-
-#include <bits/chrono.h>                             // for duration_cast
+#include <bits/chrono.h>  // for duration_cast
+#include <functional>     // for function
+#include <memory>         // for shared_ptr, __sh...
+#include <stdexcept>      // for runtime_error
 
 #include "algorithms/algorithm.h"                    // for Algorithm
 #include "common_option.h"                           // for CommonOption

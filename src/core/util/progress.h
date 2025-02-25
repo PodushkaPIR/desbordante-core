@@ -1,11 +1,10 @@
 #pragma once
 
 #include <mutex>        // for mutex
+#include <stdint.h>     // for uint8_t
 #include <string_view>  // for string_view
 #include <utility>      // for move, pair
 #include <vector>       // for vector
-
-#include <stdint.h>     // for uint8_t
 
 namespace util {
 

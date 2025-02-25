@@ -1,10 +1,10 @@
 #pragma once
 
-#include <functional>                           // for function
-#include <memory>                               // for unique_ptr, operator==
-#include <random>                               // for mt19937
-#include <string>                               // for string
-#include <vector>                               // for vector
+#include <functional>  // for function
+#include <memory>      // for unique_ptr, operator==
+#include <random>      // for mt19937
+#include <string>      // for string
+#include <vector>      // for vector
 
 #include "../model/agree_set_sample.h"          // for AgreeSetSample
 #include "dependency_consumer.h"                // for DependencyConsumer
@@ -18,7 +18,10 @@ class RelationalSchema;
 class Vertical;
 enum class CacheEvictionMethod;
 enum class CachingMethod;
-namespace model { class PositionListIndex; }
+
+namespace model {
+class PositionListIndex;
+}
 
 namespace model {
 

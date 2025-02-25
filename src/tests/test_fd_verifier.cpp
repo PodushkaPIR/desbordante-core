@@ -1,11 +1,11 @@
-#include <algorithm>                          // for is_sorted
-#include <memory>                             // for unique_ptr
-#include <string>                             // for hash
-#include <utility>                            // for move, pair
-#include <vector>                             // for vector
+#include <algorithm>  // for is_sorted
+#include <memory>     // for unique_ptr
+#include <stddef.h>   // for size_t
+#include <string>     // for hash
+#include <utility>    // for move, pair
+#include <vector>     // for vector
 
-#include <gtest/gtest.h>                      // for AssertionResult, Message
-#include <stddef.h>                           // for size_t
+#include <gtest/gtest.h>  // for AssertionResult, Message
 
 #include "algo_factory.h"                     // for CreateAndLoadAlgorithm
 #include "all_csv_configs.h"                  // for kTestFD

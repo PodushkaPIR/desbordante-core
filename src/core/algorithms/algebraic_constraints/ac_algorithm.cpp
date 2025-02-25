@@ -1,17 +1,17 @@
 #include "ac_algorithm.h"
 
-#include <algorithm>                                    // for find_if, sort
+#include <algorithm>      // for find_if, sort
+#include <assert.h>       // for assert
+#include <bits/chrono.h>  // for duration_cast
 #include <cmath>
 #include <iostream>
 #include <random>
-#include <stdexcept>                                    // for invalid_argument
-#include <string_view>                                  // for basic_string_...
-#include <utility>                                      // for move, pair
+#include <stdexcept>    // for invalid_argument
+#include <string_view>  // for basic_string_...
+#include <utility>      // for move, pair
 
-#include <assert.h>                                     // for assert
-#include <bits/chrono.h>                                // for duration_cast
-#include <boost/any.hpp>                                // for any
-#include <boost/type_index/type_index_facade.hpp>       // for operator==
+#include <boost/any.hpp>                           // for any
+#include <boost/type_index/type_index_facade.hpp>  // for operator==
 #include <easylogging++.h>
 
 #include "algebraic_constraints/ac.h"                   // for ACPair
@@ -25,12 +25,12 @@
 #include "common_option.h"                              // for CommonOption
 #include "config/exceptions.h"
 #include "config/tabular_data/input_table/option.h"
-#include "descriptions.h"                               // for kDACSeed, kDB...
-#include "names.h"                                      // for kWeight, kACSeed
-#include "option.h"                                     // for Option
-#include "table/column_layout_typed_relation_data.h"    // for ColumnLayoutT...
-#include "table/typed_column_data.h"                    // for TypedColumnData
-#include "type.h"                                       // for Type
+#include "descriptions.h"                             // for kDACSeed, kDB...
+#include "names.h"                                    // for kWeight, kACSeed
+#include "option.h"                                   // for Option
+#include "table/column_layout_typed_relation_data.h"  // for ColumnLayoutT...
+#include "table/typed_column_data.h"                  // for TypedColumnData
+#include "type.h"                                     // for Type
 #include "types/create_type.h"
 
 namespace algos {

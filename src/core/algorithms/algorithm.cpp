@@ -1,11 +1,11 @@
 #include "algorithms/algorithm.h"
 
-#include <stdexcept>            // for logic_error
-#include <string>               // for char_traits, operator+, string
+#include <stdexcept>  // for logic_error
+#include <string>     // for char_traits, operator+, string
 
 #include "config/exceptions.h"
-#include "ioption.h"            // for IOption
-#include "progress.h"           // for Progress
+#include "ioption.h"   // for IOption
+#include "progress.h"  // for Progress
 
 namespace algos {
 

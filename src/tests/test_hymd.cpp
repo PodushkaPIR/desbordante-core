@@ -10,8 +10,8 @@
 #include <utility>
 #include <vector>
 
-#include <gtest/gtest.h>
 #include <boost/any.hpp>
+#include <gtest/gtest.h>
 
 #include "algorithms/algo_factory.h"
 #include "algorithms/md/decision_boundary.h"

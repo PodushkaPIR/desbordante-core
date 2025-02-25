@@ -1,13 +1,16 @@
 #pragma once
 
-#include <vector>                                     // for vector
-
-#include <stddef.h>                                   // for size_t
+#include <stddef.h>  // for size_t
+#include <vector>    // for vector
 
 #include "dc/FastADC/model/pli_shard.h"               // for Pli, PliShard (...
 #include "dc/FastADC/util/common_clue_set_builder.h"  // for Clue, ClueSet
 
-namespace algos { namespace fastadc { struct PredicatePacks; } }
+namespace algos {
+namespace fastadc {
+struct PredicatePacks;
+}
+}  // namespace algos
 
 namespace algos::fastadc {
 

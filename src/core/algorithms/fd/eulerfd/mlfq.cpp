@@ -1,7 +1,7 @@
 #include "mlfq.h"
 
-#include <algorithm>             // for max
-#include <cmath>                 // for floor, log10
+#include <algorithm>  // for max
+#include <cmath>      // for floor, log10
 
 #include "fd/eulerfd/cluster.h"  // for Cluster
 

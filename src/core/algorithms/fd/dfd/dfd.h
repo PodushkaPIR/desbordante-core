@@ -1,7 +1,7 @@
 #pragma once
 
-#include <optional>                                // for optional, nullopt
-#include <vector>                                  // for vector
+#include <optional>  // for optional, nullopt
+#include <vector>    // for vector
 
 #include "algorithms/fd/pli_based_fd_algorithm.h"  // for PliBasedFDAlgorithm
 #include "config/thread_number/type.h"             // for ThreadNumType

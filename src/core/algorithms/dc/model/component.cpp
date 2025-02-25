@@ -1,13 +1,13 @@
 #include "component.h"
 
-#include <assert.h>                        // for assert
+#include <assert.h>  // for assert
 #include <cstddef>
 #include <stdexcept>
 #include <string>
 
 #include "algorithms/dc/model/operator.h"
 #include "model/types/builtin.h"
-#include "numeric_type.h"                  // for INumericType
+#include "numeric_type.h"  // for INumericType
 
 namespace algos::dc {
 

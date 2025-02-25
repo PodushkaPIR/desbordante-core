@@ -1,8 +1,9 @@
 #pragma once
 
-#include <cmath>                   // for ceil
-#include <memory>                  // for unique_ptr
-#include <string>                  // for string
+#include <cmath>   // for ceil
+#include <memory>  // for unique_ptr
+#include <string>  // for string
+
 #include "dependency_candidate.h"  // for DependencyCandidate
 #include "model/table/vertical.h"  // for Vertical
 #include "table/column.h"          // for Column

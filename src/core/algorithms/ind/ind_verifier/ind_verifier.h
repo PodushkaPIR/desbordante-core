@@ -5,9 +5,8 @@
  */
 #pragma once
 
-#include <vector>                            // for vector
-
-#include <stddef.h>                          // for size_t
+#include <stddef.h>  // for size_t
+#include <vector>    // for vector
 
 #include "algorithms/algorithm.h"            // for Algorithm
 #include "config/indices/type.h"             // for IndicesType

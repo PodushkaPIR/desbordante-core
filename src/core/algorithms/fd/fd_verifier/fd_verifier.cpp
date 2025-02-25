@@ -1,18 +1,18 @@
 #include "algorithms/fd/fd_verifier/fd_verifier.h"
 
-#include <functional>                                 // for function
-#include <memory>                                     // for shared_ptr, uni...
-#include <stdexcept>                                  // for runtime_error
+#include <bits/chrono.h>  // for duration_cast
+#include <functional>     // for function
+#include <memory>         // for shared_ptr, uni...
+#include <stdexcept>      // for runtime_error
 
-#include <bits/chrono.h>                              // for duration_cast
-#include <boost/type_index/type_index_facade.hpp>     // for operator==
+#include <boost/type_index/type_index_facade.hpp>  // for operator==
 
-#include "algorithm.h"                                // for Algorithm
-#include "common_option.h"                            // for CommonOption
-#include "config/equal_nulls/option.h"                // for kEqualNullsOpt
-#include "config/indices/option.h"                    // for IndicesOption
+#include "algorithm.h"                  // for Algorithm
+#include "common_option.h"              // for CommonOption
+#include "config/equal_nulls/option.h"  // for kEqualNullsOpt
+#include "config/indices/option.h"      // for IndicesOption
+#include "config/names_and_descriptions.h"
 #include "config/option_using.h"                      // for DESBORDANTE_OPT...
-#include "config/names_and_descriptions.h"  
 #include "config/tabular_data/input_table/option.h"   // for kTableOpt
 #include "fd/fd_verifier/stats_calculator.h"          // for StatsCalculator
 #include "indices/type.h"                             // for IndicesType

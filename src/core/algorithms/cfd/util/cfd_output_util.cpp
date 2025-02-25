@@ -1,9 +1,9 @@
 #include "cfd_output_util.h"
 
-#include <sstream>                                   // for basic_ostream
-#include <vector>                                    // for vector
+#include <sstream>  // for basic_ostream
+#include <vector>   // for vector
 
-#include <boost/algorithm/string/join.hpp>           // for join
+#include <boost/algorithm/string/join.hpp>  // for join
 
 #include "algorithms/cfd/model/cfd_relation_data.h"
 #include "algorithms/cfd/model/cfd_types.h"

@@ -1,15 +1,15 @@
 #include "algorithms/nd/nd_verifier/nd_verifier.h"
 
-#include <cstddef>                                             // for size_t
-#include <functional>                                          // for function
-#include <stdexcept>                                           // for runtim...
-#include <string>                                              // for to_string
-#include <string_view>                                         // for basic_...
-#include <unordered_set>                                       // for unorde...
-#include <vector>                                              // for vector
+#include <bits/chrono.h>  // for durati...
+#include <cstddef>        // for size_t
+#include <functional>     // for function
+#include <stdexcept>      // for runtim...
+#include <string>         // for to_string
+#include <string_view>    // for basic_...
+#include <unordered_set>  // for unorde...
+#include <vector>         // for vector
 
-#include <bits/chrono.h>                                       // for durati...
-#include <easylogging++.h>                                     // for Writer
+#include <easylogging++.h>  // for Writer
 
 #include "algorithm.h"                                         // for Algorithm
 #include "algorithms/nd/nd_verifier/util/stats_calculator.h"   // for StatsC...
@@ -32,7 +32,13 @@
 #include "table/relational_schema.h"                           // for Relati...
 #include "util/timed_invoke.h"                                 // for TimedI...
 
-namespace algos { namespace nd_verifier { namespace util { class Highlight; } } }
+namespace algos {
+namespace nd_verifier {
+namespace util {
+class Highlight;
+}
+}  // namespace nd_verifier
+}  // namespace algos
 
 namespace algos::nd_verifier {
 

@@ -1,9 +1,9 @@
 #pragma once
 
-#include <utility>                              // for move
-#include <vector>                               // for vector
+#include <utility>  // for move
+#include <vector>   // for vector
 
-#include <boost/move/utility_core.hpp>          // for move
+#include <boost/move/utility_core.hpp>  // for move
 
 #include "algorithms/ucc/raw_ucc.h"             // for RawUCC
 #include "config/thread_number/type.h"          // for ThreadNumType
@@ -12,7 +12,11 @@
 #include "model/table/position_list_index.h"    // for PLI
 #include "ucc/hyucc/model/ucc_tree_vertex.h"    // for LhsPair
 
-namespace algos { namespace hyucc { class UCCTree; } }
+namespace algos {
+namespace hyucc {
+class UCCTree;
+}
+}  // namespace algos
 
 namespace algos::hyucc {
 

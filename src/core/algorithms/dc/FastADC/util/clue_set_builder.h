@@ -1,11 +1,20 @@
 #pragma once
 
-#include <vector>                                     // for vector
+#include <vector>  // for vector
 
 #include "dc/FastADC/util/common_clue_set_builder.h"  // for ClueSet
 
-namespace algos { namespace fastadc { class PliShard; } }
-namespace algos { namespace fastadc { struct PredicatePacks; } }
+namespace algos {
+namespace fastadc {
+class PliShard;
+}
+}  // namespace algos
+
+namespace algos {
+namespace fastadc {
+struct PredicatePacks;
+}
+}  // namespace algos
 
 namespace algos::fastadc {
 

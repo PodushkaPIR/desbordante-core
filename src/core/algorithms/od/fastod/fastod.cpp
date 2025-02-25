@@ -1,7 +1,7 @@
 #include "fastod.h"
 
-#include <functional>                                 // for function
-#include <memory>                                     // for shared_ptr, __s...
+#include <functional>  // for function
+#include <memory>      // for shared_ptr, __s...
 
 #include <boost/move/utility_core.hpp>                // for move
 #include <boost/type_index/type_index_facade.hpp>     // for operator==
@@ -9,14 +9,14 @@
 #include <boost/unordered/unordered_map.hpp>          // for unordered_map
 #include <easylogging++.h>                            // for Writer, CDEBUG
 
-#include "algorithm.h"                                // for Algorithm
-#include "common_option.h"                            // for CommonOption
-#include "config/tabular_data/input_table/option.h"   // for kTableOpt
-#include "config/time_limit/option.h"                 // for kTimeLimitSecon...
-#include "od/fastod/model/attribute_pair.h"           // for hash
-#include "od/fastod/model/attribute_set.h"            // for hash, DeleteAtt...
-#include "od/fastod/model/canonical_od.h"             // for CanonicalOD
-#include "util/timed_invoke.h"                        // for TimedInvoke
+#include "algorithm.h"                               // for Algorithm
+#include "common_option.h"                           // for CommonOption
+#include "config/tabular_data/input_table/option.h"  // for kTableOpt
+#include "config/time_limit/option.h"                // for kTimeLimitSecon...
+#include "od/fastod/model/attribute_pair.h"          // for hash
+#include "od/fastod/model/attribute_set.h"           // for hash, DeleteAtt...
+#include "od/fastod/model/canonical_od.h"            // for CanonicalOD
+#include "util/timed_invoke.h"                       // for TimedInvoke
 
 namespace algos {
 
@@ -93,9 +93,9 @@ unsigned long long Fastod::ExecuteInternal() {
 }
 
 void Fastod::PrintStatistics() const {
-    const size_t ocd_count = result_asc_.size() + result_desc_.size();
-    const size_t fd_count = result_simple_.size();
-    const size_t od_count = ocd_count + fd_count;
+    size_t const ocd_count = result_asc_.size() + result_desc_.size();
+    size_t const fd_count = result_simple_.size();
+    size_t const od_count = ocd_count + fd_count;
 
     LOG(DEBUG) << "RESULT: Time=" << timer_.GetElapsedSeconds() << ", "
                << "OD=" << od_count << ", "
@@ -182,7 +182,7 @@ void Fastod::ComputeODs() {
                         AddToResult(std::move(od));
                         CCPut(context, fastod::DeleteAttribute(cc, attr));
 
-                        const AttributeSet diff = fastod::Difference(schema_, context);
+                        AttributeSet const diff = fastod::Difference(schema_, context);
 
                         if (diff.Any()) {
                             CCPut(context, cc & (~diff));
@@ -235,7 +235,7 @@ void Fastod::CalculateNextLevel() {
             for (size_t j = i + 1; j < single_attributes.size(); ++j) {
                 bool create_context = true;
 
-                const AttributeSet candidate = fastod::AddAttribute(
+                AttributeSet const candidate = fastod::AddAttribute(
                         fastod::AddAttribute(prefix, single_attributes[i]), single_attributes[j]);
 
                 candidate.Iterate([this, &candidate, &create_context](model::ColumnIndex attr) {

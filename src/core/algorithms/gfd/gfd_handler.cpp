@@ -1,19 +1,19 @@
 #include "gfd_handler.h"
 
-#include <fstream>                                 // for basic_ifstream
-#include <string_view>                             // for basic_string_view
+#include <bits/chrono.h>  // for duration_cast, ope...
+#include <fstream>        // for basic_ifstream
+#include <string_view>    // for basic_string_view
 
-#include <bits/chrono.h>                           // for duration_cast, ope...
 #include <boost/type_index/type_index_facade.hpp>  // for operator==
 #include <easylogging++.h>                         // for Writer, CDEBUG, LOG
 
-#include "algorithm.h"                             // for Algorithm
-#include "config/option_using.h"                   // for DESBORDANTE_OPTION...
-#include "descriptions.h"                          // for kDGfdData, kDGraph...
-#include "gfd/gfd.h"                               // for Gfd
-#include "graph_parser/graph_parser.h"             // for ReadGfd, ReadGraph
-#include "names.h"                                 // for kGfdData, kGraphData
-#include "option.h"                                // for Option
+#include "algorithm.h"                  // for Algorithm
+#include "config/option_using.h"        // for DESBORDANTE_OPTION...
+#include "descriptions.h"               // for kDGfdData, kDGraph...
+#include "gfd/gfd.h"                    // for Gfd
+#include "graph_parser/graph_parser.h"  // for ReadGfd, ReadGraph
+#include "names.h"                      // for kGfdData, kGraphData
+#include "option.h"                     // for Option
 
 namespace algos {
 

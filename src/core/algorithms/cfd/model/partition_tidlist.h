@@ -1,6 +1,6 @@
 #pragma once
 
-#include <utility>      // for move
+#include <utility>  // for move
 
 #include "cfd_types.h"
 

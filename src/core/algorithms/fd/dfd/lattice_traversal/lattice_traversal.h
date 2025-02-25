@@ -1,10 +1,10 @@
 #pragma once
 
-#include <list>                                            // for list
-#include <random>                                          // for mt19937
-#include <stack>                                           // for stack
-#include <unordered_set>                                   // for unordered_set
-#include <vector>                                          // for vector
+#include <list>           // for list
+#include <random>         // for mt19937
+#include <stack>          // for stack
+#include <unordered_set>  // for unordered_set
+#include <vector>         // for vector
 
 #include "../column_order/column_order.h"                  // for ColumnOrder
 #include "../lattice_observations/lattice_observations.h"  // for LatticeObs...

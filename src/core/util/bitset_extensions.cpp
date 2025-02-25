@@ -2,7 +2,6 @@
 
 #include <bit>       // for countr_zero
 #include <bitset>    // for bitset
-
 #include <stddef.h>  // for size_t
 
 namespace util::bitset_extensions {

@@ -1,14 +1,14 @@
-#include <algorithm>                        // for sort, transform
-#include <exception>                        // for exception
-#include <iostream>                         // for char_traits, basic_ostream
-#include <iterator>                         // for back_inserter
-#include <memory>                           // for unique_ptr
-#include <string>                           // for hash
-#include <utility>                          // for pair
-#include <vector>                           // for vector
+#include <algorithm>  // for sort, transform
+#include <exception>  // for exception
+#include <iostream>   // for char_traits, basic_ostream
+#include <iterator>   // for back_inserter
+#include <memory>     // for unique_ptr
+#include <string>     // for hash
+#include <utility>    // for pair
+#include <vector>     // for vector
 
-#include <gmock/gmock.h>                    // for ContainerEq, ASSERT_THAT
-#include <gtest/gtest.h>                    // for Message, Values, Paramete...
+#include <gmock/gmock.h>  // for ContainerEq, ASSERT_THAT
+#include <gtest/gtest.h>  // for Message, Values, Paramete...
 
 #include "algorithms/algo_factory.h"        // for CreateAndLoadAlgorithm
 #include "algorithms/fd/pyro/pyro.h"        // for Pyro

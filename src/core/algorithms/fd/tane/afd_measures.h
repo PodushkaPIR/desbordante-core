@@ -3,7 +3,10 @@
 #include "config/error/type.h"  // for ErrorType
 
 class ColumnData;
-namespace model { class PositionListIndex; }
+
+namespace model {
+class PositionListIndex;
+}
 
 namespace algos {
 config::ErrorType CalculateZeroAryG1(ColumnData const* rhs, unsigned long long num_tuple_pairs);

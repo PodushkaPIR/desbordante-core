@@ -1,12 +1,11 @@
 #pragma once
 
-#include <memory>                                          // for shared_ptr
-#include <unordered_map>                                   // for unordered_map
-#include <unordered_set>                                   // for unordered_set
-#include <utility>                                         // for move
-#include <vector>                                          // for vector
-
-#include <stddef.h>                                        // for size_t
+#include <memory>         // for shared_ptr
+#include <stddef.h>       // for size_t
+#include <unordered_map>  // for unordered_map
+#include <unordered_set>  // for unordered_set
+#include <utility>        // for move
+#include <vector>         // for vector
 
 #include "algorithms/algorithm.h"                          // for Algorithm
 #include "algorithms/od/fastod/model/attribute_pair.h"     // for operator==
@@ -128,7 +127,7 @@ private:
                 auto const& candidates = CSGet<Ascending>(deleted_attrs[attr]);
 
                 for (AttributePair const& attribute_pair : candidates) {
-                    const AttributeSet context_delete_ab = fastod::DeleteAttribute(
+                    AttributeSet const context_delete_ab = fastod::DeleteAttribute(
                             deleted_attrs[attribute_pair.left], attribute_pair.right);
 
                     bool add_context = true;

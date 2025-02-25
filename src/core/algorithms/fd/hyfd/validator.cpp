@@ -1,17 +1,17 @@
 #include "validator.h"
 
-#include <algorithm>                                   // for any_of
-#include <future>                                      // for future, packag...
-#include <unordered_set>                               // for unordered_set
-#include <utility>                                     // for pair, move
-#include <vector>                                      // for vector
+#include <algorithm>      // for any_of
+#include <assert.h>       // for assert
+#include <future>         // for future, packag...
+#include <stddef.h>       // for size_t
+#include <unordered_set>  // for unordered_set
+#include <utility>        // for pair, move
+#include <vector>         // for vector
 
-#include <assert.h>                                    // for assert
-#include <stddef.h>                                    // for size_t
-#include <boost/asio/post.hpp>                         // for post
-#include <boost/asio/thread_pool.hpp>                  // for thread_pool
-#include <boost/dynamic_bitset/dynamic_bitset.hpp>     // for dynamic_bitset
-#include <boost/unordered/detail/foa/table.hpp>        // for operator!=
+#include <boost/asio/post.hpp>                      // for post
+#include <boost/asio/thread_pool.hpp>               // for thread_pool
+#include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
+#include <boost/unordered/detail/foa/table.hpp>     // for operator!=
 
 #include "algorithms/fd/hycommon/util/pli_util.h"      // for PLIUtil
 #include "algorithms/fd/hycommon/validator_helpers.h"  // for BuildClustersI...

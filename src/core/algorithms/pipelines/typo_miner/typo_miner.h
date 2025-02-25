@@ -1,16 +1,16 @@
 #pragma once
 
-#include <cstddef>                                          // for byte
-#include <map>                                              // for map
-#include <memory>                                           // for unique_ptr
-#include <string>                                           // for string
-#include <string_view>                                      // for string_view
-#include <unordered_set>                                    // for unordered...
-#include <utility>                                          // for pair
-#include <vector>                                           // for vector
+#include <assert.h>       // for assert
+#include <cstddef>        // for byte
+#include <map>            // for map
+#include <memory>         // for unique_ptr
+#include <string>         // for string
+#include <string_view>    // for string_view
+#include <unordered_set>  // for unordered...
+#include <utility>        // for pair
+#include <vector>         // for vector
 
-#include <assert.h>                                         // for assert
-#include <boost/any.hpp>                                    // for any
+#include <boost/any.hpp>  // for any
 
 #include "algorithm_types.h"                                // for Algorithm...
 #include "algorithms/algorithm.h"                           // for Algorithm
@@ -26,7 +26,10 @@
 
 class Column;
 class ColumnLayoutRelationData;
-namespace model { class Type; }
+
+namespace model {
+class Type;
+}
 
 namespace algos {
 

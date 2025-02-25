@@ -1,7 +1,7 @@
 #pragma once
 
-#include <memory>                                     // for unique_ptr
-#include <vector>                                     // for vector
+#include <memory>  // for unique_ptr
+#include <vector>  // for vector
 
 #include "algorithms/algorithm.h"                     // for Algorithm
 #include "dc/FastADC/providers/index_provider.h"      // for DoubleIndexProv...
@@ -10,7 +10,11 @@
 #include "table/column_layout_typed_relation_data.h"  // for ColumnLayoutTyp...
 #include "tabular_data/input_table_type.h"            // for InputTable
 
-namespace algos { namespace fastadc { class DenialConstraint; } }
+namespace algos {
+namespace fastadc {
+class DenialConstraint;
+}
+}  // namespace algos
 
 namespace algos::dc {
 

@@ -5,11 +5,12 @@
  */
 #include "attribute.h"
 
-#include <boost/move/utility_core.hpp>  // for move
-#include <stddef.h>                     // for size_t
+#include <stddef.h>  // for size_t
 
-#include "bitset_utils.h"               // for BitsetToIndices
-#include "error/type.h"                 // for ErrorType
+#include <boost/move/utility_core.hpp>  // for move
+
+#include "bitset_utils.h"  // for BitsetToIndices
+#include "error/type.h"    // for ErrorType
 
 namespace algos::spider {
 

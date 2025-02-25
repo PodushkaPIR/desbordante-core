@@ -1,9 +1,8 @@
 #pragma once
 
-#include <string>                                // for string
-#include <vector>                                // for vector
-
-#include <bits/chrono.h>                         // for high_resolution_clock
+#include <bits/chrono.h>  // for high_resolution_clock
+#include <string>         // for string
+#include <vector>         // for vector
 
 #include "algorithms/ucc/hpivalid/enums.h"       // for TimerName
 #include "algorithms/ucc/hpivalid/hypergraph.h"  // for Edge

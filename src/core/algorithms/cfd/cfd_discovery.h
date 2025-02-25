@@ -1,15 +1,19 @@
 #pragma once
 
-#include <memory>                                  // for shared_ptr
-#include <string>                                  // for string
-#include <string_view>                             // for string_view
+#include <memory>       // for shared_ptr
+#include <string>       // for string
+#include <string_view>  // for string_view
 #include <vector>
 
 #include "algorithms/algorithm.h"
 #include "algorithms/cfd/model/cfd_types.h"
 #include "config/tabular_data/input_table_type.h"
 
-namespace algos { namespace cfd { class CFDRelationData; } }
+namespace algos {
+namespace cfd {
+class CFDRelationData;
+}
+}  // namespace algos
 
 // see algorithms/cfd/LICENSE
 

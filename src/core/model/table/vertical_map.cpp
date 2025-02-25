@@ -1,18 +1,23 @@
 #include "vertical_map.h"
 
-#include <algorithm>        // for all_of, sort
-#include <mutex>            // for scoped_lock
-#include <queue>            // for priority_queue, queue
-#include <stdexcept>        // for runtime_error
-#include <unordered_set>    // for unordered_set
+#include <algorithm>      // for all_of, sort
+#include <mutex>          // for scoped_lock
+#include <queue>          // for priority_queue, queue
+#include <stdexcept>      // for runtime_error
+#include <unordered_set>  // for unordered_set
 
 #include "custom_hashes.h"  // for hash
 
 class DependencyCandidate;
 class VerticalInfo;
 
-namespace model { class AgreeSetSample; }
-namespace model { class PositionListIndex; }
+namespace model {
+class AgreeSetSample;
+}
+
+namespace model {
+class PositionListIndex;
+}
 
 namespace model {
 

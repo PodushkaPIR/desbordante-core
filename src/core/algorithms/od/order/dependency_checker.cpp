@@ -1,8 +1,7 @@
 #include "dependency_checker.h"
 
-#include <unordered_set>                 // for operator==, _Node_const_iter...
-
-#include <stddef.h>                      // for size_t
+#include <stddef.h>       // for size_t
+#include <unordered_set>  // for operator==, _Node_const_iter...
 
 #include "model/table/tuple_index.h"     // for TupleIndex
 #include "od/order/sorted_partitions.h"  // for SortedPartition

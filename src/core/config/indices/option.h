@@ -1,12 +1,12 @@
 #pragma once
 
-#include <functional>              // for function
-#include <string_view>             // for string_view
+#include <functional>   // for function
+#include <string_view>  // for string_view
 
 #include "config/common_option.h"  // for CommonOption
 #include "config/indices/type.h"   // for IndicesType, IndexType
 #include "indices/option.h"
-#include "option.h"                // for Option
+#include "option.h"  // for Option
 
 namespace config {
 

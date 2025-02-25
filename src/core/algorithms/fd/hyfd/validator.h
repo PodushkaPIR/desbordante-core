@@ -1,10 +1,10 @@
 #pragma once
 
-#include <memory>                                          // for shared_ptr
-#include <utility>                                         // for move
-#include <vector>                                          // for vector
+#include <memory>   // for shared_ptr
+#include <utility>  // for move
+#include <vector>   // for vector
 
-#include <boost/move/utility_core.hpp>                     // for move
+#include <boost/move/utility_core.hpp>  // for move
 
 #include "algorithms/fd/hycommon/primitive_validations.h"  // for PrimitiveV...
 #include "algorithms/fd/raw_fd.h"                          // for RawFD
@@ -12,7 +12,13 @@
 #include "fd/hycommon/types.h"                             // for PLIsPtr
 #include "fd/hyfd/model/fd_tree_vertex.h"                  // for LhsPair
 
-namespace algos { namespace hyfd { namespace fd_tree { class FDTree; } } }
+namespace algos {
+namespace hyfd {
+namespace fd_tree {
+class FDTree;
+}
+}  // namespace hyfd
+}  // namespace algos
 
 namespace algos::hyfd {
 

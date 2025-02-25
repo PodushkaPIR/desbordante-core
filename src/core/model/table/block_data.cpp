@@ -8,8 +8,8 @@
 #include <algorithm>  // for copy
 #include <cassert>    // for assert
 #include <iterator>   // for back_insert_iterator, next, advance, back_inserter
-
-#include <stddef.h>   // for size_t
+#include <limits>
+#include <stddef.h>  // for size_t
 
 namespace model {
 

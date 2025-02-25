@@ -1,10 +1,9 @@
 #pragma once
 
-#include <memory>                                  // for unique_ptr, shared...
-#include <string>                                  // for string
-#include <vector>                                  // for vector
-
-#include <stddef.h>                                // for size_t
+#include <memory>    // for unique_ptr, shared...
+#include <stddef.h>  // for size_t
+#include <string>    // for string
+#include <vector>    // for vector
 
 #include "algorithms/fd/fd_algorithm.h"            // for FDAlgorithm
 #include "algorithms/fd/fdep/fd_tree_element.h"    // for FDTreeElement

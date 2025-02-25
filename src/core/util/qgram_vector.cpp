@@ -4,9 +4,8 @@
 #include <cassert>    // for assert
 #include <cmath>      // for sqrt
 #include <numeric>    // for accumulate
-#include <utility>    // for pair
-
 #include <stddef.h>   // for size_t
+#include <utility>    // for pair
 
 namespace util {
 

@@ -1,9 +1,9 @@
-#include <memory>                           // for unique_ptr
-#include <optional>                         // for optional, nullopt, nullopt_t
-#include <stdexcept>                        // for runtime_error
-#include <utility>                          // for pair, move
+#include <memory>     // for unique_ptr
+#include <optional>   // for optional, nullopt, nullopt_t
+#include <stdexcept>  // for runtime_error
+#include <utility>    // for pair, move
 
-#include <gtest/gtest.h>                    // for UnitTest, TestWithParam
+#include <gtest/gtest.h>  // for UnitTest, TestWithParam
 
 #include "algo_factory.h"                   // for CreateAndLoadAlgorithm
 #include "all_csv_configs.h"                // for kIndTestTypos, kIndTest3a...

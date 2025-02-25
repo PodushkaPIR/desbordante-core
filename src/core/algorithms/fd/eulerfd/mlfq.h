@@ -1,9 +1,9 @@
 #pragma once
 
-#include <stddef.h>   // for size_t
-#include <queue>      // for queue, priority_queue
-#include <utility>    // for pair
-#include <vector>     // for vector
+#include <queue>     // for queue, priority_queue
+#include <stddef.h>  // for size_t
+#include <utility>   // for pair
+#include <vector>    // for vector
 
 #include "cluster.h"  // for Cluster
 

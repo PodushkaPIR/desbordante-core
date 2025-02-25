@@ -1,8 +1,8 @@
 #include "combined_inclusion_tester.h"
 
-#include <bit>                                                   // for rotl
-#include <unordered_set>                                         // for unor...
-#include <utility>                                               // for pair
+#include <bit>            // for rotl
+#include <unordered_set>  // for unor...
+#include <utility>        // for pair
 
 #ifdef __AVX2__
 #include "immintrin.h"

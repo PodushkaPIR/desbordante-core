@@ -1,4 +1,6 @@
-namespace model { class TypedColumnData; }
+namespace model {
+class TypedColumnData;
+}
 
 namespace algos::fastadc {
 

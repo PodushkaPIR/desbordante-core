@@ -1,10 +1,10 @@
 #pragma once
 
-#include <stddef.h>                                         // for size_t
-#include <list>                                             // for list
-#include <memory>                                           // for unique_ptr
-#include <string_view>                                      // for string_view
-#include <vector>                                           // for vector
+#include <list>         // for list
+#include <memory>       // for unique_ptr
+#include <stddef.h>     // for size_t
+#include <string_view>  // for string_view
+#include <vector>       // for vector
 
 #include "algorithms/fd/fd_algorithm.h"                     // for FDAlgorithm
 #include "config/equal_nulls/type.h"                        // for EqNullsType
@@ -16,8 +16,13 @@
 #include "model/table/column_layout_typed_relation_data.h"  // for ColumnLay...
 #include "primitive_collection.h"                           // for Primitive...
 
-namespace algos { class Sample; }
-namespace model { class TypedColumnData; }
+namespace algos {
+class Sample;
+}
+
+namespace model {
+class TypedColumnData;
+}
 
 namespace algos {
 class Cords : public FDAlgorithm {

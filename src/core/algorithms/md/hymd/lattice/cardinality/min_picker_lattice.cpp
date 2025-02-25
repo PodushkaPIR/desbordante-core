@@ -1,10 +1,10 @@
 #include "algorithms/md/hymd/lattice/cardinality/min_picker_lattice.h"
 
-#include <cassert>                                    // for assert
-#include <map>                                        // for _Rb_tree_iterator
-#include <utility>                                    // for move, forward
+#include <cassert>  // for assert
+#include <map>      // for _Rb_tree_iterator
+#include <utility>  // for move, forward
 
-#include <boost/move/utility_core.hpp>                // for move
+#include <boost/move/utility_core.hpp>  // for move
 
 #include "algorithms/md/hymd/utility/reserve_more.h"  // for ReserveMore
 #include "index.h"                                    // for Index

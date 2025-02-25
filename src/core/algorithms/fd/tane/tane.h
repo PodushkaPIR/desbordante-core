@@ -1,13 +1,16 @@
 #pragma once
 
-#include <optional>             // for optional, nullopt, nullopt_t
+#include <optional>  // for optional, nullopt, nullopt_t
 
 #include "config/error/type.h"  // for ErrorType
 #include "enums.h"              // for operator+, AfdErrorMeasure
 #include "tane_common.h"        // for TaneCommon
 
 class ColumnData;
-namespace model { class PositionListIndex; }
+
+namespace model {
+class PositionListIndex;
+}
 
 namespace algos {
 

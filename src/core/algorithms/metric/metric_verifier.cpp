@@ -1,26 +1,26 @@
 #include "algorithms/metric/metric_verifier.h"
 
-#include <algorithm>                                  // for all_of
-#include <cassert>                                    // for assert
-#include <deque>                                      // for _Deque_iterator
-#include <format>                                     // for vector
-#include <functional>                                 // for function
-#include <iterator>                                   // for next
-#include <memory>                                     // for shared_ptr, all...
-#include <stdexcept>                                  // for runtime_error
-#include <string>                                     // for operator+, char...
-#include <string_view>                                // for basic_string_view
-#include <utility>                                    // for move, pair
+#include <algorithm>      // for all_of
+#include <bits/chrono.h>  // for duration_cast
+#include <cassert>        // for assert
+#include <deque>          // for _Deque_iterator
+#include <format>         // for vector
+#include <functional>     // for function
+#include <iterator>       // for next
+#include <memory>         // for shared_ptr, all...
+#include <stdexcept>      // for runtime_error
+#include <string>         // for operator+, char...
+#include <string_view>    // for basic_string_view
+#include <utility>        // for move, pair
 
-#include <bits/chrono.h>                              // for duration_cast
-#include <easylogging++.h>                            // for Writer, CDEBUG
+#include <easylogging++.h>  // for Writer, CDEBUG
 
-#include "algorithm.h"                                // for Algorithm
-#include "builtin.h"                                  // for TypeId, operator+
-#include "common_option.h"                            // for CommonOption
-#include "config/equal_nulls/option.h"                // for kEqualNullsOpt
-#include "config/exceptions.h"                        // for ConfigurationError
-#include "config/indices/option.h"                    // for IndicesOption
+#include "algorithm.h"                  // for Algorithm
+#include "builtin.h"                    // for TypeId, operator+
+#include "common_option.h"              // for CommonOption
+#include "config/equal_nulls/option.h"  // for kEqualNullsOpt
+#include "config/exceptions.h"          // for ConfigurationError
+#include "config/indices/option.h"      // for IndicesOption
 #include "config/names_and_descriptions.h"
 #include "config/option_using.h"                      // for DESBORDANTE_OPT...
 #include "config/tabular_data/input_table/option.h"   // for kTableOpt

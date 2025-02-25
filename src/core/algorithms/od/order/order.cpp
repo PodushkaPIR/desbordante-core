@@ -1,18 +1,19 @@
 #include "order.h"
 
-#include <bits/chrono.h>                              // for duration, durat...
-#include <easylogging++.h>                            // for Writer, CDEBUG
-#include <stddef.h>                                   // for size_t
-#include <algorithm>                                  // for search, find
-#include <boost/type_index/type_index_facade.hpp>     // for operator==
-#include <initializer_list>                           // for initializer_list
-#include <memory>                                     // for shared_ptr, uni...
-#include <unordered_set>                              // for unordered_set
-#include <utility>                                    // for move
+#include <algorithm>         // for search, find
+#include <bits/chrono.h>     // for duration, durat...
+#include <initializer_list>  // for initializer_list
+#include <memory>            // for shared_ptr, uni...
+#include <stddef.h>          // for size_t
+#include <unordered_set>     // for unordered_set
+#include <utility>           // for move
 
-#include "algorithm.h"                                // for Algorithm
-#include "builtin.h"                                  // for TypeId, Compare...
-#include "common_option.h"                            // for CommonOption
+#include <boost/type_index/type_index_facade.hpp>  // for operator==
+#include <easylogging++.h>                         // for Writer, CDEBUG
+
+#include "algorithm.h"      // for Algorithm
+#include "builtin.h"        // for TypeId, Compare...
+#include "common_option.h"  // for CommonOption
 #include "config/names_and_descriptions.h"
 #include "config/tabular_data/input_table/option.h"   // for kTableOpt
 #include "create_type.h"                              // for CreateSpecificType
@@ -26,7 +27,10 @@
 #include "table/typed_column_data.h"                  // for TypedColumnData
 #include "type.h"                                     // for Type
 
-namespace config { template <typename T> class Option; }
+namespace config {
+template <typename T>
+class Option;
+}
 
 namespace algos::order {
 

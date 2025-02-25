@@ -1,6 +1,7 @@
 #include "algorithms/dd/split/split.h"
 
 #include <algorithm>
+#include <bits/chrono.h>
 #include <cstddef>
 #include <limits>
 #include <list>
@@ -15,7 +16,6 @@
 #include <utility>
 #include <vector>
 
-#include <bits/chrono.h>
 #include <boost/dynamic_bitset/dynamic_bitset.hpp>
 #include <boost/move/utility_core.hpp>
 #include <boost/regex.hpp>

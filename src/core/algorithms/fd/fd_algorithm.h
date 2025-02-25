@@ -1,12 +1,12 @@
 #pragma once
 
-#include <algorithm>                    // for sort
-#include <list>                         // for list
-#include <memory>                       // for shared_ptr
-#include <string>                       // for string, operator<=>, operator+
-#include <string_view>                  // for string_view
-#include <utility>                      // for move
-#include <vector>                       // for vector
+#include <algorithm>    // for sort
+#include <list>         // for list
+#include <memory>       // for shared_ptr
+#include <string>       // for string, operator<=>, operator+
+#include <string_view>  // for string_view
+#include <utility>      // for move
+#include <vector>       // for vector
 
 #include "algorithms/algorithm.h"       // for Algorithm
 #include "algorithms/fd/fd.h"           // for FD

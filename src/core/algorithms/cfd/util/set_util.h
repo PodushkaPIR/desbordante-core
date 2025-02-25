@@ -2,9 +2,9 @@
 
 #include <algorithm>
 #include <ctime>
-#include <iterator>   // for pair, distance, inserter
+#include <iterator>  // for pair, distance, inserter
 #include <random>
-#include <utility>    // for pair
+#include <utility>  // for pair
 #include <vector>
 
 // see algorithms/cfd/LICENSE

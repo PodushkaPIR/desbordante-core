@@ -1,6 +1,8 @@
 #pragma once
 
-#include <memory>            // for unique_ptr, make_unique
+#include <assert.h>  // for assert
+#include <memory>    // for unique_ptr, make_unique
+#include <stdint.h>  // for uint8_t
 #include <string_view>
 #include <typeindex>
 #include <unordered_map>
@@ -8,9 +10,7 @@
 #include <utility>
 #include <vector>
 
-#include <assert.h>          // for assert
 #include <boost/any.hpp>
-#include <stdint.h>          // for uint8_t
 
 #include "config/ioption.h"
 #include "config/option.h"

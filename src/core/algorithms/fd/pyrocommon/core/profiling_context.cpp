@@ -1,14 +1,14 @@
 #include "profiling_context.h"
 
-#include <algorithm>                               // for max_element, min_e...
-#include <ostream>                                 // for basic_ios::imbue
-#include <utility>                                 // for move
-#include <variant>                                 // for get, holds_alterna...
+#include <algorithm>  // for max_element, min_e...
+#include <ostream>    // for basic_ios::imbue
+#include <utility>    // for move
+#include <variant>    // for get, holds_alterna...
 
-#include <boost/format.hpp>       
-#include <boost/move/utility_core.hpp>             // for move
-#include <boost/optional/optional.hpp>             // for get_pointer
-#include <easylogging++.h>                         // for Writer, LOG, CTRACE
+#include <boost/format.hpp>
+#include <boost/move/utility_core.hpp>  // for move
+#include <boost/optional/optional.hpp>  // for get_pointer
+#include <easylogging++.h>              // for Writer, LOG, CTRACE
 
 #include "../model/list_agree_set_sample.h"        // for ListAgreeSetSample
 #include "../model/pli_cache.h"                    // for PLICache

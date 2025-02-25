@@ -1,10 +1,10 @@
 #include "algorithms/fd/fdep/fdep.h"
 
-#include <bitset>                                    // for bitset
-#include <stdexcept>                                 // for runtime_error
+#include <bits/chrono.h>  // for duration_cast
+#include <bitset>         // for bitset
+#include <stdexcept>      // for runtime_error
 
-#include <bits/chrono.h>                             // for duration_cast
-#include <boost/type_index/type_index_facade.hpp>    // for operator==
+#include <boost/type_index/type_index_facade.hpp>  // for operator==
 
 #include "common_option.h"                           // for CommonOption
 #include "config/tabular_data/input_table/option.h"  // for kTableOpt

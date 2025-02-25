@@ -1,7 +1,7 @@
-#include <cstddef>         // for byte
-#include <memory>          // for unique_ptr
+#include <cstddef>  // for byte
+#include <memory>   // for unique_ptr
 
-#include <gtest/gtest.h>   // for CmpHelperFloatingPointEQ, TestInfo (ptr only)
+#include <gtest/gtest.h>  // for CmpHelperFloatingPointEQ, TestInfo (ptr only)
 
 #include "builtin.h"       // for Double, Int
 #include "double_type.h"   // for DoubleType

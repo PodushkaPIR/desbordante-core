@@ -1,17 +1,21 @@
 #include "dc/FastADC/util/clue_set_builder.h"
 
-#include <bitset>                                     // for bitset
-#include <unordered_map>                              // for _Node_iterator
-#include <utility>                                    // for pair
+#include <bitset>         // for bitset
+#include <stddef.h>       // for size_t
+#include <unordered_map>  // for _Node_iterator
+#include <utility>        // for pair
 
-#include <easylogging++.h>                            // for Writer, CDEBUG
-#include <stddef.h>                                   // for size_t
+#include <easylogging++.h>  // for Writer, CDEBUG
 
 #include "dc/FastADC/model/pli_shard.h"               // for PliShard
 #include "dc/FastADC/util/cross_clue_set_builder.h"   // for CrossClueSetBui...
 #include "dc/FastADC/util/single_clue_set_builder.h"  // for SingleClueSetBu...
 
-namespace algos { namespace fastadc { struct PredicatePacks; } }
+namespace algos {
+namespace fastadc {
+struct PredicatePacks;
+}
+}  // namespace algos
 
 namespace algos::fastadc {
 

@@ -1,12 +1,12 @@
 #pragma once
 
-#include <algorithm>                                // for any_of
-#include <cassert>                                  // for assert
-#include <memory>                                   // for unique_ptr, opera...
-#include <utility>                                  // for pair
-#include <vector>                                   // for vector
+#include <algorithm>  // for any_of
+#include <cassert>    // for assert
+#include <memory>     // for unique_ptr, opera...
+#include <stddef.h>   // for size_t
+#include <utility>    // for pair
+#include <vector>     // for vector
 
-#include <stddef.h>                                 // for size_t
 #include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
 
 namespace algos::hyucc {

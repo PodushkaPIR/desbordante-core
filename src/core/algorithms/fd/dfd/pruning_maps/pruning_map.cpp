@@ -1,14 +1,14 @@
 #include "pruning_map.h"
 
-#include <memory>                                   // for unique_ptr
-#include <utility>                                  // for pair, make_pair
-#include <vector>                                   // for vector
+#include <memory>    // for unique_ptr
+#include <stddef.h>  // for size_t
+#include <utility>   // for pair, make_pair
+#include <vector>    // for vector
 
 #include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
-#include <stddef.h>                                 // for size_t
 
-#include "table/relational_schema.h"                // for RelationalSchema
-#include "table/vertical.h"                         // for Vertical
+#include "table/relational_schema.h"  // for RelationalSchema
+#include "table/vertical.h"           // for Vertical
 
 PruningMap::PruningMap(RelationalSchema const* schema) {
     for (auto const& column : schema->GetColumns()) {

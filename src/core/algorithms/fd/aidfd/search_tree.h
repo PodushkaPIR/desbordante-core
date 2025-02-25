@@ -1,8 +1,8 @@
 #pragma once
 
-#include <stddef.h>                                 // for size_t
-#include <functional>                               // for function
-#include <memory>                                   // for shared_ptr, weak_ptr
+#include <functional>  // for function
+#include <memory>      // for shared_ptr, weak_ptr
+#include <stddef.h>    // for size_t
 #include <utility>
 
 #include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset

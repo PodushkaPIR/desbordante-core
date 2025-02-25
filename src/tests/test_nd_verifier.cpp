@@ -1,8 +1,8 @@
-#include <limits.h>                                 // for UINT_MAX
-#include <memory>                                   // for unique_ptr
-#include <utility>                                  // for move, pair
+#include <limits.h>  // for UINT_MAX
+#include <memory>    // for unique_ptr
+#include <utility>   // for move, pair
 
-#include <gtest/gtest.h>                            // for UnitTest, EXPECT_...
+#include <gtest/gtest.h>  // for UnitTest, EXPECT_...
 
 #include "algorithms/algo_factory.h"                // for CreateAndLoadAlgo...
 #include "algorithms/nd/nd.h"                       // for WeightType

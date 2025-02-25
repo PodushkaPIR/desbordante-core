@@ -1,8 +1,8 @@
 #pragma once
 
-#include <cstddef>                                          // for size_t, byte
+#include <cstddef>  // for size_t, byte
 #include <functional>
-#include <memory>                                           // for unique_ptr
+#include <memory>  // for unique_ptr
 #include <vector>
 
 #include <enum.h>
@@ -13,11 +13,16 @@
 #include "bin_operation_enum.h"
 #include "config/tabular_data/input_table_type.h"
 #include "model/table/column_layout_typed_relation_data.h"
-#include "numeric_type.h"                                   // for INumericType
+#include "numeric_type.h"  // for INumericType
 #include "ranges_collection.h"
 
-namespace algos { struct ACException; }
-namespace model { class TypedColumnData; }
+namespace algos {
+struct ACException;
+}
+
+namespace model {
+class TypedColumnData;
+}
 
 namespace algos {
 

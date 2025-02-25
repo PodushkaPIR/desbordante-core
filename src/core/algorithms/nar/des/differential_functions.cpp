@@ -1,10 +1,9 @@
 #include "differential_functions.h"
 
-#include <algorithm>              // for clamp
-#include <set>                    // for set, operator==
-#include <stdexcept>              // for logic_error
-
-#include <assert.h>               // for assert
+#include <algorithm>  // for clamp
+#include <assert.h>   // for assert
+#include <set>        // for set, operator==
+#include <stdexcept>  // for logic_error
 
 #include "nar/des/encoded_nar.h"  // for EncodedNAR
 #include "nar/des/enums.h"        // for DifferentialStrategy

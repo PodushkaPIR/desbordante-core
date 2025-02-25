@@ -1,19 +1,18 @@
 #include "ucc_verifier.h"
 
-#include <functional>                                // for function
-#include <numeric>                                   // for iota
-#include <stdexcept>                                 // for runtime_error
-#include <string_view>                               // for basic_string_view
-#include <utility>                                   // for move
+#include <bits/chrono.h>  // for duration_cast
+#include <functional>     // for function
+#include <numeric>        // for iota
+#include <stdexcept>      // for runtime_error
+#include <string_view>    // for basic_string_view
+#include <utility>        // for move
 
-#include <bits/chrono.h>                             // for duration_cast
-
-#include "algorithm.h"                               // for Algorithm
-#include "common_option.h"                           // for CommonOption
-#include "config/equal_nulls/option.h"               // for kEqualNullsOpt
-#include "config/indices/option.h"                   // for IndicesOption
+#include "algorithm.h"                  // for Algorithm
+#include "common_option.h"              // for CommonOption
+#include "config/equal_nulls/option.h"  // for kEqualNullsOpt
+#include "config/indices/option.h"      // for IndicesOption
+#include "config/names_and_descriptions.h"
 #include "config/option_using.h"                     // for DESBORDANTE_OPTI...
-#include "config/names_and_descriptions.h" 
 #include "config/tabular_data/input_table/option.h"  // for kTableOpt
 #include "indices/type.h"                            // for IndicesType
 #include "table/column_data.h"                       // for ColumnData

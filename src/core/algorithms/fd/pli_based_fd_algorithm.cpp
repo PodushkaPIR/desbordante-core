@@ -1,9 +1,9 @@
 #include "pli_based_fd_algorithm.h"
 
-#include <stdexcept>                                 // for runtime_error
-#include <utility>                                   // for move
+#include <stdexcept>  // for runtime_error
+#include <utility>    // for move
 
-#include <boost/type_index/type_index_facade.hpp>    // for operator==
+#include <boost/type_index/type_index_facade.hpp>  // for operator==
 
 #include "common_option.h"                           // for CommonOption
 #include "config/equal_nulls/option.h"               // for kEqualNullsOpt

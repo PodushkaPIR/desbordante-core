@@ -1,9 +1,9 @@
-#include <algorithm>                               // for sort
-#include <memory>                                  // for unique_ptr
-#include <vector>                                  // for vector
+#include <algorithm>  // for sort
+#include <memory>     // for unique_ptr
+#include <stddef.h>   // for size_t
+#include <vector>     // for vector
 
-#include <gtest/gtest.h>                           // for UnitTest, EXPECT_EQ
-#include <stddef.h>                                // for size_t
+#include <gtest/gtest.h>  // for UnitTest, EXPECT_EQ
 
 #include "algorithms/algo_factory.h"               // for CreateAndLoadAlgor...
 #include "algorithms/od/fastod/fastod.h"           // for Fastod

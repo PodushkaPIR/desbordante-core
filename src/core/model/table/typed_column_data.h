@@ -1,31 +1,33 @@
 #pragma once
 
-#include <algorithm>                                      // for find, fill
-#include <bitset>                                         // for bitset
-#include <cstddef>                                        // for size_t, byte
-#include <functional>                                     // for function
-#include <map>                                            // for operator==
-#include <memory>                                         // for unique_ptr
-#include <string>                                         // for basic_string
-#include <unordered_map>                                  // for unordered_map
-#include <unordered_set>                                  // for unordered_set
-#include <utility>                                        // for pair, move
-#include <vector>                                         // for vector
+#include <algorithm>      // for find, fill
+#include <bitset>         // for bitset
+#include <cstddef>        // for size_t, byte
+#include <functional>     // for function
+#include <map>            // for operator==
+#include <memory>         // for unique_ptr
+#include <string>         // for basic_string
+#include <unordered_map>  // for unordered_map
+#include <unordered_set>  // for unordered_set
+#include <utility>        // for pair, move
+#include <vector>         // for vector
 
-#include <boost/date_time/gregorian/parsers.hpp>          // for from_simple...
+#include <boost/date_time/gregorian/parsers.hpp>  // for from_simple...
 #include <boost/regex.hpp>
 
-#include "abstract_column_data.h"                         // for AbstractCol...
-#include "builtin.h"                                      // for TypeId, ope...
-#include "date_type.h"                                    // for DateType
-#include "empty_type.h"                                   // for EmptyType
-#include "mixed_type.h"                                   // for MixedType
-#include "null_type.h"                                    // for NullType
-#include "string_type.h"                                  // for StringType
-#include "table/column.h"                                 // for Column
-#include "type.h"                                         // for Type
+#include "abstract_column_data.h"  // for AbstractCol...
+#include "builtin.h"               // for TypeId, ope...
+#include "date_type.h"             // for DateType
+#include "empty_type.h"            // for EmptyType
+#include "mixed_type.h"            // for MixedType
+#include "null_type.h"             // for NullType
+#include "string_type.h"           // for StringType
+#include "table/column.h"          // for Column
+#include "type.h"                  // for Type
 
-namespace model { class IDatasetStream; }
+namespace model {
+class IDatasetStream;
+}
 
 namespace model {
 

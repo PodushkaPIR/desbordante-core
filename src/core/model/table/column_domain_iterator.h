@@ -5,12 +5,12 @@
  */
 #pragma once
 
-#include <compare>          // for operator>
-#include <functional>       // for reference_wrapper
-#include <memory>           // for unique_ptr
-#include <queue>            // for priority_queue
-#include <string>           // for operator<=>
-#include <vector>           // for vector
+#include <compare>     // for operator>
+#include <functional>  // for reference_wrapper
+#include <memory>      // for unique_ptr
+#include <queue>       // for priority_queue
+#include <string>      // for operator<=>
+#include <vector>      // for vector
 
 #include "column_domain.h"  // for ColumnDomain, DomainPartition
 

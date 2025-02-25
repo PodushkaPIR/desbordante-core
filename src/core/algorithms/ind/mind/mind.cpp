@@ -5,20 +5,20 @@
  */
 #include "mind.h"
 
-#include <algorithm>                                // for for_each
-#include <cmath>                                    // for floor
-#include <functional>                               // for invoke
-#include <iterator>                                 // for next, prev
-#include <list>                                     // for _List_const_iterator
-#include <string>                                   // for operator+, operat...
-#include <unordered_set>                            // for unordered_set
-#include <utility>                                  // for move
-#include <vector>                                   // for vector
+#include <algorithm>      // for for_each
+#include <assert.h>       // for assert
+#include <cmath>          // for floor
+#include <functional>     // for invoke
+#include <iterator>       // for next, prev
+#include <list>           // for _List_const_iterator
+#include <string>         // for operator+, operat...
+#include <unordered_set>  // for unordered_set
+#include <utility>        // for move
+#include <vector>         // for vector
 
-#include <assert.h>                                 // for assert
-#include <boost/container_hash/hash.hpp>            // for hash
-#include <boost/type_index.hpp>                     // for type_id
-#include <boost/type_index/type_index_facade.hpp>   // for operator==
+#include <boost/container_hash/hash.hpp>           // for hash
+#include <boost/type_index.hpp>                    // for type_id
+#include <boost/type_index/type_index_facade.hpp>  // for operator==
 
 #include "algorithm.h"                              // for Algorithm
 #include "algorithm_types.h"                        // for AlgorithmType
@@ -40,7 +40,9 @@
 #include "tabular_data/input_table_type.h"          // for InputTable
 #include "util/timed_invoke.h"                      // for TimedInvoke
 
-namespace boost { class any; }
+namespace boost {
+class any;
+}
 
 namespace algos {
 

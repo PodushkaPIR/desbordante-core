@@ -1,10 +1,9 @@
 #pragma once
 
-#include <memory>                                             // for unique_ptr
-#include <vector>                                             // for vector
-
-#include <assert.h>                                           // for assert
-#include <stddef.h>                                           // for size_t
+#include <assert.h>  // for assert
+#include <memory>    // for unique_ptr
+#include <stddef.h>  // for size_t
+#include <vector>    // for vector
 
 #include "algorithms/algorithm.h"                             // for Algorithm
 #include "algorithms/fd/pfd_verifier/pfd_stats_calculator.h"  // for PFDStat...

@@ -1,6 +1,6 @@
 #include "dependencies_map.h"
 
-#include <utility>                            // for pair
+#include <utility>  // for pair
 
 #include "custom_hashes.h"                    // for hash
 #include "fd/dfd/pruning_maps/pruning_map.h"  // for PruningMap

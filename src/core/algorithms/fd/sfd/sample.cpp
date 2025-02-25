@@ -1,14 +1,13 @@
 #include "sample.h"
 
-#include <algorithm>                  // for min
-#include <cmath>                      // for pow, sqrt, log
-#include <numbers>                    // for pi
-#include <random>                     // for uniform_int_distribution, mt19937
-#include <string>                     // for hash, operator==, string, opera...
-#include <unordered_set>              // for unordered_set
-#include <vector>                     // for vector, erase_if
-
-#include <bits/chrono.h>              // for duration, high_resolution_clock
+#include <algorithm>      // for min
+#include <bits/chrono.h>  // for duration, high_resolution_clock
+#include <cmath>          // for pow, sqrt, log
+#include <numbers>        // for pi
+#include <random>         // for uniform_int_distribution, mt19937
+#include <string>         // for hash, operator==, string, opera...
+#include <unordered_set>  // for unordered_set
+#include <vector>         // for vector, erase_if
 
 #include "frequency_handler.h"        // for FrequencyHandler
 #include "model/table/tuple_index.h"  // for TupleIndex

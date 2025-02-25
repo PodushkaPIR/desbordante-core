@@ -1,11 +1,11 @@
 #include "faida.h"
 
+#include <bits/chrono.h>
 #include <list>
 #include <map>
 #include <string_view>
 #include <unordered_set>
 
-#include <bits/chrono.h>
 #include <boost/type_index/type_index_facade.hpp>
 #include <easylogging++.h>
 

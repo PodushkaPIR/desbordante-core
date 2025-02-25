@@ -4,12 +4,12 @@
 //
 #include "column_layout_relation_data.h"
 
-#include <memory>                       // for make_unique, unique_ptr, __sh...
-#include <string>                       // for hash, string, operator==
-#include <unordered_map>                // for unordered_map, operator==
-#include <utility>                      // for move, pair
+#include <memory>         // for make_unique, unique_ptr, __sh...
+#include <string>         // for hash, string, operator==
+#include <unordered_map>  // for unordered_map, operator==
+#include <utility>        // for move, pair
 
-#include <easylogging++.h>              // for Writer, CWARNING, LOG
+#include <easylogging++.h>  // for Writer, CWARNING, LOG
 
 #include "table/column.h"               // for Column
 #include "table/column_data.h"          // for ColumnData

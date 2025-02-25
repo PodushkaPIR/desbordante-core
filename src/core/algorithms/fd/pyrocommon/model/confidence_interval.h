@@ -1,10 +1,10 @@
 #pragma once
 
-#include <ostream>                                 // for basic_ios::imbue
+#include <ostream>  // for basic_ios::imbue
 #include <string>
 
 #include <boost/format.hpp>
-#include <boost/optional/optional.hpp>             // for get_pointer
+#include <boost/optional/optional.hpp>  // for get_pointer
 
 namespace model {
 

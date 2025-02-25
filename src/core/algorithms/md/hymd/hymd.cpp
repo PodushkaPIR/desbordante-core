@@ -1,6 +1,8 @@
 #include "algorithms/md/hymd/hymd.h"
 
 #include <algorithm>
+#include <assert.h>
+#include <bits/chrono.h>
 #include <cstddef>
 #include <functional>
 #include <limits>
@@ -10,8 +12,6 @@
 #include <string_view>
 #include <utility>
 
-#include <assert.h>
-#include <bits/chrono.h>
 #include <boost/type_index/type_index_facade.hpp>
 
 #include "algorithms/md/hymd/lattice/cardinality/min_picking_level_getter.h"

@@ -1,15 +1,15 @@
 #include "algorithms/ucc/pyroucc/pyroucc.h"
 
-#include <functional>                                       // for function
-#include <stdexcept>                                        // for runtime_e...
-#include <string>                                           // for char_traits
-#include <string_view>                                      // for basic_str...
-#include <utility>                                          // for move
-#include <vector>                                           // for vector
+#include <bits/chrono.h>  // for duration_...
+#include <functional>     // for function
+#include <stdexcept>      // for runtime_e...
+#include <string>         // for char_traits
+#include <string_view>    // for basic_str...
+#include <utility>        // for move
+#include <vector>         // for vector
 
-#include <bits/chrono.h>                                    // for duration_...
-#include <easylogging++.h>                                  // for Writer
-#include <boost/type_index/type_index_facade.hpp>           // for operator==
+#include <boost/type_index/type_index_facade.hpp>  // for operator==
+#include <easylogging++.h>                         // for Writer
 
 #include "algorithms/fd/pyrocommon/core/key_g1_strategy.h"  // for KeyG1Stra...
 #include "common_option.h"                                  // for CommonOption

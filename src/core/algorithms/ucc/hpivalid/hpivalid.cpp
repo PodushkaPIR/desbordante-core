@@ -1,13 +1,13 @@
 #include "algorithms/ucc/hpivalid/hpivalid.h"
 
-#include <deque>                                       // for deque
-#include <list>                                        // for _List_const_it...
-#include <stdexcept>                                   // for runtime_error
-#include <utility>                                     // for move
-#include <vector>                                      // for vector
+#include <deque>      // for deque
+#include <list>       // for _List_const_it...
+#include <stdexcept>  // for runtime_error
+#include <utility>    // for move
+#include <vector>     // for vector
 
-#include <boost/move/utility_core.hpp>                 // for move
-#include <easylogging++.h>                             // for Writer, LOG
+#include <boost/move/utility_core.hpp>  // for move
+#include <easylogging++.h>              // for Writer, LOG
 
 #include "algorithms/fd/hycommon/preprocessor.h"       // for BuildInvertedPlis
 #include "algorithms/ucc/hpivalid/config.h"            // for Config

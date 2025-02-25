@@ -4,9 +4,8 @@
  * Spider algorithm class definition
  */
 #pragma once
+#include <stddef.h>  // for size_t
 #include <vector>
-
-#include <stddef.h>                        // for size_t
 
 #include "algorithms/ind/ind_algorithm.h"
 #include "config/equal_nulls/type.h"

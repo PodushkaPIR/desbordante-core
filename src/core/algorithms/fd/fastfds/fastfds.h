@@ -1,9 +1,9 @@
 #pragma once
 
-#include <functional>                              // for function
-#include <optional>                                // for optional, nullopt
-#include <set>                                     // for set
-#include <vector>                                  // for vector
+#include <functional>  // for function
+#include <optional>    // for optional, nullopt
+#include <set>         // for set
+#include <vector>      // for vector
 
 #include "algorithms/fd/pli_based_fd_algorithm.h"  // for PliBasedFDAlgorithm
 #include "config/thread_number/type.h"             // for ThreadNumType

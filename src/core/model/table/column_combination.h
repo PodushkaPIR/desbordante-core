@@ -1,11 +1,11 @@
 #pragma once
 
-#include <algorithm>       // for equal
-#include <cstddef>         // for size_t
-#include <numeric>         // for accumulate
-#include <string>          // for string
-#include <utility>         // for move
-#include <vector>          // for vector, operator==
+#include <algorithm>  // for equal
+#include <cstddef>    // for size_t
+#include <numeric>    // for accumulate
+#include <string>     // for string
+#include <utility>    // for move
+#include <vector>     // for vector, operator==
 
 #include "arity_index.h"   // for ArityIndex
 #include "column_index.h"  // for ColumnIndex

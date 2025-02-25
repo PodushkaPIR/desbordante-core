@@ -1,12 +1,12 @@
 #include "algorithms/md/hymd/indexes/records_info.h"
 
-#include <string>                                                // for string
-#include <vector>                                                // for vector
+#include <string>  // for string
+#include <vector>  // for vector
 
-#include <boost/container_hash/hash.hpp>                         // for hash
-#include <boost/unordered/detail/foa/table.hpp>                  // for tabl...
-#include <boost/unordered/unordered_flat_map.hpp>                // for unor...
-#include <easylogging++.h>                                       // for Writer
+#include <boost/container_hash/hash.hpp>           // for hash
+#include <boost/unordered/detail/foa/table.hpp>    // for tabl...
+#include <boost/unordered/unordered_flat_map.hpp>  // for unor...
+#include <easylogging++.h>                         // for Writer
 
 #include "algorithms/md/hymd/indexes/global_value_identifier.h"  // for Glob...
 #include "index.h"                                               // for Index

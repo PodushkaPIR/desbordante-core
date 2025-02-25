@@ -6,7 +6,9 @@
 
 #include "node.h"
 
-namespace model { class TransactionalData; }
+namespace model {
+class TransactionalData;
+}
 
 namespace algos {
 

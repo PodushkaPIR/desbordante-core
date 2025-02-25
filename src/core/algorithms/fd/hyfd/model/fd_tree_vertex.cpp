@@ -1,8 +1,8 @@
 #include "fd_tree_vertex.h"
 
-#include <assert.h>     // for assert
-#include <algorithm>    // for all_of
-#include <vector>       // for vector
+#include <algorithm>  // for all_of
+#include <assert.h>   // for assert
+#include <vector>     // for vector
 
 #include "fd/raw_fd.h"  // for RawFD
 

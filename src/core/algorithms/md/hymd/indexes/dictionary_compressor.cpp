@@ -1,7 +1,7 @@
 #include "algorithms/md/hymd/indexes/dictionary_compressor.h"
 
-#include <cstddef>                                      // for size_t
-#include <utility>                                      // for move
+#include <cstddef>  // for size_t
+#include <utility>  // for move
 
 #include "md/hymd/compressed_record.h"                  // for CompressedRecord
 #include "md/hymd/indexes/keyed_position_list_index.h"  // for KeyedPosition...

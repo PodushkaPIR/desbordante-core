@@ -7,10 +7,10 @@
 #include <boost/unordered/detail/implementation.hpp>  // for iterator
 
 #include "algorithms/cfd/util/set_util.h"
-#include "cfd/model/cfd_column_data.h"                // for CFDColumnData
-#include "cfd/model/cfd_types.h"                      // for Transaction, Item
-#include "table/column.h"                             // for Column
-#include "table/idataset_stream.h"                    // for IDatasetStream
+#include "cfd/model/cfd_column_data.h"  // for CFDColumnData
+#include "cfd/model/cfd_types.h"        // for Transaction, Item
+#include "table/column.h"               // for Column
+#include "table/idataset_stream.h"      // for IDatasetStream
 
 // see algorithms/cfd/LICENSE
 

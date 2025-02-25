@@ -1,6 +1,6 @@
 #pragma once
 
-#include <vector>                                  // for vector
+#include <vector>  // for vector
 
 #include "algorithms/ind/faida/util/simple_ind.h"  // for SimpleIND
 

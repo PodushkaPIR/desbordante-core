@@ -2,8 +2,8 @@
 
 #include <algorithm>
 #include <cassert>
-#include <iterator>                          // for next
-#include <utility>                           // for move, pair
+#include <iterator>  // for next
+#include <utility>   // for move, pair
 
 #include "association_rules/node.h"          // for Node
 #include "transaction/itemset.h"             // for Itemset

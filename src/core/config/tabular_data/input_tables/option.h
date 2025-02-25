@@ -1,7 +1,7 @@
 #pragma once
 
-#include <limits>                                   // for numeric_limits
-#include <string_view>                              // for string_view
+#include <limits>       // for numeric_limits
+#include <string_view>  // for string_view
 
 #include "config/common_option.h"                   // for CommonOption
 #include "config/tabular_data/input_tables_type.h"  // for InputTables

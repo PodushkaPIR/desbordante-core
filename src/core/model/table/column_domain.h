@@ -5,25 +5,26 @@
  */
 #pragma once
 
-#include <cassert>                      // for assert
-#include <filesystem>                   // for path
-#include <list>                         // for list, _List_iterator, operator==
-#include <memory>                       // for unique_ptr, shared_ptr
-#include <numeric>                      // for accumulate
-#include <set>                          // for set, _Rb_tree_const_iterator
-#include <string>                       // for basic_string, operator<=>
-#include <string_view>                  // for string_view
-#include <utility>                      // for move
-#include <vector>                       // for vector
-
-#include <stddef.h>                     // for size_t
+#include <cassert>      // for assert
+#include <filesystem>   // for path
+#include <list>         // for list, _List_iterator, operator==
+#include <memory>       // for unique_ptr, shared_ptr
+#include <numeric>      // for accumulate
+#include <set>          // for set, _Rb_tree_const_iterator
+#include <stddef.h>     // for size_t
+#include <string>       // for basic_string, operator<=>
+#include <string_view>  // for string_view
+#include <utility>      // for move
+#include <vector>       // for vector
 
 #include "config/mem_limit/type.h"      // for MemLimitMBType
 #include "config/thread_number/type.h"  // for ThreadNumType
 #include "table/column_index.h"         // for ColumnIndex
 #include "table/table_index.h"          // for TableIndex
 
-namespace model { class IDatasetStream; }
+namespace model {
+class IDatasetStream;
+}
 
 namespace model {
 

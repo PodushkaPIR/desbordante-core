@@ -6,17 +6,17 @@
 
 #include "ind_verifier.h"
 
-#include <functional>                                 // for function
-#include <memory>                                     // for __shared_ptr_ac...
-#include <set>                                        // for allocator, set
-#include <sstream>                                    // for char_traits
-#include <stdexcept>                                  // for runtime_error
-#include <string>                                     // for operator==, ope...
-#include <unordered_map>                              // for unordered_map
-#include <unordered_set>                              // for unordered_set
-#include <utility>                                    // for move
+#include <functional>     // for function
+#include <memory>         // for __shared_ptr_ac...
+#include <set>            // for allocator, set
+#include <sstream>        // for char_traits
+#include <stdexcept>      // for runtime_error
+#include <string>         // for operator==, ope...
+#include <unordered_map>  // for unordered_map
+#include <unordered_set>  // for unordered_set
+#include <utility>        // for move
 
-#include <boost/container_hash/hash.hpp>              // for hash
+#include <boost/container_hash/hash.hpp>  // for hash
 
 #include "algorithm.h"                                // for Algorithm
 #include "config/tabular_data/input_tables/option.h"  // for InputTablesOption

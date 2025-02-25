@@ -1,8 +1,8 @@
 #include "naivegfd_validation.h"
 
-#include <map>                                    // for map, operator==
-#include <string>                                 // for operator<=>, operat...
-#include <utility>                                // for pair
+#include <map>      // for map, operator==
+#include <string>   // for operator<=>, operat...
+#include <utility>  // for pair
 
 #include <boost/graph/adjacency_list.hpp>         // for target, source
 #include <boost/graph/detail/adjacency_list.hpp>  // for num_vertices, in_de...
@@ -13,7 +13,7 @@
 #include <boost/tuple/detail/tuple_basic.hpp>     // for get
 #include <easylogging++.h>                        // for Writer, CDEBUG, LOG
 
-#include "gfd.h"                                  // for Gfd, Literal
+#include "gfd.h"  // for Gfd, Literal
 
 namespace {
 
@@ -41,7 +41,7 @@ public:
     bool operator()(CorrespondenceMap1To2 f, CorrespondenceMap2To1) const {
         amount_++;
         auto satisfied = [this, &f](std::vector<Literal> const& literals) {
-            for (const Literal& l : literals) {
+            for (Literal const& l : literals) {
                 auto fst_token = l.first;
                 auto snd_token = l.second;
                 std::string fst;

@@ -1,11 +1,11 @@
 #pragma once
 
-#include <bit>                         // for rotl
-#include <cstddef>                     // for size_t
-#include <functional>                  // for equal_to
-#include <memory>                      // for shared_ptr, __shared_ptr_access
-#include <string_view>                 // for hash
-#include <utility>                     // for move
+#include <bit>          // for rotl
+#include <cstddef>      // for size_t
+#include <functional>   // for equal_to
+#include <memory>       // for shared_ptr, __shared_ptr_access
+#include <string_view>  // for hash
+#include <utility>      // for move
 
 #include "simple_cc.h"                 // for SimpleCC, hash
 #include "table/arity_index.h"         // for ArityIndex

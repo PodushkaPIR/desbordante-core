@@ -1,10 +1,10 @@
 #include "config/thread_number/option.h"
 
-#include <thread>                // for thread
-#include <variant>               // for variant
+#include <thread>   // for thread
+#include <variant>  // for variant
 
-#include "common_option.h"       // for CommonOption
-#include "config/exceptions.h"   // for ConfigurationError
+#include "common_option.h"      // for CommonOption
+#include "config/exceptions.h"  // for ConfigurationError
 #include "config/names_and_descriptions.h"
 #include "thread_number/type.h"  // for ThreadNumType
 

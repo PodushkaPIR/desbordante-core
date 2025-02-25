@@ -1,22 +1,24 @@
 #pragma once
 
 #include <cstddef>
-#include <memory>                             // for unique_ptr
-#include <string>                             // for string
-#include <unordered_map>                      // for unordered_map
+#include <memory>         // for unique_ptr
+#include <string>         // for string
+#include <unordered_map>  // for unordered_map
 #include <utility>
-#include <vector>                             // for vector
+#include <vector>  // for vector
 
 #include <boost/move/utility_core.hpp>        // for move
 #include <boost/unordered/unordered_map.hpp>  // for unordered_map
 
-#include "cfd/model/raw_cfd.h"                // for AttributeIndex
+#include "cfd/model/raw_cfd.h"  // for AttributeIndex
 #include "cfd_column_data.h"
 #include "cfd_types.h"
 #include "model/table/relation_data.h"
-#include "table/relational_schema.h"          // for RelationalSchema
+#include "table/relational_schema.h"  // for RelationalSchema
 
-namespace model { class IDatasetStream; }
+namespace model {
+class IDatasetStream;
+}
 
 // see algorithms/cfd/LICENSE
 

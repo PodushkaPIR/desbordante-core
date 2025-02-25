@@ -1,11 +1,12 @@
 #pragma once
 
-#include <enum.h>                                    // for _iterable
-#include <cstddef>                                   // for byte
-#include <memory>                                    // for unique_ptr, shar...
-#include <string>                                    // for string
-#include <unordered_map>                             // for unordered_map
-#include <vector>                                    // for vector
+#include <cstddef>        // for byte
+#include <memory>         // for unique_ptr, shar...
+#include <string>         // for string
+#include <unordered_map>  // for unordered_map
+#include <vector>         // for vector
+
+#include <enum.h>  // for _iterable
 
 #include "algorithms/algorithm.h"                    // for Algorithm
 #include "algorithms/metric/aliases.h"               // for DistanceFunction
@@ -17,12 +18,35 @@
 #include "config/tabular_data/input_table_type.h"    // for InputTable
 
 class ColumnLayoutRelationData;
-namespace algos { namespace metric { struct Highlight; } }
-namespace algos { namespace metric { template <typename T> struct IndexedPoint; } }
-namespace model { class ColumnLayoutTypedRelationData; }
-namespace model { class StringType; }
-namespace util { class QGramVector; }
-namespace util { struct Point; }
+
+namespace algos {
+namespace metric {
+struct Highlight;
+}
+}  // namespace algos
+
+namespace algos {
+namespace metric {
+template <typename T>
+struct IndexedPoint;
+}
+}  // namespace algos
+
+namespace model {
+class ColumnLayoutTypedRelationData;
+}
+
+namespace model {
+class StringType;
+}
+
+namespace util {
+class QGramVector;
+}
+
+namespace util {
+struct Point;
+}
 
 namespace algos::metric {
 

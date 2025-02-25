@@ -1,12 +1,12 @@
 #pragma once
 
-#include <memory>                                   // for unique_ptr
-#include <vector>                                   // for vector
+#include <memory>    // for unique_ptr
+#include <stddef.h>  // for size_t
+#include <vector>    // for vector
 
 #include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
-#include <stddef.h>                                 // for size_t
 
-#include "ucc_tree_vertex.h"                        // for UCCTreeVertex
+#include "ucc_tree_vertex.h"  // for UCCTreeVertex
 
 namespace algos::hyucc {
 

@@ -1,13 +1,13 @@
 #pragma once
 
-#include <algorithm>                                      // for min
-#include <cstddef>                                        // for size_t
-#include <unordered_map>                                  // for unordered_map
-#include <utility>                                        // for pair
-#include <vector>                                         // for vector
+#include <algorithm>      // for min
+#include <cstddef>        // for size_t
+#include <unordered_map>  // for unordered_map
+#include <utility>        // for pair
+#include <vector>         // for vector
 
-#include <boost/dynamic_bitset/dynamic_bitset.hpp>        // for dynamic_bitset
-#include <boost/unordered/detail/foa/table.hpp>           // for operator==
+#include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
+#include <boost/unordered/detail/foa/table.hpp>     // for operator==
 
 #include "algorithms/md/hymd/column_match_info.h"         // for ColumnMatch...
 #include "algorithms/md/hymd/indexes/records_info.h"      // for RecordsInfo
@@ -27,9 +27,25 @@
 #include "md/hymd/md_element.h"                           // for MdElement
 #include "model/index.h"                                  // for Index
 
-namespace algos { namespace hymd { namespace lattice { class MdLattice; } } }
-namespace algos { namespace hymd { namespace lattice { struct ValidationInfo; } } }
-namespace util { class WorkerThreadPool; }
+namespace algos {
+namespace hymd {
+namespace lattice {
+class MdLattice;
+}
+}  // namespace hymd
+}  // namespace algos
+
+namespace algos {
+namespace hymd {
+namespace lattice {
+struct ValidationInfo;
+}
+}  // namespace hymd
+}  // namespace algos
+
+namespace util {
+class WorkerThreadPool;
+}
 
 namespace algos::hymd {
 

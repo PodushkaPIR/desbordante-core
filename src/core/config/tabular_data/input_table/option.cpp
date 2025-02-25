@@ -1,10 +1,10 @@
 #include "config/tabular_data/input_table/option.h"
 
-#include <memory>                           // for operator==
-#include <optional>                         // for nullopt
-#include <variant>                          // for variant
+#include <memory>    // for operator==
+#include <optional>  // for nullopt
+#include <variant>   // for variant
 
-#include "common_option.h"                  // for CommonOption
+#include "common_option.h"  // for CommonOption
 #include "config/names_and_descriptions.h"
 #include "exceptions.h"                     // for ConfigurationError
 #include "tabular_data/input_table_type.h"  // for InputTable

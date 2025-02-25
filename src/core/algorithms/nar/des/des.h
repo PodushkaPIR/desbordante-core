@@ -1,9 +1,8 @@
 #pragma once
 
-#include <memory>                                     // for shared_ptr
-#include <vector>                                     // for vector
-
-#include <stddef.h>                                   // for size_t
+#include <memory>    // for shared_ptr
+#include <stddef.h>  // for size_t
+#include <vector>    // for vector
 
 #include "algorithms/nar/nar_algorithm.h"             // for NARAlgorithm
 #include "differential_functions.h"                   // for DifferentialOpt...

@@ -1,10 +1,10 @@
 #pragma once
 
-#include <cstddef>                // for byte, size_t
-#include <ostream>                // for ostream
-#include <string>                 // for string
-#include <utility>                // for pair
-#include <vector>                 // for vector
+#include <cstddef>  // for byte, size_t
+#include <ostream>  // for ostream
+#include <string>   // for string
+#include <utility>  // for pair
+#include <vector>   // for vector
 
 #include "model/types/builtin.h"  // for TypeId
 

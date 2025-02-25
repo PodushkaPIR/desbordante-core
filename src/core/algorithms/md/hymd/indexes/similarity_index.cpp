@@ -1,7 +1,7 @@
 #include "algorithms/md/hymd/indexes/similarity_index.h"
 
-#include <iterator>                              // for reverse_iterator
-#include <ranges>                                // for operator|, reverse
+#include <iterator>  // for reverse_iterator
+#include <ranges>    // for operator|, reverse
 
 #include "md/hymd/column_classifier_value_id.h"  // for ColumnClassifierValueId
 

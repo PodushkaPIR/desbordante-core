@@ -1,7 +1,7 @@
 #include "key_g1_strategy.h"
 
-#include <variant>                                   // for get, holds_alter...
-#include <vector>                                    // for vector
+#include <variant>  // for get, holds_alter...
+#include <vector>   // for vector
 
 #include "../model/pli_cache.h"                      // for PLICache
 #include "fd/pyrocommon/core/dependency_consumer.h"  // for DependencyConsumer

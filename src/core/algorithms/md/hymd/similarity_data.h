@@ -15,8 +15,17 @@
 #include "md/hymd/indexes/column_similarity_info.h"
 #include "model/index.h"
 
-namespace algos { namespace hymd { namespace indexes { class DictionaryCompressor; } } }
-namespace util { class WorkerThreadPool; }
+namespace algos {
+namespace hymd {
+namespace indexes {
+class DictionaryCompressor;
+}
+}  // namespace hymd
+}  // namespace algos
+
+namespace util {
+class WorkerThreadPool;
+}
 
 namespace algos::hymd {
 

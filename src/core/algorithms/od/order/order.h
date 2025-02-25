@@ -1,8 +1,8 @@
 #pragma once
 
-#include <memory>                                           // for unique_ptr
-#include <unordered_map>                                    // for unordered...
-#include <vector>                                           // for vector
+#include <memory>         // for unique_ptr
+#include <unordered_map>  // for unordered...
+#include <vector>         // for vector
 
 #include "algorithms/algorithm.h"                           // for Algorithm
 #include "config/tabular_data/input_table_type.h"           // for InputTable

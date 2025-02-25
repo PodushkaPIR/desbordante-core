@@ -1,13 +1,15 @@
 #pragma once
 
-#include <cstddef>                    // for size_t
-#include <string>                     // for hash, string
-#include <unordered_map>              // for unordered_map
-#include <vector>                     // for vector
+#include <cstddef>        // for size_t
+#include <string>         // for hash, string
+#include <unordered_map>  // for unordered_map
+#include <vector>         // for vector
 
 #include "model/table/tuple_index.h"  // for TupleIndex
 
-namespace model { class TypedColumnData; }
+namespace model {
+class TypedColumnData;
+}
 
 namespace algos::dd {
 using ClusterIndex = std::size_t;

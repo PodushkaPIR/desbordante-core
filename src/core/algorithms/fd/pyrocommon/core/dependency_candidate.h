@@ -1,8 +1,8 @@
 #pragma once
 
-#include <iosfwd>                          // for ostream
-#include <string>                          // for allocator, char_traits
-#include <utility>                         // for move
+#include <iosfwd>   // for ostream
+#include <string>   // for allocator, char_traits
+#include <utility>  // for move
 
 #include "../model/confidence_interval.h"  // for ConfidenceInterval
 #include "model/table/vertical.h"          // for Vertical

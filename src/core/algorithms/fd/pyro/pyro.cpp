@@ -1,25 +1,25 @@
 #include "pyro.h"
 
-#include <bits/chrono.h>                                   // for duration_cast
-#include <boost/format/alt_sstream_impl.hpp>               // for basic_alts...
-#include <boost/format/format_class.hpp>                   // for basic_format
-#include <boost/format/format_fwd.hpp>                     // for format
-#include <boost/format/format_implementation.hpp>          // for basic_form...
-#include <boost/format/free_funcs.hpp>                     // for operator<<
-#include <boost/move/utility_core.hpp>                     // for move
-#include <boost/optional/optional.hpp>                     // for get_pointer
-#include <boost/type_index/type_index_facade.hpp>          // for operator==
-#include <easylogging++.h>                                 // for Writer, LOG
+#include <bits/chrono.h>  // for duration_cast
+#include <functional>     // for function, ref
+#include <mutex>          // for mutex, sco...
+#include <ostream>        // for basic_ios:...
+#include <stdexcept>      // for runtime_error
+#include <string>         // for char_traits
+#include <string_view>    // for basic_stri...
+#include <thread>         // for thread
+#include <utility>        // for move
+#include <vector>         // for vector
 
-#include <functional>                                      // for function, ref
-#include <mutex>                                           // for mutex, sco...
-#include <ostream>                                         // for basic_ios:...
-#include <stdexcept>                                       // for runtime_error
-#include <string>                                          // for char_traits
-#include <string_view>                                     // for basic_stri...
-#include <thread>                                          // for thread
-#include <utility>                                         // for move
-#include <vector>                                          // for vector
+#include <boost/format/alt_sstream_impl.hpp>       // for basic_alts...
+#include <boost/format/format_class.hpp>           // for basic_format
+#include <boost/format/format_fwd.hpp>             // for format
+#include <boost/format/format_implementation.hpp>  // for basic_form...
+#include <boost/format/free_funcs.hpp>             // for operator<<
+#include <boost/move/utility_core.hpp>             // for move
+#include <boost/optional/optional.hpp>             // for get_pointer
+#include <boost/type_index/type_index_facade.hpp>  // for operator==
+#include <easylogging++.h>                         // for Writer, LOG
 
 #include "algorithms/fd/pyrocommon/core/fd_g1_strategy.h"  // for FdG1Strategy
 #include "common_option.h"                                 // for CommonOption

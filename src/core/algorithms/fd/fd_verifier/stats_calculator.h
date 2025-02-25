@@ -1,13 +1,12 @@
 #pragma once
 
-#include <functional>                             // for function
-#include <memory>                                 // for shared_ptr
-#include <string>                                 // for string
-#include <unordered_map>                          // for unordered_map
-#include <utility>                                // for move
-#include <vector>                                 // for vector
-
-#include <stddef.h>                               // for size_t
+#include <functional>     // for function
+#include <memory>         // for shared_ptr
+#include <stddef.h>       // for size_t
+#include <string>         // for string
+#include <unordered_map>  // for unordered_map
+#include <utility>        // for move
+#include <vector>         // for vector
 
 #include "algorithms/fd/fd_verifier/highlight.h"  // for Highlight
 #include "builtin.h"                              // for CompareResult
@@ -15,7 +14,10 @@
 #include "table/position_list_index.h"            // for PLI
 
 class ColumnLayoutRelationData;
-namespace model { class ColumnLayoutTypedRelationData; }
+
+namespace model {
+class ColumnLayoutTypedRelationData;
+}
 
 namespace algos::fd_verifier {
 

@@ -1,8 +1,8 @@
 #include "validator_helpers.h"
 
-#include <utility>                                    // for move
+#include <utility>  // for move
 
-#include <boost/dynamic_bitset/dynamic_bitset.hpp>    // for dynamic_bitset
+#include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
 
 #include "algorithms/fd/hycommon/util/pli_util.h"     // for PLIUtil
 #include "algorithms/fd/hyfd/model/fd_tree_vertex.h"  // for LhsPair

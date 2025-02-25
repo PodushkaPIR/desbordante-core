@@ -1,18 +1,18 @@
 #include "fd_algorithm.h"
 
-#include <map>                                     // for map, _Rb_tree_iter...
-#include <vector>                                  // for vector
+#include <assert.h>  // for assert
+#include <map>       // for map, _Rb_tree_iter...
+#include <stddef.h>  // for size_t
+#include <vector>    // for vector
 
-#include <assert.h>                                // for assert
 #include <boost/type_index/type_index_facade.hpp>  // for operator==
-#include <stddef.h>                                // for size_t
 
-#include "algorithm.h"                             // for Algorithm
-#include "common_option.h"                         // for CommonOption
-#include "config/max_lhs/option.h"                 // for kMaxLhsOpt
-#include "fd/fd.h"                                 // for FD
-#include "primitive_collection.h"                  // for PrimitiveCollection
-#include "table/relational_schema.h"               // for RelationalSchema
+#include "algorithm.h"                // for Algorithm
+#include "common_option.h"            // for CommonOption
+#include "config/max_lhs/option.h"    // for kMaxLhsOpt
+#include "fd/fd.h"                    // for FD
+#include "primitive_collection.h"     // for PrimitiveCollection
+#include "table/relational_schema.h"  // for RelationalSchema
 
 namespace algos {
 

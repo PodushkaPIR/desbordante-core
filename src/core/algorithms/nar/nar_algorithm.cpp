@@ -1,11 +1,13 @@
 #include "nar_algorithm.h"
 
-#include <boost/type_index/type_index_facade.hpp>     // for operator==
-#include <stdexcept>                                  // for runtime_error
-#include <utility>                                    // for move
+#include <config/names_and_descriptions.h>
+#include <stdexcept>  // for runtime_error
+#include <utility>    // for move
+
+#include <boost/type_index/type_index_facade.hpp>  // for operator==
+
 #include "algorithm.h"                                // for Algorithm
 #include "common_option.h"                            // for CommonOption
-#include <config/names_and_descriptions.h>
 #include "config/option_using.h"                      // for DESBORDANTE_OPT...
 #include "config/tabular_data/input_table/option.h"   // for kTableOpt
 #include "nar/nar.h"                                  // for NAR

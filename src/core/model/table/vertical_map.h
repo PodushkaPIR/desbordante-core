@@ -1,20 +1,20 @@
 #pragma once
 
-#include <functional>                               // for function
-#include <iterator>                                 // for pair
-#include <memory>                                   // for shared_ptr, uniqu...
-#include <shared_mutex>                             // for shared_mutex
-#include <unordered_map>                            // for unordered_map
-#include <unordered_set>                            // for unordered_set
-#include <utility>                                  // for pair
-#include <vector>                                   // for vector
+#include <functional>     // for function
+#include <iterator>       // for pair
+#include <memory>         // for shared_ptr, uniqu...
+#include <shared_mutex>   // for shared_mutex
+#include <stddef.h>       // for size_t
+#include <unordered_map>  // for unordered_map
+#include <unordered_set>  // for unordered_set
+#include <utility>        // for pair
+#include <vector>         // for vector
 
 #include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
 #include <boost/move/utility_core.hpp>              // for move
-#include <stddef.h>                                 // for size_t
 
-#include "table/relational_schema.h"                // for RelationalSchema
-#include "table/vertical.h"                         // for Vertical
+#include "table/relational_schema.h"  // for RelationalSchema
+#include "table/vertical.h"           // for Vertical
 
 namespace model {
 

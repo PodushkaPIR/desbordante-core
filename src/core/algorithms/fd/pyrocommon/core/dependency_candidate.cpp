@@ -1,9 +1,9 @@
 #include "dependency_candidate.h"
 
-#include <ostream>                                    // for ostream, basic_ios
+#include <ostream>   // for ostream, basic_ios
+#include <stddef.h>  // for size_t
 
-#include <boost/dynamic_bitset/dynamic_bitset.hpp>    // for dynamic_bitset
-#include <stddef.h>                                   // for size_t
+#include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
 
 #include "fd/pyrocommon/model/confidence_interval.h"  // for ConfidenceInterval
 #include "table/vertical.h"                           // for Vertical

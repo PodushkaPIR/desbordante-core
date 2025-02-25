@@ -1,10 +1,10 @@
 #pragma once
 
-#include <memory>                  // for shared_ptr
-#include <string>                  // for allocator, char_traits, operator+
-#include <tuple>                   // for tuple
-#include <utility>                 // for move
-#include <vector>                  // for vector
+#include <memory>   // for shared_ptr
+#include <string>   // for allocator, char_traits, operator+
+#include <tuple>    // for tuple
+#include <utility>  // for move
+#include <vector>   // for vector
 
 #include "model/table/column.h"    // for Column
 #include "model/table/vertical.h"  // for Vertical
