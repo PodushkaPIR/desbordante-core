@@ -7,7 +7,6 @@
 #include <list>
 #include <memory>
 
-#include <bits/chrono.h>                            // for duration, duratio...
 #include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
 #include <easylogging++.h>
 #include <stddef.h>                                 // for size_t

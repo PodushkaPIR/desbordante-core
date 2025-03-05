@@ -6,7 +6,6 @@
 #include <stdexcept>                                  // for runtime_error
 
 #include <assert.h>                                   // for assert
-#include <bits/chrono.h>                              // for duration_cast
 #include <boost/dynamic_bitset/dynamic_bitset.hpp>    // for dynamic_bitset
 #include <boost/format.hpp>                
 #include <boost/optional/detail/optional_relops.hpp>  // for operator<=

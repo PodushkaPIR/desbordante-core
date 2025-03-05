@@ -6,7 +6,6 @@
 #include <string>                                        // for operator+
 #include <string_view>                                   // for basic_string...
 
-#include <bits/chrono.h>                                 // for duration_cast
 #include <boost/type_index/type_index_facade.hpp>        // for operator==
 #include <easylogging++.h>
 #include <stddef.h>                                      // for size_t

@@ -12,7 +12,6 @@
 #include <utility>
 
 #include <assert.h>                                          // for assert
-#include <bits/chrono.h>                                     // for duration...
 #include <boost/algorithm/string/classification.hpp>
 #include <boost/algorithm/string/detail/classification.hpp>  // for is_any_ofF
 #include <boost/algorithm/string/split.hpp>

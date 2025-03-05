@@ -7,7 +7,6 @@
 #include <list>                                       // for list, operator==
 #include <numeric>                                    // for iota
 
-#include <bits/chrono.h>                              // for duration, durat...
 #include <boost/type_index.hpp>                       // for type_id
 #include <boost/type_index/type_index_facade.hpp>     // for operator==
 

@@ -11,7 +11,6 @@
 #include <utility>
 
 #include <assert.h>
-#include <bits/chrono.h>
 #include <boost/type_index/type_index_facade.hpp>
 
 #include "algorithms/md/hymd/lattice/cardinality/min_picking_level_getter.h"

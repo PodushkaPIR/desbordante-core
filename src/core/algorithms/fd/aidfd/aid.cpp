@@ -4,7 +4,6 @@
 #include <stdexcept>                                 // for runtime_error
 #include <string>                                    // for string, hash
 
-#include <bits/chrono.h>                             // for duration_cast
 #include <boost/move/utility_core.hpp>               // for move
 #include <boost/type_index/type_index_facade.hpp>    // for operator==
 

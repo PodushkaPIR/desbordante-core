@@ -7,7 +7,6 @@
 #include <utility>                                  // for pair, make_pair
 #include <vector>                                   // for vector
 
-#include <bits/chrono.h>                            // for filesystem
 #include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
 #include <gmock/gmock.h>                            // for ContainerEq, Eq
 #include <gtest/gtest.h>                            // for TypedTestSuitePState

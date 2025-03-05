@@ -5,7 +5,6 @@
 #include <optional>                                          // for optional
 #include <utility>                                           // for pair, move
 
-#include <bits/chrono.h>                                     // for duration...
 #include <easylogging++.h>                                   // for Writer
 
 #include "algorithm.h"                                       // for Algorithm

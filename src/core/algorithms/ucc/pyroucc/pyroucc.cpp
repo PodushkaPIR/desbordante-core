@@ -7,7 +7,6 @@
 #include <utility>                                          // for move
 #include <vector>                                           // for vector
 
-#include <bits/chrono.h>                                    // for duration_...
 #include <easylogging++.h>                                  // for Writer
 #include <boost/type_index/type_index_facade.hpp>           // for operator==
 

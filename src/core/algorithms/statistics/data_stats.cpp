@@ -11,7 +11,6 @@
 #include <unordered_map>                             // for unordered_map
 #include <utility>                                   // for pair
 
-#include <bits/chrono.h>                             // for duration_cast
 #include <algorithm>                                 // for sort, nth_element
 #include <boost/asio/post.hpp>                       // for post
 #include <boost/asio/thread_pool.hpp>                // for thread_pool

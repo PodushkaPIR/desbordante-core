@@ -8,7 +8,6 @@
 #include <unordered_set>              // for unordered_set
 #include <vector>                     // for vector, erase_if
 
-#include <bits/chrono.h>              // for duration, high_resolution_clock
 
 #include "frequency_handler.h"        // for FrequencyHandler
 #include "model/table/tuple_index.h"  // for TupleIndex

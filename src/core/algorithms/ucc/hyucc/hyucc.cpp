@@ -4,7 +4,6 @@
 #include <stdexcept>                            // for runtime_error
 #include <utility>                              // for move
 
-#include <bits/chrono.h>                        // for duration_cast, operator-
 #include <easylogging++.h>                      // for Writer, CDEBUG, LOG
 #include <boost/move/utility_core.hpp>          // for move
 

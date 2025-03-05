@@ -6,7 +6,6 @@
 #include <vector>                                     // for vector
 
 #include <assert.h>                                   // for assert
-#include <bits/chrono.h>                              // for duration_cast
 #include <boost/container_hash/hash.hpp>              // for hash
 #include <boost/move/utility_core.hpp>                // for move
 #include <boost/unordered/detail/implementation.hpp>  // for iterator

@@ -1,6 +1,5 @@
 #include "pyro.h"
 
-#include <bits/chrono.h>                                   // for duration_cast
 #include <boost/format/alt_sstream_impl.hpp>               // for basic_alts...
 #include <boost/format/format_class.hpp>                   // for basic_format
 #include <boost/format/format_fwd.hpp>                     // for format

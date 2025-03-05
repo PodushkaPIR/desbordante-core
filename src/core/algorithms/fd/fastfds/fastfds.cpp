@@ -9,7 +9,6 @@
 #include <utility>                                 // for move
 
 #include <assert.h>                                // for assert
-#include <bits/chrono.h>                           // for duration_cast, ope...
 #include <boost/asio/post.hpp>                     // for post
 #include <boost/asio/thread_pool.hpp>              // for thread_pool
 #include <boost/type_index/type_index_facade.hpp>  // for operator==

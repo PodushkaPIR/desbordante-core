@@ -8,7 +8,6 @@
 #include <unordered_set>                                       // for unorde...
 #include <vector>                                              // for vector
 
-#include <bits/chrono.h>                                       // for durati...
 #include <easylogging++.h>                                     // for Writer
 
 #include "algorithm.h"                                         // for Algorithm

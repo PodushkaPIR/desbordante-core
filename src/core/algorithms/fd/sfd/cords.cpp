@@ -6,7 +6,6 @@
 #include <utility>                                    // for move, pair
 #include <vector>                                     // for vector
 
-#include <bits/chrono.h>                              // for duration_cast
 #include <boost/type_index/type_index_facade.hpp>     // for operator==
 
 #include "common_option.h"                            // for CommonOption

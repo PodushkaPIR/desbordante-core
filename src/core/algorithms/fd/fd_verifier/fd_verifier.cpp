@@ -1,10 +1,10 @@
 #include "algorithms/fd/fd_verifier/fd_verifier.h"
 
+#include <chrono>                              
 #include <functional>                                 // for function
 #include <memory>                                     // for shared_ptr, uni...
 #include <stdexcept>                                  // for runtime_error
 
-#include <bits/chrono.h>                              // for duration_cast
 #include <boost/type_index/type_index_facade.hpp>     // for operator==
 
 #include "algorithm.h"                                // for Algorithm

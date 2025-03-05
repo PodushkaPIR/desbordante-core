@@ -12,7 +12,6 @@
 #include <string_view>                                // for basic_string_view
 #include <utility>                                    // for move, pair
 
-#include <bits/chrono.h>                              // for duration_cast
 #include <easylogging++.h>                            // for Writer, CDEBUG
 
 #include "algorithm.h"                                // for Algorithm

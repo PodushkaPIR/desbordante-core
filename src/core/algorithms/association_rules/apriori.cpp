@@ -5,7 +5,6 @@
 #include <iterator>                                 // for next, prev
 #include <utility>                                  // for move
 
-#include <bits/chrono.h>                            // for duration_cast
 #include <easylogging++.h>
 
 #include "association_rules/ar_algorithm.h"         // for ARAlgorithm

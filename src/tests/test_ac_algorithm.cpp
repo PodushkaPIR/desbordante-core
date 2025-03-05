@@ -4,7 +4,6 @@
 #include <utility>                                                // for pair
 #include <vector>                                                 // for vector
 
-#include <bits/chrono.h>                                          // for fil...
 #include <gtest/gtest.h>
 
 #include "algebraic_constraints/ac_exception.h"                   // for ACE...

@@ -3,7 +3,6 @@
 #include <memory>                                        // for shared_ptr
 #include <utility>                                       // for pair
 
-#include <bits/chrono.h>                                 // for duration_cast
 #include <easylogging++.h>                               // for Writer, CINFO
 #include <boost/asio/post.hpp>                           // for post
 #include <boost/asio/thread_pool.hpp>                    // for thread_pool

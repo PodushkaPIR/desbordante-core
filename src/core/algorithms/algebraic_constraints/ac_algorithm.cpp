@@ -9,7 +9,6 @@
 #include <utility>                                      // for move, pair
 
 #include <assert.h>                                     // for assert
-#include <bits/chrono.h>                                // for duration_cast
 #include <boost/any.hpp>                                // for any
 #include <boost/type_index/type_index_facade.hpp>       // for operator==
 #include <easylogging++.h>

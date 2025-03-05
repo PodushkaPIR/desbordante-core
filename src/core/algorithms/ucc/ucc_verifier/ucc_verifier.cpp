@@ -6,7 +6,6 @@
 #include <string_view>                               // for basic_string_view
 #include <utility>                                   // for move
 
-#include <bits/chrono.h>                             // for duration_cast
 
 #include "algorithm.h"                               // for Algorithm
 #include "common_option.h"                           // for CommonOption

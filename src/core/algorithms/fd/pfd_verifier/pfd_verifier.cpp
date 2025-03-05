@@ -4,7 +4,6 @@
 #include <memory>                                    // for shared_ptr, __sh...
 #include <stdexcept>                                 // for runtime_error
 
-#include <bits/chrono.h>                             // for duration_cast
 
 #include "algorithms/algorithm.h"                    // for Algorithm
 #include "common_option.h"                           // for CommonOption

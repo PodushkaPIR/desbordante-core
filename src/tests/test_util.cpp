@@ -8,7 +8,6 @@
 #include <utility>                                      // for move
 #include <vector>                                       // for vector
 
-#include <bits/chrono.h>                                // for filesystem
 #include <boost/dynamic_bitset/dynamic_bitset.hpp>      // for dynamic_bitset
 #include <gmock/gmock.h>                                // for ContainerEq
 #include <gtest/gtest.h>                                // for Test, TestInf...

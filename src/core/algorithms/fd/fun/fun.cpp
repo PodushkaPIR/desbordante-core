@@ -3,7 +3,6 @@
 #include <algorithm>                                // for find, max
 #include <vector>                                   // for vector
 
-#include <bits/chrono.h>                            // for duration_cast
 #include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
 #include <easylogging++.h>                          // for Writer, CINFO, LOG
 #include <stddef.h>                                 // for size_t

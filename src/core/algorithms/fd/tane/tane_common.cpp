@@ -10,7 +10,6 @@
 #include <utility>                                    // for move, pair
 #include <vector>                                     // for vector
 
-#include <bits/chrono.h>                              // for duration_cast
 #include <boost/dynamic_bitset/dynamic_bitset.hpp>    // for dynamic_bitset
 #include <boost/type_index/type_index_facade.hpp>     // for operator==
 #include <easylogging++.h>                            // for Writer, LOG
