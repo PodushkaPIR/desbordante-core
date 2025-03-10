@@ -11,8 +11,6 @@
 #include "dc/FastADC/model/predicate.h"             // for PredicatePtr, kPr...
 #include "dc/FastADC/providers/index_provider.h"    // for PredicateIndexPro...
 
-namespace algos { namespace fastadc { class PredicateProvider; } }
-
 namespace algos::fastadc {
 
 class PredicateSet {

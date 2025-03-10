@@ -5,12 +5,9 @@
 
 #include <stddef.h>             // for size_t
 
+#include "idataset_stream.h"
 #include "relation_data.h"      // for AbstractRelationData
 #include "typed_column_data.h"  // for TypedColumnData
-
-class RelationalSchema;
-
-namespace model { class IDatasetStream; }
 
 namespace model {
 

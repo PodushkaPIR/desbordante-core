@@ -5,9 +5,8 @@
 #include <utility>                         // for swap
 
 #include "algorithms/dc/model/operator.h"
-#include "type.h"                          // for Type
-
-namespace model { enum class CompareResult; }
+#include "model/types/builtin.h"
+#include "model/types/types.h"
 
 namespace algos::dc {
 

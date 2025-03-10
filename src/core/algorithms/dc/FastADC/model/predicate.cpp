@@ -10,8 +10,6 @@
 #include "model/table/column.h"                       // for Column
 #include "model/table/typed_column_data.h"            // for TypedColumnData
 
-namespace model { class Type; }
-
 namespace algos::fastadc {
 
 PredicatePtr GetPredicateByType(PredicatesSpan predicates, OperatorType type) {

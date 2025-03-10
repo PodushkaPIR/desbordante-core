@@ -25,7 +25,9 @@
 #include "table/column.h"                                 // for Column
 #include "type.h"                                         // for Type
 
-namespace model { class IDatasetStream; }
+#include "idataset_stream.h"
+#include "model/types/types.h"
+#include "relation_data.h"
 
 namespace model {
 

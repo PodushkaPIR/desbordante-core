@@ -6,9 +6,7 @@
 
 #include "frozen/string.h"         // for string
 #include "frozen/unordered_map.h"  // for unordered_map
-// #include "model/types/type.h"
-
-namespace model { class Type; }
+#include "model/types/type.h"
 
 namespace algos::fastadc {
 

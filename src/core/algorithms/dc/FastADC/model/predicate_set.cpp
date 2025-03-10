@@ -5,8 +5,6 @@
 
 #include "dc/FastADC/model/predicate.h"  // for PredicatePtr
 
-namespace algos { namespace fastadc { class PredicateProvider; } }
-
 namespace algos::fastadc {
 
 bool PredicateSet::Add(PredicatePtr predicate) {

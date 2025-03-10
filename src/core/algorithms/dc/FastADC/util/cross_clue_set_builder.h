@@ -4,11 +4,9 @@
 
 #include <stddef.h>                                   // for size_t
 
-#include "dc/FastADC/util/common_clue_set_builder.h"  // for Clue, ClueSet
-
-namespace algos { namespace fastadc { class Pli; } }
-namespace algos { namespace fastadc { class PliShard; } }
-namespace algos { namespace fastadc { struct PredicatePacks; } }
+#include "dc/FastADC/model/pli_shard.h"
+#include "dc/FastADC/util/common_clue_set_builder.h"
+#include "dc/FastADC/util/evidence_aux_structures_builder.h"
 
 namespace algos::fastadc {
 

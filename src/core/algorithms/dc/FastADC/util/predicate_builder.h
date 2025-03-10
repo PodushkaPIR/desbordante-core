@@ -8,10 +8,6 @@
 #include "dc/FastADC/model/predicate.h"           // for PredicatesVector
 #include "dc/FastADC/providers/index_provider.h"  // for PredicateIndexProvider
 
-namespace algos { namespace fastadc { class ColumnOperand; } }
-namespace algos { namespace fastadc { class PredicateProvider; } }
-namespace model { class TypedColumnData; }
-
 namespace algos::fastadc {
 
 /**

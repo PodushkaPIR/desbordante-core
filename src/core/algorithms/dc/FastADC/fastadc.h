@@ -7,10 +7,9 @@
 #include "dc/FastADC/providers/index_provider.h"      // for DoubleIndexProv...
 #include "dc/FastADC/providers/predicate_provider.h"  // for PredicateProvider
 #include "dc/FastADC/util/denial_constraint_set.h"    // for DenialConstrain...
+#include "model/denial_constraint.h"
 #include "table/column_layout_typed_relation_data.h"  // for ColumnLayoutTyp...
 #include "tabular_data/input_table_type.h"            // for InputTable
-
-namespace algos { namespace fastadc { class DenialConstraint; } }
 
 namespace algos::dc {
 
