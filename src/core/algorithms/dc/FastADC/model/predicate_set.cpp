@@ -1,7 +1,7 @@
 #include "dc/FastADC/model/predicate_set.h"
 
-#include <algorithm>                     // for max
-#include <sstream>                       // for basic_ostream, basic_strings...
+#include <algorithm>  // for max
+#include <sstream>    // for basic_ostream, basic_strings...
 
 #include "dc/FastADC/model/predicate.h"  // for PredicatePtr
 

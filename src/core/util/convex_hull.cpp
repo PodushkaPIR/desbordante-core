@@ -1,7 +1,7 @@
 #include "convex_hull.h"
 
-#include <stddef.h>   // for size_t
 #include <algorithm>  // for sort, unique
+#include <stddef.h>   // for size_t
 
 namespace util {
 

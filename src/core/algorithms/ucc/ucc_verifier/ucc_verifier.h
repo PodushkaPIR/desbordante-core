@@ -1,11 +1,10 @@
 #pragma once
 
-#include <deque>                                               // for deque
-#include <memory>                                              // for unique...
-#include <vector>                                              // for vector
-
-#include <assert.h>                                            // for assert
-#include <stddef.h>                                            // for size_t
+#include <assert.h>  // for assert
+#include <deque>     // for deque
+#include <memory>    // for unique...
+#include <stddef.h>  // for size_t
+#include <vector>    // for vector
 
 #include "algorithms/algorithm.h"                              // for Algorithm
 #include "algorithms/ucc/ucc_verifier/ucc_stats_calculator.h"  // for UCCSta...

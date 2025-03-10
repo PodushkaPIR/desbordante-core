@@ -1,10 +1,10 @@
-#include <list>                       // for list, operator==, _List_const_i...
-#include <memory>                     // for unique_ptr
-#include <optional>                   // for optional, nullopt, nullopt_t
-#include <set>                        // for set, operator==
-#include <utility>                    // for pair, move, make_pair
+#include <list>      // for list, operator==, _List_const_i...
+#include <memory>    // for unique_ptr
+#include <optional>  // for optional, nullopt, nullopt_t
+#include <set>       // for set, operator==
+#include <utility>   // for pair, move, make_pair
 
-#include <gtest/gtest.h>              // for TestInfo (ptr only), TEST_F
+#include <gtest/gtest.h>  // for TestInfo (ptr only), TEST_F
 
 #include "algorithms/algo_factory.h"  // for CreateAndLoadAlgorithm, StdPara...
 #include "all_csv_configs.h"          // for kTestDD2, kTestDD, kTestDD1

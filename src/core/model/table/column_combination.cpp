@@ -1,7 +1,7 @@
 #include "column_combination.h"
 
-#include <algorithm>             // for any_of, find
-#include <sstream>               // for basic_ostream, basic_stringstream
+#include <algorithm>  // for any_of, find
+#include <sstream>    // for basic_ostream, basic_stringstream
 
 #include "table/column_index.h"  // for ColumnIndex
 

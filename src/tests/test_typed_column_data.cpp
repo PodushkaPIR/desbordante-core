@@ -1,9 +1,9 @@
-#include <cstddef>                    // for byte, size_t
-#include <memory>                     // for unique_ptr, __shared_ptr_access
-#include <utility>                    // for move
-#include <vector>                     // for vector
+#include <cstddef>  // for byte, size_t
+#include <memory>   // for unique_ptr, __shared_ptr_access
+#include <utility>  // for move
+#include <vector>   // for vector
 
-#include <gtest/gtest.h>              // for Test, ASSERT_EQ, CmpHelperFloat...
+#include <gtest/gtest.h>  // for Test, ASSERT_EQ, CmpHelperFloat...
 
 #include "all_csv_configs.h"          // for kIris, kACShippingDates, kCIPub...
 #include "builtin.h"                  // for TypeId, Double
@@ -11,7 +11,9 @@
 #include "numeric_type.h"             // for INumericType
 #include "table/typed_column_data.h"  // for CreateTypedColumnData, TypedCol...
 
-namespace algos { class FDAlgorithm; }
+namespace algos {
+class FDAlgorithm;
+}
 
 struct CSVConfig;
 

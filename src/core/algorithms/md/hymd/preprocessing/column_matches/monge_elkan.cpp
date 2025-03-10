@@ -1,10 +1,9 @@
 #include "algorithms/md/hymd/preprocessing/column_matches/monge_elkan.h"
 
+#include <math.h>
 #include <sstream>
 #include <string>
 #include <vector>
-
-#include <math.h>
 
 #include "algorithms/md/hymd/preprocessing/column_matches/smith_waterman_gotoh.h"
 

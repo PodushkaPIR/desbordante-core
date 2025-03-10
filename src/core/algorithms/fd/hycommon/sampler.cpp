@@ -1,6 +1,10 @@
 #include "sampler.h"
 
-#include <assert.h>                                  // for assert
+#include <algorithm>  // for min, sort
+#include <assert.h>   // for assert
+#include <memory>     // for __shared_ptr_access
+#include <utility>    // for move, pair, make...
+
 #include <boost/asio/post.hpp>                       // for post
 #include <boost/asio/thread_pool.hpp>                // for thread_pool
 #include <boost/exception/detail/exception_ptr.hpp>  // for current_exception
@@ -8,17 +12,13 @@
 #include <boost/thread/future.hpp>                   // for unique_future
 #include <boost/thread/futures/wait_for_all.hpp>     // for wait_for_all
 
-#include <algorithm>                                 // for min, sort
-#include <memory>                                    // for __shared_ptr_access
-#include <utility>                                   // for move, pair, make...
-
-#include "algorithms/fd/hycommon/util/pli_util.h"    // for PLIUtil
-#include "efficiency.h"                              // for Sampler::Efficiency
-#include "fd/hycommon/all_column_combinations.h"     // for AllColumnCombina...
-#include "fd/hycommon/efficiency_threshold.h"        // for kEfficiencyThres...
-#include "fd/hycommon/types.h"                       // for IdPairs, Rows
-#include "table/position_list_index.h"               // for PLI, PositionLis...
-#include "thread_number/type.h"                      // for ThreadNumType
+#include "algorithms/fd/hycommon/util/pli_util.h"  // for PLIUtil
+#include "efficiency.h"                            // for Sampler::Efficiency
+#include "fd/hycommon/all_column_combinations.h"   // for AllColumnCombina...
+#include "fd/hycommon/efficiency_threshold.h"      // for kEfficiencyThres...
+#include "fd/hycommon/types.h"                     // for IdPairs, Rows
+#include "table/position_list_index.h"             // for PLI, PositionLis...
+#include "thread_number/type.h"                    // for ThreadNumType
 
 namespace {
 

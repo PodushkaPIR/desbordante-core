@@ -2,10 +2,9 @@
 
 #include <memory>
 #include <sstream>
+#include <stddef.h>
 #include <string>
 #include <vector>
-
-#include <stddef.h>
 
 #include "algorithms/ind/faida/inclusion_testing/iinclusion_tester.h"
 #include "algorithms/ind/faida/preprocessing/preprocessor.h"

@@ -1,8 +1,8 @@
 #pragma once
 
-#include <cstddef>                                    // for size_t
-#include <memory>                                     // for shared_ptr, uni...
-#include <vector>                                     // for vector
+#include <cstddef>  // for size_t
+#include <memory>   // for shared_ptr, uni...
+#include <vector>   // for vector
 
 #include "algorithms/md/hymd/enums.h"                 // for operator+, Leve...
 #include "algorithms/md/hymd/indexes/records_info.h"  // for RecordsInfo
@@ -12,7 +12,14 @@
 #include "config/thread_number/type.h"                // for ThreadNumType
 
 class RelationalSchema;
-namespace algos { namespace hymd { namespace lattice { struct MdLatticeNodeInfo; } } }
+
+namespace algos {
+namespace hymd {
+namespace lattice {
+struct MdLatticeNodeInfo;
+}
+}  // namespace hymd
+}  // namespace algos
 
 namespace algos::hymd {
 

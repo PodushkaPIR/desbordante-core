@@ -1,9 +1,9 @@
 #include "algorithms/md/hymd/lattice/cardinality/one_by_one_min_picker.h"
 
-#include <cassert>                            // for assert
-#include <utility>                            // for move
+#include <cassert>  // for assert
+#include <utility>  // for move
 
-#include <boost/move/utility_core.hpp>        // for move
+#include <boost/move/utility_core.hpp>  // for move
 
 #include "algorithms/md/hymd/md_lhs.h"        // for MdLhs, LhsNode
 #include "index.h"                            // for Index

@@ -1,13 +1,13 @@
-#include <memory>                              // for unique_ptr, allocator
-#include <set>                                 // for set
-#include <sstream>                             // for basic_ostream, basic_s...
-#include <string>                              // for basic_string, char_traits
-#include <utility>                             // for pair
-#include <vector>                              // for vector
+#include <memory>    // for unique_ptr, allocator
+#include <set>       // for set
+#include <sstream>   // for basic_ostream, basic_s...
+#include <stddef.h>  // for size_t
+#include <string>    // for basic_string, char_traits
+#include <utility>   // for pair
+#include <vector>    // for vector
 
-#include <easylogging++.h>                     // for Writer, CINFO, LOG
-#include <gtest/gtest.h>                       // for Test, TestInfo (ptr only)
-#include <stddef.h>                            // for size_t
+#include <easylogging++.h>  // for Writer, CINFO, LOG
+#include <gtest/gtest.h>    // for Test, TestInfo (ptr only)
 
 #include "algorithms/algo_factory.h"           // for ConfigureFromMap, Crea...
 #include "algorithms/statistics/data_stats.h"  // for DataStats

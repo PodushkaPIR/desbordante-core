@@ -3,7 +3,7 @@
 #include <cstddef>
 #include <memory>
 #include <string>
-#include <utility>                                    // for pair
+#include <utility>  // for pair
 #include <vector>
 
 #include <frozen/unordered_map.h>
@@ -12,10 +12,10 @@
 #include "algorithms/dc/model/dc.h"
 #include "algorithms/dc/model/point.h"
 #include "config/tabular_data/input_table_type.h"
-#include "dc/model/component.h"                       // for Component, ValType
-#include "dc/model/predicate.h"                       // for Predicate
+#include "dc/model/component.h"  // for Component, ValType
+#include "dc/model/predicate.h"  // for Predicate
 #include "model/table/column_layout_relation_data.h"
-#include "table/column.h"                             // for Column
+#include "table/column.h"  // for Column
 #include "table/typed_column_data.h"
 #include "util/kdtree.h"
 

@@ -1,12 +1,12 @@
-#include <algorithm>                        // for sort
-#include <list>                             // for list, _List_const_iterator
-#include <set>                              // for set, operator==
-#include <stdexcept>                        // for runtime_error
-#include <utility>                          // for pair, make_pair
-#include <vector>                           // for vector
+#include <algorithm>  // for sort
+#include <list>       // for list, _List_const_iterator
+#include <set>        // for set, operator==
+#include <stdexcept>  // for runtime_error
+#include <utility>    // for pair, make_pair
+#include <vector>     // for vector
 
-#include <gtest/gtest.h>                    // for TypedTestSuitePState, ASS...
-#include <gmock/gmock.h>                    // for ContainerEq, Eq
+#include <gmock/gmock.h>  // for ContainerEq, Eq
+#include <gtest/gtest.h>  // for TypedTestSuitePState, ASS...
 
 #include "algo_factory.h"                   // for ConfigureFromMap
 #include "algorithms/fd/eulerfd/eulerfd.h"  // for EulerFD

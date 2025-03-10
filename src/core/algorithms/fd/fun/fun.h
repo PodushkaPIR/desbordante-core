@@ -1,10 +1,10 @@
 #pragma once
 
-#include <list>                                    // for list
-#include <memory>                                  // for unique_ptr
-#include <optional>                                // for optional, nullopt
-#include <set>                                     // for set
-#include <unordered_map>                           // for unordered_map
+#include <list>           // for list
+#include <memory>         // for unique_ptr
+#include <optional>       // for optional, nullopt
+#include <set>            // for set
+#include <unordered_map>  // for unordered_map
 
 #include "algorithms/fd/pli_based_fd_algorithm.h"  // for PliBasedFDAlgorithm
 #include "table/column.h"                          // for Column

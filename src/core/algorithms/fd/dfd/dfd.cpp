@@ -1,12 +1,12 @@
 #include "dfd.h"
 
-#include <memory>                                        // for shared_ptr
-#include <utility>                                       // for pair
+#include <memory>   // for shared_ptr
+#include <utility>  // for pair
 
-#include <easylogging++.h>                               // for Writer, CINFO
-#include <boost/asio/post.hpp>                           // for post
-#include <boost/asio/thread_pool.hpp>                    // for thread_pool
-#include <boost/type_index/type_index_facade.hpp>        // for operator==
+#include <boost/asio/post.hpp>                     // for post
+#include <boost/asio/thread_pool.hpp>              // for thread_pool
+#include <boost/type_index/type_index_facade.hpp>  // for operator==
+#include <easylogging++.h>                         // for Writer, CINFO
 
 #include "cache_eviction_method.h"                       // for CacheEvictio...
 #include "caching_method.h"                              // for CachingMethod

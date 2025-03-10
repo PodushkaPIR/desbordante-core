@@ -1,17 +1,17 @@
-#include <iostream>                                      // for basic_ostream
-#include <iterator>                                      // for prev, next
-#include <memory>                                        // for unique_ptr
-#include <stdexcept>                                     // for runtime_error
-#include <string>                                        // for hash, string
-#include <unordered_map>                                 // for unordered_map
-#include <utility>                                       // for pair, move
-#include <vector>                                        // for vector
+#include <assert.h>       // for assert
+#include <iostream>       // for basic_ostream
+#include <iterator>       // for prev, next
+#include <memory>         // for unique_ptr
+#include <stdexcept>      // for runtime_error
+#include <string>         // for hash, string
+#include <unordered_map>  // for unordered_map
+#include <utility>        // for pair, move
+#include <vector>         // for vector
 
-#include <assert.h>                                      // for assert
-#include <gtest/gtest.h>                                 // for Test, UnitTest
-#include <boost/container_hash/hash.hpp>                 // for hash
-#include <boost/dynamic_bitset/dynamic_bitset.hpp>       // for dynamic_bitset
-#include <boost/move/utility_core.hpp>                   // for move
+#include <boost/container_hash/hash.hpp>            // for hash
+#include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
+#include <boost/move/utility_core.hpp>              // for move
+#include <gtest/gtest.h>                            // for Test, UnitTest
 
 #include "algorithm_types.h"                             // for AlgorithmType
 #include "algorithms/algo_factory.h"                     // for ConfigureFro...
@@ -29,7 +29,9 @@
 #include "table/relational_schema.h"                     // for RelationalSc...
 #include "table/vertical.h"                              // for Vertical
 
-namespace algos { class PliBasedFDAlgorithm; }
+namespace algos {
+class PliBasedFDAlgorithm;
+}
 struct CSVConfig;
 
 namespace tests {

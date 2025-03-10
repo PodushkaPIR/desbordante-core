@@ -2,7 +2,7 @@
 
 #include <cstddef>
 #include <string>
-#include <utility>                         // for swap
+#include <utility>  // for swap
 
 #include "algorithms/dc/model/operator.h"
 #include "model/types/builtin.h"
@@ -44,7 +44,7 @@ public:
     }
 
     bool operator<=(Component const& rhs) const {
-        return *this < rhs or *this == rhs;
+        return *this < rhs or * this == rhs;
     }
 
     bool operator>(Component const& rhs) const {

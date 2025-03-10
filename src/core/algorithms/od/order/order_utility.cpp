@@ -1,6 +1,6 @@
 #include "order_utility.h"
 
-#include <easylogging++.h>                  // for Writer, CDEBUG, LOG
+#include <easylogging++.h>  // for Writer, CDEBUG, LOG
 
 #include "model/table/column_index.h"       // for ColumnIndex
 #include "model/table/typed_column_data.h"  // for TypedColumnData

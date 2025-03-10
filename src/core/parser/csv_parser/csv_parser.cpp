@@ -1,13 +1,13 @@
 #include "csv_parser.h"
 
-#include <cstddef>                             // for size_t
-#include <filesystem>                          // for path
-#include <fstream>                             // for basic_ifstream, basic_...
-#include <limits>                              // for numeric_limits
-#include <stdexcept>                           // for invalid_argument, runt...
-#include <string>                              // for basic_string, string
-#include <utility>                             // for move
-#include <vector>                              // for vector
+#include <cstddef>     // for size_t
+#include <filesystem>  // for path
+#include <fstream>     // for basic_ifstream, basic_...
+#include <limits>      // for numeric_limits
+#include <stdexcept>   // for invalid_argument, runt...
+#include <string>      // for basic_string, string
+#include <utility>     // for move
+#include <vector>      // for vector
 
 #include <boost/algorithm/string/trim.hpp>     // for trim_right
 #include <boost/iterator/iterator_facade.hpp>  // for iterator_facade_base

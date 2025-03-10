@@ -1,7 +1,7 @@
 #include "all_csv_configs.h"
 
-#include <filesystem>               // for operator/, path
-#include <string_view>              // for string_view
+#include <filesystem>   // for operator/, path
+#include <string_view>  // for string_view
 
 #include "csv_config_util.h"        // for kTestDataDir
 #include "csv_parser/csv_parser.h"  // for CSVConfig

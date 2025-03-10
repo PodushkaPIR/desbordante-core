@@ -1,9 +1,9 @@
 #include "algorithms/md/hymd/lattice/cardinality/min_picking_level_getter.h"
 
-#include <utility>                                  // for move, pair
+#include <assert.h>  // for assert
+#include <utility>   // for move, pair
 
-#include <assert.h>                                 // for assert
-#include <boost/move/utility_core.hpp>              // for move
+#include <boost/move/utility_core.hpp>  // for move
 
 #include "algorithms/md/hymd/lattice/rhs.h"         // for Rhs
 #include "algorithms/md/hymd/lowest_cc_value_id.h"  // for kLowestCCValueId

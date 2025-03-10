@@ -1,14 +1,14 @@
-#include <algorithm>                             // for is_sorted
-#include <filesystem>                            // for path, operator==
-#include <memory>                                // for unique_ptr
-#include <string>                                // for hash, basic_string
-#include <unordered_set>                         // for unordered_set
-#include <utility>                               // for move, pair
-#include <vector>                                // for vector
+#include <algorithm>      // for is_sorted
+#include <filesystem>     // for path, operator==
+#include <memory>         // for unique_ptr
+#include <stddef.h>       // for size_t
+#include <string>         // for hash, basic_string
+#include <unordered_set>  // for unordered_set
+#include <utility>        // for move, pair
+#include <vector>         // for vector
 
-#include <boost/any.hpp>                         // for any
-#include <gtest/gtest.h>                         // for ASSERT_TRUE, EXPECT_EQ
-#include <stddef.h>                              // for size_t
+#include <boost/any.hpp>  // for any
+#include <gtest/gtest.h>  // for ASSERT_TRUE, EXPECT_EQ
 
 #include "algorithms/algo_factory.h"             // for CreateAndLoadAlgorithm
 #include "all_csv_configs.h"                     // for kTestDynamicFDInsert

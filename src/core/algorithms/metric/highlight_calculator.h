@@ -1,16 +1,24 @@
 #pragma once
 
-#include <cstddef>                        // for byte
-#include <memory>                         // for shared_ptr
-#include <utility>                        // for move
-#include <vector>                         // for vector
+#include <cstddef>  // for byte
+#include <memory>   // for shared_ptr
+#include <utility>  // for move
+#include <vector>   // for vector
 
 #include "algorithms/metric/highlight.h"  // for Highlight
 #include "config/indices/type.h"          // for IndicesType
 #include "metric/aliases.h"               // for DistanceFunction, IndexedOn...
 
-namespace algos { namespace metric { template <typename T> struct IndexedPoint; } }
-namespace model { class ColumnLayoutTypedRelationData; }
+namespace algos {
+namespace metric {
+template <typename T>
+struct IndexedPoint;
+}
+}  // namespace algos
+
+namespace model {
+class ColumnLayoutTypedRelationData;
+}
 
 namespace algos::metric {
 
@@ -60,7 +68,7 @@ public:
     explicit HighlightCalculator(
             std::shared_ptr<model::ColumnLayoutTypedRelationData> typed_relation,
             config::IndicesType rhs_indices)
-        : typed_relation_(std::move(typed_relation)), rhs_indices_(std::move(rhs_indices)){};
+        : typed_relation_(std::move(typed_relation)), rhs_indices_(std::move(rhs_indices)) {};
 };
 
 }  // namespace algos::metric

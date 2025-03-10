@@ -1,6 +1,6 @@
 #pragma once
 
-#include <cstddef>                                    // for byte
+#include <cstddef>  // for byte
 
 #include "algorithms/od/fastod/storage/data_frame.h"  // for DataFrame
 #include "mixed_type.h"                               // for MixedType
@@ -19,8 +19,8 @@ template <bool IsColumnMixed>
 model::CompareResult CompareData(DataFrame::DataAndIndex const& left,
                                  DataFrame::DataAndIndex const& right,
                                  model::TypedColumnData const& column) {
-    const model::TypeId left_type_id = column.GetValueTypeId(left.second);
-    const model::TypeId right_type_id = column.GetValueTypeId(right.second);
+    model::TypeId const left_type_id = column.GetValueTypeId(left.second);
+    model::TypeId const right_type_id = column.GetValueTypeId(right.second);
 
     bool const is_both_types_unordered =
             IsUnorderedType(left_type_id) && IsUnorderedType(right_type_id);

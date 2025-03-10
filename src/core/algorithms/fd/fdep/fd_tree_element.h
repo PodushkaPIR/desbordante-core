@@ -1,13 +1,12 @@
 #pragma once
 
-#include <fstream>               // for ofstream
-#include <limits>                // for numeric_limits
-#include <list>                  // for list
-#include <memory>                // for unique_ptr, shared_ptr
-#include <string>                // for string
-#include <vector>                // for vector
-
-#include <stddef.h>              // for size_t
+#include <fstream>   // for ofstream
+#include <limits>    // for numeric_limits
+#include <list>      // for list
+#include <memory>    // for unique_ptr, shared_ptr
+#include <stddef.h>  // for size_t
+#include <string>    // for string
+#include <vector>    // for vector
 
 #include "model/types/bitset.h"  // for Bitset
 

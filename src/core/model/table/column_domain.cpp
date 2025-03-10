@@ -5,15 +5,15 @@
  */
 #include "column_domain.h"
 
-#include <algorithm>                           // for max, min
-#include <cmath>                               // for log2, pow
-#include <fstream>                             // for basic_ofstream, basic_...
-#include <iterator>                            // for next
-#include <numeric>                             // for accumulate
-#include <stdexcept>                           // for runtime_error
-#include <string>                              // for char_traits, operator+
+#include <algorithm>  // for max, min
+#include <cmath>      // for log2, pow
+#include <fstream>    // for basic_ofstream, basic_...
+#include <iterator>   // for next
+#include <numeric>    // for accumulate
+#include <stdexcept>  // for runtime_error
+#include <string>     // for char_traits, operator+
 
-#include <easylogging++.h>                     // for Writer, CERROR, LOG
+#include <easylogging++.h>  // for Writer, CERROR, LOG
 
 #include "config/thread_number/type.h"         // for ThreadNumType
 #include "mem_limit/type.h"                    // for MemLimitMBType

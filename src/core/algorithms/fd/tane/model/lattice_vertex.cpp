@@ -1,8 +1,7 @@
 #include "lattice_vertex.h"
 
-#include <ostream>                      // for basic_ostream, operator<<, endl
-
-#include <stddef.h>                     // for size_t
+#include <ostream>   // for basic_ostream, operator<<, endl
+#include <stddef.h>  // for size_t
 
 #include "table/column.h"               // for Column
 #include "table/position_list_index.h"  // for PositionListIndex

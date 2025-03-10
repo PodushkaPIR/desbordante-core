@@ -1,13 +1,13 @@
 #pragma once
 
+#include <algorithm>  // for any_of
+#include <bitset>     // for bitset
 #include <cstddef>
 #include <functional>
 #include <memory>
 #include <span>
 #include <stdexcept>
 #include <vector>
-#include <algorithm>                                  // for any_of
-#include <bitset>                                     // for bitset
 
 #include "dc/FastADC/model/column_operand.h"          // for ColumnOperand
 #include "dc/FastADC/model/operator.h"                // for OperatorType (p...

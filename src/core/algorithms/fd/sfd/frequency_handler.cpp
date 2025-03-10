@@ -1,10 +1,10 @@
 #include "frequency_handler.h"
 
-#include <algorithm>                        // for min, sort
-#include <tuple>                            // for tie, operator<=>, tuple
-#include <unordered_map>                    // for unordered_map, operator==
-#include <utility>                          // for pair
-#include <vector>                           // for vector
+#include <algorithm>      // for min, sort
+#include <tuple>          // for tie, operator<=>, tuple
+#include <unordered_map>  // for unordered_map, operator==
+#include <utility>        // for pair
+#include <vector>         // for vector
 
 #include "model/table/column_index.h"       // for ColumnIndex
 #include "model/table/tuple_index.h"        // for TupleIndex

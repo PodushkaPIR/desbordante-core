@@ -2,7 +2,10 @@
 
 #include "config/error_measure/type.h"  // for AfdErrorMeasureType, PfdError...
 
-namespace config { template <typename T> class CommonOption; }
+namespace config {
+template <typename T>
+class CommonOption;
+}
 
 namespace config {
 

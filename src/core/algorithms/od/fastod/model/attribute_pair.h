@@ -1,8 +1,8 @@
 #pragma once
 
-#include <cstddef>                                 // for size_t
-#include <string>                                  // for string
-#include <string_view>                             // for hash
+#include <cstddef>      // for size_t
+#include <string>       // for string
+#include <string_view>  // for hash
 
 #include "algorithms/od/fastod/hashing/hashing.h"  // for CombineHashes
 #include "model/table/column_index.h"              // for ColumnIndex

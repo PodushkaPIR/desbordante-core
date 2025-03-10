@@ -1,11 +1,13 @@
 #include "preprocessor.h"
 
-#include <cassert>                                        // for assert
+#include <cassert>  // for assert
 
 #include "algorithms/ind/faida/hashing/hashing.h"         // for CalcMurmurHash
 #include "ind/faida/preprocessing/hashed_column_store.h"  // for HashedColum...
 
-namespace model { class IDatasetStream; }
+namespace model {
+class IDatasetStream;
+}
 
 namespace algos::faida {
 

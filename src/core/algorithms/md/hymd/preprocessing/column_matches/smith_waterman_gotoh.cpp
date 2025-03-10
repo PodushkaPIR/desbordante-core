@@ -1,7 +1,7 @@
 #include "algorithms/md/hymd/preprocessing/column_matches/smith_waterman_gotoh.h"
 
-#include <stddef.h>   // for size_t
 #include <algorithm>  // for max, min
+#include <stddef.h>   // for size_t
 #include <vector>     // for vector, swap
 
 namespace {

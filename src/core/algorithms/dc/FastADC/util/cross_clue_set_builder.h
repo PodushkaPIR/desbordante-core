@@ -1,8 +1,7 @@
 #pragma once
 
-#include <vector>                                     // for vector
-
-#include <stddef.h>                                   // for size_t
+#include <stddef.h>  // for size_t
+#include <vector>    // for vector
 
 #include "dc/FastADC/model/pli_shard.h"
 #include "dc/FastADC/util/common_clue_set_builder.h"

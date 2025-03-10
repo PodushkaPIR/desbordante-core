@@ -45,4 +45,3 @@ ClueSet BuildClueSet(std::vector<PliShard> const& pliShards, PredicatePacks cons
 }
 
 }  // namespace algos::fastadc
-

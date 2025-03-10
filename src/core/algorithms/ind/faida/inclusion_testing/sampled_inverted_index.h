@@ -3,19 +3,18 @@
 #include <atomic_bitvector.hpp>
 #include <hash_set2.hpp>
 #include <hash_table8.hpp>
-#include <stddef.h>                                 // for size_t
-
-#include <memory>                                   // for unique_ptr, share...
+#include <memory>  // for unique_ptr, share...
 #include <mutex>
+#include <stddef.h>  // for size_t
 #include <unordered_map>
-#include <utility>                                  // for pair
-#include <vector>                                   // for vector
+#include <utility>  // for pair
+#include <vector>   // for vector
 
 #include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
 
 #include "algorithms/ind/faida/util/simple_ind.h"
 #include "hll_data.h"
-#include "ind/faida/util/simple_cc.h"               // for SimpleCC, TableIndex
+#include "ind/faida/util/simple_cc.h"  // for SimpleCC, TableIndex
 
 namespace algos::faida {
 

@@ -1,13 +1,18 @@
 #pragma once
 
-#include <memory>                               // for shared_ptr
-#include <vector>                               // for vector
+#include <memory>  // for shared_ptr
+#include <vector>  // for vector
 
 #include "algorithms/ucc/hpivalid/pli_table.h"  // for PLITable
 #include "algorithms/ucc/ucc_algorithm.h"       // for UCCAlgorithm
 
 class ColumnLayoutRelationData;
-namespace algos { namespace hpiv { class ResultCollector; } }
+
+namespace algos {
+namespace hpiv {
+class ResultCollector;
+}
+}  // namespace algos
 
 // see algorithms/ucc/hpivalid/LICENSE
 

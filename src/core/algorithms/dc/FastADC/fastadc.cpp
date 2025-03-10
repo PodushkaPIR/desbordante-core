@@ -1,19 +1,19 @@
 #include "algorithms/dc/FastADC/fastadc.h"
 
-#include <cstddef>                                            // for size_t
-#include <stdexcept>                                          // for invalid...
-#include <string>                                             // for char_tr...
-#include <string_view>                                        // for basic_s...
-#include <utility>                                            // for move
-#include <vector>                                             // for vector
+#include <cstddef>      // for size_t
+#include <stdexcept>    // for invalid...
+#include <string>       // for char_tr...
+#include <string_view>  // for basic_s...
+#include <utility>      // for move
+#include <vector>       // for vector
 
-#include <boost/type_index/type_index_facade.hpp>             // for operator==
-#include <easylogging++.h>                                    // for Writer
+#include <boost/type_index/type_index_facade.hpp>  // for operator==
+#include <easylogging++.h>                         // for Writer
 
-#include "algorithm.h"                                        // for Algorithm
-#include "builtin.h"                                          // for TypeId
+#include "algorithm.h"      // for Algorithm
+#include "builtin.h"        // for TypeId
+#include "common_option.h"  // for CommonO...
 #include "config/names_and_descriptions.h"
-#include "common_option.h"                                    // for CommonO...
 #include "config/option.h"                                    // for Option
 #include "config/option_using.h"                              // for DESBORD...
 #include "config/tabular_data/input_table/option.h"           // for kTableOpt

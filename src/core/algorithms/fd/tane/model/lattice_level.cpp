@@ -1,12 +1,12 @@
 #include "lattice_level.h"
 
-#include <algorithm>                       // for min, sort
-#include <utility>                         // for move, pair
+#include <algorithm>                   // for min, sort
+#include <assert.h>                    // for assert
+#include <pstl/glue_algorithm_defs.h>  // for move, sort
+#include <utility>                     // for move, pair
 
-#include <assert.h>                        // for assert
-#include <boost/move/utility_core.hpp>     // for move
-#include <easylogging++.h>                 // for Writer, CTRACE, LOG
-#include <pstl/glue_algorithm_defs.h>      // for move, sort
+#include <boost/move/utility_core.hpp>  // for move
+#include <easylogging++.h>              // for Writer, CTRACE, LOG
 
 #include "fd/tane/model/lattice_vertex.h"  // for LatticeVertex
 #include "table/relational_schema.h"       // for RelationalSchema

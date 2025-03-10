@@ -1,9 +1,9 @@
 #include "algorithms/fd/fdep/fdep.h"
 
-#include <bitset>                                    // for bitset
-#include <stdexcept>                                 // for runtime_error
+#include <bitset>     // for bitset
+#include <stdexcept>  // for runtime_error
 
-#include <boost/type_index/type_index_facade.hpp>    // for operator==
+#include <boost/type_index/type_index_facade.hpp>  // for operator==
 
 #include "common_option.h"                           // for CommonOption
 #include "config/tabular_data/input_table/option.h"  // for kTableOpt

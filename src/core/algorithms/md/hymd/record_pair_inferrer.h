@@ -1,13 +1,13 @@
 #pragma once
 
-#include <cstddef>                                      // for size_t
-#include <queue>                                        // for priority_queue
-#include <tuple>                                        // for forward_as_tuple
-#include <unordered_set>                                // for unordered_set
-#include <utility>                                      // for move, pair
-#include <vector>                                       // for vector
+#include <cstddef>        // for size_t
+#include <queue>          // for priority_queue
+#include <tuple>          // for forward_as_tuple
+#include <unordered_set>  // for unordered_set
+#include <utility>        // for move, pair
+#include <vector>         // for vector
 
-#include <boost/container/detail/std_fwd.hpp>           // for pair
+#include <boost/container/detail/std_fwd.hpp>  // for pair
 
 #include "algorithms/md/hymd/pair_comparison_result.h"  // for PairCompariso...
 #include "algorithms/md/hymd/recommendation.h"          // for Recommendations
@@ -18,9 +18,23 @@
 #include "md/hymd/table_identifiers.h"                  // for RecordIdentifier
 #include "util/desbordante_assume.h"                    // for DESBORDANTE_A...
 
-namespace algos { namespace hymd { namespace lattice { class MdLattice; } } }
-namespace algos { namespace hymd { struct LhsCCVIdsInfo; } }
-namespace util { class WorkerThreadPool; }
+namespace algos {
+namespace hymd {
+namespace lattice {
+class MdLattice;
+}
+}  // namespace hymd
+}  // namespace algos
+
+namespace algos {
+namespace hymd {
+struct LhsCCVIdsInfo;
+}
+}  // namespace algos
+
+namespace util {
+class WorkerThreadPool;
+}
 
 namespace algos::hymd {
 

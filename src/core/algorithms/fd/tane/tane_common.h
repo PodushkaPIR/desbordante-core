@@ -1,6 +1,6 @@
 #pragma once
 
-#include <optional>                                // for optional, nullopt
+#include <optional>  // for optional, nullopt
 
 #include "algorithms/fd/pli_based_fd_algorithm.h"  // for PliBasedFDAlgorithm
 #include "config/error/type.h"                     // for ErrorType
@@ -9,8 +9,14 @@ class Column;
 class ColumnData;
 class ColumnLayoutRelationData;
 class Vertical;
-namespace model { class LatticeLevel; }
-namespace model { class PositionListIndex; }
+
+namespace model {
+class LatticeLevel;
+}
+
+namespace model {
+class PositionListIndex;
+}
 
 namespace algos::tane {
 

@@ -1,12 +1,12 @@
 #pragma once
 
-#include <stddef.h>                                            // for size_t
-#include <memory>                                              // for shared...
-#include <ostream>                                             // for ostream
-#include <string>                                              // for string
-#include <unordered_set>                                       // for unorde...
-#include <utility>                                             // for move
-#include <vector>                                              // for vector
+#include <memory>         // for shared...
+#include <ostream>        // for ostream
+#include <stddef.h>       // for size_t
+#include <string>         // for string
+#include <unordered_set>  // for unorde...
+#include <utility>        // for move
+#include <vector>         // for vector
 
 #include "algorithms/nd/nd_verifier/util/value_combination.h"  // for ValueC...
 

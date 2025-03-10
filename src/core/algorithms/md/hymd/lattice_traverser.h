@@ -1,18 +1,27 @@
 #pragma once
 
-#include <cstddef>                                  // for size_t
-#include <utility>                                  // for move
-#include <vector>                                   // for vector
+#include <cstddef>  // for size_t
+#include <utility>  // for move
+#include <vector>   // for vector
 
 #include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
 
-#include "algorithms/md/hymd/recommendation.h"      // for Recommendations
-#include "algorithms/md/hymd/validator.h"           // for BatchValidator
-#include "md/hymd/lattice/validation_info.h"        // for ValidationInfo
-#include "md/hymd/utility/invalidated_rhss.h"       // for InvalidatedRhss
+#include "algorithms/md/hymd/recommendation.h"  // for Recommendations
+#include "algorithms/md/hymd/validator.h"       // for BatchValidator
+#include "md/hymd/lattice/validation_info.h"    // for ValidationInfo
+#include "md/hymd/utility/invalidated_rhss.h"   // for InvalidatedRhss
 
-namespace algos { namespace hymd { namespace lattice { class LevelGetter; } } }
-namespace util { class WorkerThreadPool; }
+namespace algos {
+namespace hymd {
+namespace lattice {
+class LevelGetter;
+}
+}  // namespace hymd
+}  // namespace algos
+
+namespace util {
+class WorkerThreadPool;
+}
 
 namespace algos::hymd {
 

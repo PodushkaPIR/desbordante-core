@@ -1,11 +1,11 @@
-#include <exception>                    // for exception
-#include <iostream>                     // for basic_ostream, operator<<
-#include <list>                         // for list, _List_const_iterator
-#include <memory>                       // for unique_ptr
-#include <stdexcept>                    // for runtime_error
-#include <vector>                       // for vector
+#include <exception>  // for exception
+#include <iostream>   // for basic_ostream, operator<<
+#include <list>       // for list, _List_const_iterator
+#include <memory>     // for unique_ptr
+#include <stdexcept>  // for runtime_error
+#include <vector>     // for vector
 
-#include <gtest/gtest.h>                // for TypedTestSuitePState, Types
+#include <gtest/gtest.h>  // for TypedTestSuitePState, Types
 
 #include "algorithms/algo_factory.h"    // for CreateAndLoadAlgorithm, StdPa...
 #include "all_csv_configs.h"            // for kCIPublicHighway10k, kCIPubli...

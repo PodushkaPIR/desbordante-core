@@ -1,8 +1,8 @@
 #pragma once
 
-#include <stddef.h>    // for size_t
 #include <array>       // for array
 #include <functional>  // for function
+#include <stddef.h>    // for size_t
 #include <vector>      // for vector
 
 namespace algos {

@@ -15,7 +15,13 @@
 #include "md/hymd/preprocessing/ccv_id_pickers/pick_lhs_ccv_ids_type.h"
 #include "model/types/builtin.h"
 
-namespace algos { namespace hymd { namespace indexes { class KeyedPositionListIndex; } } }
+namespace algos {
+namespace hymd {
+namespace indexes {
+class KeyedPositionListIndex;
+}
+}  // namespace hymd
+}  // namespace algos
 
 namespace algos::hymd::preprocessing::column_matches {
 namespace detail {

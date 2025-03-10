@@ -1,7 +1,7 @@
 #include "transactional_data.h"
 
-#include <cassert>                  // for assert
-#include <unordered_map>            // for unordered_map, _Node_iterator
+#include <cassert>        // for assert
+#include <unordered_map>  // for unordered_map, _Node_iterator
 
 #include "table/idataset_stream.h"  // for IDatasetStream
 #include "transaction/itemset.h"    // for Itemset

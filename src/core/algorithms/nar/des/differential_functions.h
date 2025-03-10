@@ -1,8 +1,7 @@
 #pragma once
 
-#include <vector>         // for vector
-
-#include <stddef.h>       // for size_t
+#include <stddef.h>  // for size_t
+#include <vector>    // for vector
 
 #include "encoded_nar.h"  // for EncodedNAR
 #include "enums.h"        // for DifferentialStrategy

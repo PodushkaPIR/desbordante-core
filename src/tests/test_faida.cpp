@@ -1,6 +1,6 @@
-#include <memory>                        // for unique_ptr
+#include <memory>  // for unique_ptr
 
-#include <gtest/gtest.h>                 // for TestInfo (ptr only), TEST_F
+#include <gtest/gtest.h>  // for TestInfo (ptr only), TEST_F
 
 #include "algorithms/algo_factory.h"     // for CreateAndLoadAlgorithm, StdP...
 #include "algorithms/ind/faida/faida.h"  // for Faida

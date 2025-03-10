@@ -1,6 +1,6 @@
 #include "sampled_inverted_index.h"
 
-#include <algorithm>                    // for remove_if
+#include <algorithm>  // for remove_if
 
 #include <boost/move/utility_core.hpp>  // for move
 

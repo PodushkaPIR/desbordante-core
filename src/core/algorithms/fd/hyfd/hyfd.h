@@ -1,7 +1,7 @@
 #pragma once
 
-#include <optional>                                // for optional, nullopt
-#include <vector>                                  // for vector
+#include <optional>  // for optional, nullopt
+#include <vector>    // for vector
 
 #include "algorithms/fd/hycommon/types.h"          // for ClusterId
 #include "algorithms/fd/pli_based_fd_algorithm.h"  // for PliBasedFDAlgorithm

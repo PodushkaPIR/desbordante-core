@@ -1,12 +1,12 @@
 #pragma once
 
 #include <list>
-#include <memory>                                              // for unique...
+#include <memory>  // for unique...
 #include <queue>
-#include <set>                                                 // for set
+#include <set>  // for set
 #include <stack>
-#include <string>                                              // for string
-#include <unordered_map>                                       // for unorde...
+#include <string>         // for string
+#include <unordered_map>  // for unorde...
 #include <vector>
 
 #include "algorithms/association_rules/candidate_hash_tree.h"

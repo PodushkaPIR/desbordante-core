@@ -1,7 +1,7 @@
 #include "algorithms/md/hymd/lattice_traverser.h"
 
-#include <assert.h>                          // for assert
-#include <tuple>                             // for tuple
+#include <assert.h>  // for assert
+#include <tuple>     // for tuple
 
 #include "algorithms/md/hymd/utility/zip.h"  // for Zip
 #include "md/hymd/lattice/level_getter.h"    // for LevelGetter

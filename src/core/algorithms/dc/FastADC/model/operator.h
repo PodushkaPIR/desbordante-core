@@ -1,8 +1,8 @@
 #pragma once
 
-#include <array>                   // for array
-#include <cstddef>                 // for size_t, byte
-#include <string>                  // for string
+#include <array>    // for array
+#include <cstddef>  // for size_t, byte
+#include <string>   // for string
 
 #include "frozen/string.h"         // for string
 #include "frozen/unordered_map.h"  // for unordered_map

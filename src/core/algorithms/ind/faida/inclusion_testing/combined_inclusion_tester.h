@@ -1,13 +1,12 @@
 #pragma once
 
-#include <cmath>                                     // for log
-#include <stddef.h>                                   // for size_t
-#include <memory>                                     // for shared_ptr, __s...
-#include <optional>                                   // for optional
-#include <unordered_map>                              // for unordered_map
-#include <vector>                                     // for vector
-
-#include <hash_table8.hpp>                            // for HashMap
+#include <cmath>            // for log
+#include <hash_table8.hpp>  // for HashMap
+#include <memory>           // for shared_ptr, __s...
+#include <optional>         // for optional
+#include <stddef.h>         // for size_t
+#include <unordered_map>    // for unordered_map
+#include <vector>           // for vector
 
 #include "hll_data.h"                                 // for HLLData
 #include "iinclusion_tester.h"                        // for IInclusionTester

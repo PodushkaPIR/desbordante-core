@@ -3,7 +3,11 @@
 #include "algorithms/ucc/hyucc/model/non_ucc_list.h"  // for NonUCCList
 #include "algorithms/ucc/raw_ucc.h"                   // for RawUCC
 
-namespace algos { namespace hyucc { class UCCTree; } }
+namespace algos {
+namespace hyucc {
+class UCCTree;
+}
+}  // namespace algos
 
 namespace algos::hyucc {
 

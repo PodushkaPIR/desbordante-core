@@ -1,11 +1,11 @@
-#include <list>                                        // for list, _List_co...
-#include <memory>                                      // for unique_ptr
-#include <utility>                                     // for move, pair
-#include <vector>                                      // for vector
+#include <list>      // for list, _List_co...
+#include <memory>    // for unique_ptr
+#include <stddef.h>  // for size_t
+#include <utility>   // for move, pair
+#include <vector>    // for vector
 
-#include <boost/any.hpp>                               // for any
-#include <gtest/gtest.h>                               // for EXPECT_EQ, Uni...
-#include <stddef.h>                                    // for size_t
+#include <boost/any.hpp>  // for any
+#include <gtest/gtest.h>  // for EXPECT_EQ, Uni...
 
 #include "algorithms/algo_factory.h"                   // for StdParamsMap
 #include "algorithms/ucc/ucc_verifier/ucc_verifier.h"  // for UCCVerifier
@@ -66,6 +66,7 @@ public:
     double GetExpectedError() const {
         return expected_error_;
     }
+
     std::vector<model::PLI::Cluster> const& GetExpectedClustersViolatingUCC() const {
         return clusters_violating_ucc_;
     }

@@ -2,7 +2,10 @@
 
 #include "config/error/type.h"  // for ErrorType
 
-namespace config { template <typename T> class CommonOption; }
+namespace config {
+template <typename T>
+class CommonOption;
+}
 
 namespace config {
 

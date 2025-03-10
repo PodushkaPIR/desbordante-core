@@ -1,11 +1,11 @@
 #include "afd_measures.h"
 
-#include <algorithm>                    // for max
-#include <cstddef>                      // for size_t
-#include <deque>                        // for deque, _Deque_iterator
-#include <memory>                       // for shared_ptr, __shared_ptr_access
-#include <unordered_map>                // for unordered_map
-#include <vector>                       // for vector
+#include <algorithm>      // for max
+#include <cstddef>        // for size_t
+#include <deque>          // for deque, _Deque_iterator
+#include <memory>         // for shared_ptr, __shared_ptr_access
+#include <unordered_map>  // for unordered_map
+#include <vector>         // for vector
 
 #include "error/type.h"                 // for ErrorType
 #include "table/column_data.h"          // for ColumnData

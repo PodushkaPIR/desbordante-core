@@ -1,9 +1,8 @@
 #include "algorithms/fd/pfd_verifier/pfd_verifier.h"
 
-#include <functional>                                // for function
-#include <memory>                                    // for shared_ptr, __sh...
-#include <stdexcept>                                 // for runtime_error
-
+#include <functional>  // for function
+#include <memory>      // for shared_ptr, __sh...
+#include <stdexcept>   // for runtime_error
 
 #include "algorithms/algorithm.h"                    // for Algorithm
 #include "common_option.h"                           // for CommonOption

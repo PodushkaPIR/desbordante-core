@@ -1,6 +1,6 @@
 #pragma once
 
-#include <vector>                            // for vector
+#include <vector>  // for vector
 
 #include "algorithms/cfd/model/cfd_types.h"
 

@@ -1,8 +1,8 @@
-#include <filesystem>                       // for path, operator/
-#include <memory>                           // for unique_ptr
-#include <vector>                           // for vector
+#include <filesystem>  // for path, operator/
+#include <memory>      // for unique_ptr
+#include <vector>      // for vector
 
-#include <gtest/gtest.h>                    // for TypedTestSuitePState, ASS...
+#include <gtest/gtest.h>  // for TypedTestSuitePState, ASS...
 
 #include "algorithms/algo_factory.h"        // for CreateAndLoadAlgorithm
 #include "algorithms/gfd/gfd_validation.h"  // for GfdValidation
@@ -13,7 +13,9 @@
 
 class Gfd;
 
-namespace algos { class GfdHandler; }
+namespace algos {
+class GfdHandler;
+}
 
 using namespace algos;
 using algos::StdParamsMap;

@@ -1,6 +1,6 @@
 #include <memory>
 
-#include <gtest/gtest.h>                                      // for Message
+#include <gtest/gtest.h>  // for Message
 
 #include "all_csv_configs.h"
 #include "create_type.h"

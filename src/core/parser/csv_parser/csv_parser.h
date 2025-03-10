@@ -5,12 +5,11 @@
 
 #pragma once
 
-#include <filesystem>                     // for path
-#include <fstream>                        // for basic_ifstream, ifstream
-#include <string>                         // for string
-#include <vector>                         // for vector
-
-#include <stddef.h>                       // for size_t
+#include <filesystem>  // for path
+#include <fstream>     // for basic_ifstream, ifstream
+#include <stddef.h>    // for size_t
+#include <string>      // for string
+#include <vector>      // for vector
 
 #include "model/table/idataset_stream.h"  // for IDatasetStream
 

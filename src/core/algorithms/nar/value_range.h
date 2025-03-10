@@ -1,12 +1,12 @@
 #pragma once
 
-#include <algorithm>                  // for minmax
-#include <cstddef>                    // for byte
-#include <memory>                     // for shared_ptr
-#include <stdexcept>                  // for logic_error
-#include <string>                     // for string, to_string, basic_string
-#include <utility>                    // for move
-#include <vector>                     // for vector
+#include <algorithm>  // for minmax
+#include <cstddef>    // for byte
+#include <memory>     // for shared_ptr
+#include <stdexcept>  // for logic_error
+#include <string>     // for string, to_string, basic_string
+#include <utility>    // for move
+#include <vector>     // for vector
 
 #include "builtin.h"                  // for TypeId, String, Double, Int
 #include "model/types/type.h"         // for Type

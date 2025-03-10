@@ -1,11 +1,11 @@
 #pragma once
 
-#include <memory>                                     // for allocator, uniq...
-#include <ostream>                                    // for basic_ios::imbue
-#include <string>                                     // for string, char_tr...
+#include <memory>   // for allocator, uniq...
+#include <ostream>  // for basic_ios::imbue
+#include <string>   // for string, char_tr...
 
 #include <boost/format.hpp>
-#include <boost/optional/optional.hpp>                // for get_pointer
+#include <boost/optional/optional.hpp>  // for get_pointer
 
 #include "dependency_strategy.h"                      // for DependencyStrategy
 #include "fd/pyrocommon/core/dependency_candidate.h"  // for DependencyCandi...
@@ -17,7 +17,10 @@
 
 class DependencyConsumer;
 class SearchSpace;
-namespace model { class PositionListIndex; }
+
+namespace model {
+class PositionListIndex;
+}
 
 class KeyG1Strategy : public DependencyStrategy {
 private:

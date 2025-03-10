@@ -1,9 +1,8 @@
 #include "vertical.h"
 
-#include <utility>                    // for move
-
-#include <assert.h>                   // for assert
-#include <stddef.h>                   // for size_t
+#include <assert.h>  // for assert
+#include <stddef.h>  // for size_t
+#include <utility>   // for move
 
 #include "table/column.h"             // for Column
 #include "table/relational_schema.h"  // for RelationalSchema

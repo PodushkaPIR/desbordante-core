@@ -1,9 +1,9 @@
 #pragma once
 
-#include <cstddef>                                       // for size_t
-#include <vector>                                        // for vector
+#include <cstddef>  // for size_t
+#include <vector>   // for vector
 
-#include <boost/dynamic_bitset/dynamic_bitset.hpp>       // for dynamic_bitset
+#include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
 
 #include "algorithms/md/hymd/lattice/md_lattice.h"       // for MdLattice
 #include "algorithms/md/hymd/lattice/node_base.h"        // for NodeBase

@@ -2,7 +2,11 @@
 
 #include "algorithms/cfd/model/cfd_types.h"
 
-namespace algos { namespace cfd { struct PartitionTIdList; } }
+namespace algos {
+namespace cfd {
+struct PartitionTIdList;
+}
+}  // namespace algos
 
 // see algorithms/cfd/LICENSE
 

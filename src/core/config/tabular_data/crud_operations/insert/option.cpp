@@ -1,8 +1,8 @@
 #include "config/tabular_data/crud_operations/insert/option.h"
 
-#include <variant>                          // for variant
+#include <variant>  // for variant
 
-#include "common_option.h"                  // for CommonOption
+#include "common_option.h"  // for CommonOption
 #include "config/names_and_descriptions.h"
 #include "tabular_data/input_table_type.h"  // for InputTable
 

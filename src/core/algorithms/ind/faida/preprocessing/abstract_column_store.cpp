@@ -1,10 +1,9 @@
 #include "abstract_column_store.h"
 
-#include <fstream>                    // for basic_ifstream, basic_ofstream
-#include <stdexcept>                  // for runtime_error
-#include <utility>                    // for move
-
-#include <stddef.h>                   // for size_t
+#include <fstream>    // for basic_ifstream, basic_ofstream
+#include <stddef.h>   // for size_t
+#include <stdexcept>  // for runtime_error
+#include <utility>    // for move
 
 #include "model/table/column.h"       // for Column
 #include "table/idataset_stream.h"    // for IDatasetStream

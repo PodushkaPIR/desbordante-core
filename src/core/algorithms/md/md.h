@@ -1,10 +1,10 @@
 #pragma once
 
-#include <memory>                                            // for shared_ptr
-#include <optional>                                          // for optional
-#include <string>                                            // for string
-#include <utility>                                           // for pair
-#include <vector>                                            // for vector
+#include <memory>    // for shared_ptr
+#include <optional>  // for optional
+#include <string>    // for string
+#include <utility>   // for pair
+#include <vector>    // for vector
 
 #include "algorithms/md/column_similarity_classifier.h"      // for ColumnSi...
 #include "algorithms/md/decision_boundary.h"                 // for Decision...
@@ -12,7 +12,12 @@
 #include "model/index.h"                                     // for Index
 
 class RelationalSchema;
-namespace model { namespace md { struct ColumnMatch; } }
+
+namespace model {
+namespace md {
+struct ColumnMatch;
+}
+}  // namespace model
 
 namespace model {
 

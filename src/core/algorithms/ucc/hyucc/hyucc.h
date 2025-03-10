@@ -1,10 +1,10 @@
 #pragma once
 
-#include <memory>                                     // for unique_ptr
-#include <vector>                                     // for vector
+#include <memory>  // for unique_ptr
+#include <vector>  // for vector
 
-#include <boost/dynamic_bitset/dynamic_bitset.hpp>    // for dynamic_bitset
-#include <boost/type_index/type_index_facade.hpp>     // for operator==
+#include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
+#include <boost/type_index/type_index_facade.hpp>   // for operator==
 
 #include "common_option.h"                            // for CommonOption
 #include "config/thread_number/option.h"              // for kThreadNumberOpt

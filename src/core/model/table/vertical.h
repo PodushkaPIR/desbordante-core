@@ -5,14 +5,14 @@
 
 #pragma once
 
-#include <memory>                                   // for unique_ptr
-#include <string>                                   // for string
-#include <vector>                                   // for vector
+#include <memory>  // for unique_ptr
+#include <string>  // for string
+#include <vector>  // for vector
 
 #include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
 #include <boost/move/utility_core.hpp>              // for move
 
-#include "column.h"                                 // for Column
+#include "column.h"  // for Column
 
 class RelationalSchema;
 

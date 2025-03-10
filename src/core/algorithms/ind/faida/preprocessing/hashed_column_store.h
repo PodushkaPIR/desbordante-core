@@ -1,20 +1,21 @@
 #pragma once
 
-#include <filesystem>                               // for path
-#include <iosfwd>                                   // for ifstream
-#include <memory>                                   // for unique_ptr
-#include <optional>                                 // for optional
-#include <string>                                   // for string
-#include <unordered_set>                            // for unordered_set
-#include <utility>                                  // for move
-#include <vector>                                   // for vector
-
-#include <stddef.h>                                 // for size_t
+#include <filesystem>     // for path
+#include <iosfwd>         // for ifstream
+#include <memory>         // for unique_ptr
+#include <optional>       // for optional
+#include <stddef.h>       // for size_t
+#include <string>         // for string
+#include <unordered_set>  // for unordered_set
+#include <utility>        // for move
+#include <vector>         // for vector
 
 #include "abstract_column_store.h"                  // for AbstractColumnStore
 #include "ind/faida/preprocessing/irow_iterator.h"  // for IRowIterator
 
-namespace model { class IDatasetStream; }
+namespace model {
+class IDatasetStream;
+}
 
 namespace algos::faida {
 

@@ -1,8 +1,7 @@
 #include "simple_ind.h"
 
-#include <vector>                      // for vector
-
-#include <assert.h>                    // for assert
+#include <assert.h>  // for assert
+#include <vector>    // for vector
 
 #include "ind/faida/util/simple_cc.h"  // for SimpleCC, ColumnIndex
 

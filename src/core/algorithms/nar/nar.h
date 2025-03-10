@@ -1,14 +1,16 @@
 #pragma once
 
-#include <cstddef>                                          // for size_t, byte
-#include <memory>                                           // for shared_ptr
-#include <sstream>                                          // for basic_ost...
-#include <string>                                           // for char_traits
-#include <unordered_map>                                    // for unordered...
+#include <cstddef>        // for size_t, byte
+#include <memory>         // for shared_ptr
+#include <sstream>        // for basic_ost...
+#include <string>         // for char_traits
+#include <unordered_map>  // for unordered...
 
 #include "model/table/column_layout_typed_relation_data.h"  // for ColumnLay...
 
-namespace model { class ValueRange; }
+namespace model {
+class ValueRange;
+}
 
 namespace model {
 

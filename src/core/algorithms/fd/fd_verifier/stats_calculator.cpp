@@ -1,13 +1,13 @@
 #include "algorithms/fd/fd_verifier/stats_calculator.h"
 
-#include <algorithm>                                  // for max_element, sort
-#include <cassert>                                    // for assert
-#include <cstddef>                                    // for size_t, byte
-#include <deque>                                      // for deque, _Deque_i...
-#include <numeric>                                    // for accumulate
-#include <unordered_map>                              // for unordered_map
+#include <algorithm>      // for max_element, sort
+#include <cassert>        // for assert
+#include <cstddef>        // for size_t, byte
+#include <deque>          // for deque, _Deque_i...
+#include <numeric>        // for accumulate
+#include <unordered_map>  // for unordered_map
 
-#include <easylogging++.h>                            // for Writer, CDEBUG
+#include <easylogging++.h>  // for Writer, CDEBUG
 
 #include "fd/fd_verifier/highlight.h"                 // for Highlight
 #include "mixed_type.h"                               // for MixedType

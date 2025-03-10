@@ -1,6 +1,6 @@
 #pragma once
 
-#include <vector>                                     // for vector
+#include <vector>  // for vector
 
 #include <easylogging++.h>
 

@@ -1,6 +1,6 @@
 #include "algorithms/md/hymd/indexes/keyed_position_list_index.h"
 
-#include <utility>                                    // for pair
+#include <utility>  // for pair
 
 #include "md/hymd/indexes/global_value_identifier.h"  // for GlobalValueIden...
 #include "md/hymd/table_identifiers.h"                // for ValueIdentifier

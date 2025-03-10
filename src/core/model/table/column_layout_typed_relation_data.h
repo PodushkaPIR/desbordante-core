@@ -1,9 +1,8 @@
 #pragma once
 
-#include <memory>               // for unique_ptr
-#include <vector>               // for vector
-
-#include <stddef.h>             // for size_t
+#include <memory>    // for unique_ptr
+#include <stddef.h>  // for size_t
+#include <vector>    // for vector
 
 #include "idataset_stream.h"
 #include "relation_data.h"      // for AbstractRelationData

@@ -1,9 +1,9 @@
 #include "algorithms/nd/nd_verifier/util/value_combination.h"
 
-#include <memory>                     // for allocator, unique_ptr
-#include <ostream>                    // for basic_ostream, operator<<, ostream
-#include <sstream>                    // for basic_stringstream
-#include <string>                     // for char_traits, operator<<, string
+#include <memory>   // for allocator, unique_ptr
+#include <ostream>  // for basic_ostream, operator<<, ostream
+#include <sstream>  // for basic_stringstream
+#include <string>   // for char_traits, operator<<, string
 
 #include "builtin.h"                  // for TypeId, operator!=, operator+
 #include "model/types/create_type.h"  // for CreateType

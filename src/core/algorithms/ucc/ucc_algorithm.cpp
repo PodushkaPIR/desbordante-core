@@ -1,9 +1,9 @@
 #include "ucc_algorithm.h"
 
-#include <memory>                                    // for shared_ptr
-#include <utility>                                   // for move
+#include <memory>   // for shared_ptr
+#include <utility>  // for move
 
-#include <boost/type_index/type_index_facade.hpp>    // for operator==
+#include <boost/type_index/type_index_facade.hpp>  // for operator==
 
 #include "algorithm.h"                               // for Algorithm
 #include "common_option.h"                           // for CommonOption

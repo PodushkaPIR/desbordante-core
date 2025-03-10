@@ -1,11 +1,11 @@
 #pragma once
 
-#include <cstddef>                                             // for size_t
-#include <memory>                                              // for shared...
-#include <string>                                              // for string
-#include <unordered_map>                                       // for unorde...
-#include <utility>                                             // for pair
-#include <vector>                                              // for vector
+#include <cstddef>        // for size_t
+#include <memory>         // for shared...
+#include <string>         // for string
+#include <unordered_map>  // for unorde...
+#include <utility>        // for pair
+#include <vector>         // for vector
 
 #include "algorithms/algorithm.h"                              // for Algorithm
 #include "algorithms/nd/nd.h"                                  // for Weight...
@@ -15,9 +15,21 @@
 #include "config/indices/type.h"                               // for Indice...
 #include "config/tabular_data/input_table_type.h"              // for InputT...
 
-namespace algos { namespace nd_verifier { namespace util { class Highlight; } } }
-namespace model { class ColumnLayoutTypedRelationData; }
-namespace model { class TypeId; }
+namespace algos {
+namespace nd_verifier {
+namespace util {
+class Highlight;
+}
+}  // namespace nd_verifier
+}  // namespace algos
+
+namespace model {
+class ColumnLayoutTypedRelationData;
+}
+
+namespace model {
+class TypeId;
+}
 
 namespace algos::nd_verifier {
 

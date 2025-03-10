@@ -1,13 +1,13 @@
 #pragma once
 
-#include <memory>                                  // for unique_ptr
-#include <optional>                                // for optional, nullopt
-#include <unordered_set>                           // for unordered_set
-#include <vector>                                  // for vector
+#include <memory>         // for unique_ptr
+#include <optional>       // for optional, nullopt
+#include <unordered_set>  // for unordered_set
+#include <vector>         // for vector
 
 #include "algorithms/fd/depminer/cmax_set.h"
 #include "algorithms/fd/pli_based_fd_algorithm.h"
-#include "table/vertical.h"                        // for Vertical
+#include "table/vertical.h"  // for Vertical
 
 class Column;
 class RelationalSchema;

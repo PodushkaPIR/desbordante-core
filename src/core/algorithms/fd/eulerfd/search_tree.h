@@ -1,10 +1,10 @@
 #pragma once
 
-#include <functional>                               // for function
-#include <memory>                                   // for shared_ptr, weak_ptr
-#include <utility>                                  // for pair
+#include <functional>  // for function
+#include <memory>      // for shared_ptr, weak_ptr
+#include <stddef.h>    // for size_t
+#include <utility>     // for pair
 
-#include <stddef.h>                                 // for size_t
 #include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
 #include <boost/move/utility_core.hpp>              // for move
 

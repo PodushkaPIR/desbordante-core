@@ -1,17 +1,17 @@
 #pragma once
 
-#include <list>                                            // for list
-#include <random>                                          // for mt19937
-#include <stack>                                           // for stack
-#include <unordered_set>                                   // for unordered_set
-#include <vector>                                          // for vector
+#include <list>           // for list
+#include <random>         // for mt19937
+#include <stack>          // for stack
+#include <unordered_set>  // for unordered_set
+#include <vector>         // for vector
 
+#include "custom_hashes.h"                                     // for hash
 #include "fd/dfd/column_order/column_order.h"                  // for ColumnOrder
 #include "fd/dfd/lattice_observations/lattice_observations.h"  // for LatticeObs...
 #include "fd/dfd/pruning_maps/dependencies_map.h"              // for Dependenci...
 #include "fd/dfd/pruning_maps/non_dependencies_map.h"          // for NonDepende...
-#include "custom_hashes.h"                                 // for hash
-#include "model/table/vertical.h"                          // for Vertical
+#include "model/table/vertical.h"                              // for Vertical
 
 class Column;
 class ColumnLayoutRelationData;

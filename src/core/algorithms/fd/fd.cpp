@@ -1,6 +1,6 @@
 #include "algorithms/fd/fd.h"
 
-#include <sstream>              // for basic_ostream, basic_stringstream
+#include <sstream>  // for basic_ostream, basic_stringstream
 
 #include "table/column.h"       // for Column
 #include "table/vertical.h"     // for Vertical

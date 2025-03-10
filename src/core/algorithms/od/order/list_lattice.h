@@ -1,8 +1,8 @@
 #pragma once
 
-#include <unordered_map>    // for unordered_map
-#include <unordered_set>    // for unordered_set
-#include <vector>           // for vector
+#include <unordered_map>  // for unordered_map
+#include <unordered_set>  // for unordered_set
+#include <vector>         // for vector
 
 #include "order_utility.h"  // for Node, CandidateSets, AttributeList, ListHash
 

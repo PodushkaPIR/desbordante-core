@@ -1,12 +1,12 @@
 #include "test_ind_util.h"
 
-#include <algorithm>                   // for sort, transform
-#include <filesystem>                  // for operator<<, path
-#include <iterator>                    // for back_insert_iterator, back_ins...
-#include <sstream>                     // for basic_ostream, basic_stringstream
-#include <type_traits>                 // for __decay_and_strip
+#include <algorithm>    // for sort, transform
+#include <filesystem>   // for operator<<, path
+#include <iterator>     // for back_insert_iterator, back_ins...
+#include <sstream>      // for basic_ostream, basic_stringstream
+#include <type_traits>  // for __decay_and_strip
 
-#include <gtest/gtest.h>               // for ASSERT_EQ, CmpHelperNE, ASSERT_NE
+#include <gtest/gtest.h>  // for ASSERT_EQ, CmpHelperNE, ASSERT_NE
 
 #include "all_csv_configs.h"           // for kIndTest3aryInds, kIndTestPlanets
 #include "csv_parser/csv_parser.h"     // for CSVConfig

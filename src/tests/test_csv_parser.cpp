@@ -1,12 +1,12 @@
-#include <cstddef>                          // for size_t
-#include <filesystem>                       // for operator<<
-#include <memory>                           // for __shared_ptr_access
-#include <string>                           // for basic_string, string
-#include <utility>                          // for move
-#include <vector>                           // for vector
+#include <cstddef>     // for size_t
+#include <filesystem>  // for operator<<
+#include <memory>      // for __shared_ptr_access
+#include <string>      // for basic_string, string
+#include <utility>     // for move
+#include <vector>      // for vector
 
-#include <gmock/gmock.h>                    // for ContainerEq, MakePredicat...
-#include <gtest/gtest.h>                    // for Message, AssertionResult
+#include <gmock/gmock.h>  // for ContainerEq, MakePredicat...
+#include <gtest/gtest.h>  // for Message, AssertionResult
 
 #include "all_csv_configs.h"                // for kTestEmpty, kACShippingDates
 #include "csv_config_util.h"                // for MakeInputTable

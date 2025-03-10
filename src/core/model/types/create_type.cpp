@@ -1,6 +1,6 @@
 #include "create_type.h"
 
-#include <string>            // for operator+, string
+#include <string>  // for operator+, string
 
 #include "big_int_type.h"    // for BigIntType
 #include "date_type.h"       // for DateType

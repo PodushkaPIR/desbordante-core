@@ -1,22 +1,22 @@
 #pragma once
 
-#include <array>                                    // for array
-#include <cstdlib>                                  // for size_t
-#include <memory>                                   // for shared_ptr, uniqu...
-#include <unordered_set>                            // for unordered_set
-#include <vector>                                   // for vector
+#include <array>          // for array
+#include <cstdlib>        // for size_t
+#include <memory>         // for shared_ptr, uniqu...
+#include <unordered_set>  // for unordered_set
+#include <vector>         // for vector
 
 #include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset, hash
 #include <boost/move/utility_core.hpp>              // for move
 
-#include "custom_random_seed/type.h"                // for CustomRandomSeedType
-#include "equal_nulls/type.h"                       // for EqNullsType
-#include "fd/eulerfd/cluster.h"                     // for Cluster
-#include "fd/fd_algorithm.h"                        // for FDAlgorithm
-#include "mlfq.h"                                   // for MLFQ
-#include "search_tree.h"                            // for SearchTreeEulerFD
-#include "tabular_data/input_table_type.h"          // for InputTable
-#include "util/custom_random.h"                     // for CustomRandom
+#include "custom_random_seed/type.h"        // for CustomRandomSeedType
+#include "equal_nulls/type.h"               // for EqNullsType
+#include "fd/eulerfd/cluster.h"             // for Cluster
+#include "fd/fd_algorithm.h"                // for FDAlgorithm
+#include "mlfq.h"                           // for MLFQ
+#include "search_tree.h"                    // for SearchTreeEulerFD
+#include "tabular_data/input_table_type.h"  // for InputTable
+#include "util/custom_random.h"             // for CustomRandom
 
 class RelationalSchema;
 

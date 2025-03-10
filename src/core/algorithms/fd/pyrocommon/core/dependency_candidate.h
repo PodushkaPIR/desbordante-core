@@ -1,11 +1,11 @@
 #pragma once
 
-#include <iosfwd>                          // for ostream
-#include <string>                          // for allocator, char_traits
-#include <utility>                         // for move
+#include <iosfwd>   // for ostream
+#include <string>   // for allocator, char_traits
+#include <utility>  // for move
 
 #include "fd/pyrocommon/model/confidence_interval.h"  // for ConfidenceInterval
-#include "model/table/vertical.h"          // for Vertical
+#include "model/table/vertical.h"                     // for Vertical
 
 class DependencyCandidate {
 private:

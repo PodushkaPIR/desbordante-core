@@ -1,14 +1,20 @@
 #pragma once
 
-#include <memory>                                   // for shared_ptr
-#include <utility>                                  // for move
+#include <memory>    // for shared_ptr
+#include <stddef.h>  // for size_t
+#include <utility>   // for move
 
 #include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
-#include <stddef.h>                                 // for size_t
 
-#include "algorithms/fd/hyfd/model/non_fd_list.h"   // for NonFDList
+#include "algorithms/fd/hyfd/model/non_fd_list.h"  // for NonFDList
 
-namespace algos { namespace hyfd { namespace fd_tree { class FDTree; } } }
+namespace algos {
+namespace hyfd {
+namespace fd_tree {
+class FDTree;
+}
+}  // namespace hyfd
+}  // namespace algos
 
 namespace algos::hyfd {
 

@@ -2,8 +2,8 @@
 
 #include <algorithm>
 #include <cassert>
-#include <iterator>                                 // for next, prev
-#include <utility>                                  // for move
+#include <iterator>  // for next, prev
+#include <utility>   // for move
 
 #include <easylogging++.h>
 

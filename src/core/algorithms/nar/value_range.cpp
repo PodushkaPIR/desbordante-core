@@ -3,7 +3,7 @@
 #include <sstream>        // for basic_ostream, basic_ostringstream, operator<<
 #include <unordered_set>  // for unordered_set
 
-#include "type.h"         // for Type
+#include "type.h"  // for Type
 
 namespace model {
 

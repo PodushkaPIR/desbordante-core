@@ -1,12 +1,11 @@
 #include "cords.h"
 
+#include <algorithm>         // for min
+#include <initializer_list>  // for initializer_list
+#include <utility>           // for move, pair
+#include <vector>            // for vector
 
-#include <algorithm>                                  // for min
-#include <initializer_list>                           // for initializer_list
-#include <utility>                                    // for move, pair
-#include <vector>                                     // for vector
-
-#include <boost/type_index/type_index_facade.hpp>     // for operator==
+#include <boost/type_index/type_index_facade.hpp>  // for operator==
 
 #include "common_option.h"                            // for CommonOption
 #include "config/equal_nulls/option.h"                // for kEqualNullsOpt

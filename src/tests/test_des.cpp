@@ -1,9 +1,9 @@
-#include <memory>                     // for unique_ptr
-#include <string>                     // for basic_string, string, hash, to_...
-#include <utility>                    // for pair, forward
-#include <vector>                     // for vector
+#include <memory>   // for unique_ptr
+#include <string>   // for basic_string, string, hash, to_...
+#include <utility>  // for pair, forward
+#include <vector>   // for vector
 
-#include <gtest/gtest.h>              // for TestInfo (ptr only), ASSERT_EQ
+#include <gtest/gtest.h>  // for TestInfo (ptr only), ASSERT_EQ
 
 #include "algorithms/algo_factory.h"  // for CreateAndLoadAlgorithm, StdPara...
 #include "algorithms/nar/des/des.h"   // for DES

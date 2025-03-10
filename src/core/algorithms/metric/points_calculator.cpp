@@ -1,6 +1,6 @@
 #include "algorithms/metric/points_calculator.h"
 
-#include <stdexcept>                                  // for runtime_error
+#include <stdexcept>  // for runtime_error
 
 #include "builtin.h"                                  // for TypeId, operator+
 #include "convex_hull.h"                              // for Point

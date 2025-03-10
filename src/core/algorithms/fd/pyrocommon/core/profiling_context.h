@@ -1,16 +1,16 @@
 #pragma once
 
-#include <functional>                           // for function
-#include <memory>                               // for unique_ptr, operator==
-#include <random>                               // for mt19937
-#include <string>                               // for string
-#include <vector>                               // for vector
+#include <functional>  // for function
+#include <memory>      // for unique_ptr, operator==
+#include <random>      // for mt19937
+#include <string>      // for string
+#include <vector>      // for vector
 
-#include "fd/pyrocommon/model/agree_set_sample.h"          // for AgreeSetSample
-#include "dependency_consumer.h"                // for DependencyConsumer
-#include "parameters.h"                         // for Parameters
-#include "table/column_layout_relation_data.h"  // for ColumnLayoutRelationData
-#include "util/custom_random.h"                 // for CustomRandom
+#include "dependency_consumer.h"                   // for DependencyConsumer
+#include "fd/pyrocommon/model/agree_set_sample.h"  // for AgreeSetSample
+#include "parameters.h"                            // for Parameters
+#include "table/column_layout_relation_data.h"     // for ColumnLayoutRelationData
+#include "util/custom_random.h"                    // for CustomRandom
 
 class PartialFD;
 class PartialKey;
@@ -18,7 +18,10 @@ class RelationalSchema;
 class Vertical;
 enum class CacheEvictionMethod;
 enum class CachingMethod;
-namespace model { class PositionListIndex; }
+
+namespace model {
+class PositionListIndex;
+}
 
 namespace model {
 

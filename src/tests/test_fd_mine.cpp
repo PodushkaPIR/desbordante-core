@@ -1,34 +1,34 @@
-#include <algorithm>                                // for sort
-#include <filesystem>                               // for operator==, path
-#include <iostream>                                 // for char_traits, basi...
-#include <list>                                     // for list, _List_iterator
-#include <memory>                                   // for unique_ptr, make_...
-#include <set>                                      // for set, operator==
-#include <stdexcept>                                // for runtime_error
-#include <string>                                   // for hash, string, ope...
-#include <utility>                                  // for pair, make_pair
-#include <vector>                                   // for vector
+#include <algorithm>   // for sort
+#include <filesystem>  // for operator==, path
+#include <iostream>    // for char_traits, basi...
+#include <list>        // for list, _List_iterator
+#include <memory>      // for unique_ptr, make_...
+#include <set>         // for set, operator==
+#include <stddef.h>    // for size_t
+#include <stdexcept>   // for runtime_error
+#include <string>      // for hash, string, ope...
+#include <utility>     // for pair, make_pair
+#include <vector>      // for vector
 
 #include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
 #include <gmock/gmock.h>                            // for ContainerEq, Eq
 #include <gtest/gtest.h>                            // for AssertionResult
-#include <stddef.h>                                 // for size_t
 
-#include "algorithms/algo_factory.h"                // for CreateAndLoadAlgo...
-#include "algorithms/fd/fd_mine/fd_mine.h"          // for FdMine
-#include "algorithms/fd/pyro/pyro.h"                // for Pyro
-#include "all_csv_configs.h"                        // for kBreastCancer
-#include "config/error/type.h"                      // for ErrorType
-#include "config/names.h"                           // for kCsvConfig, kError
-#include "csv_config_util.h"                        // for MakeInputTable
-#include "csv_parser/csv_parser.h"                  // for CSVConfig
-#include "fd/fd.h"                                  // for FD
-#include "fd/fd_algorithm.h"                        // for FDAlgorithm
-#include "fd/pyrocommon/core/parameters.h"          // for Parameters
-#include "fd/raw_fd.h"                              // for RawFD
-#include "table/column.h"                           // for Column
-#include "table/vertical.h"                         // for Vertical
-#include "test_fd_util.h"                           // for AlgorithmTest
+#include "algorithms/algo_factory.h"        // for CreateAndLoadAlgo...
+#include "algorithms/fd/fd_mine/fd_mine.h"  // for FdMine
+#include "algorithms/fd/pyro/pyro.h"        // for Pyro
+#include "all_csv_configs.h"                // for kBreastCancer
+#include "config/error/type.h"              // for ErrorType
+#include "config/names.h"                   // for kCsvConfig, kError
+#include "csv_config_util.h"                // for MakeInputTable
+#include "csv_parser/csv_parser.h"          // for CSVConfig
+#include "fd/fd.h"                          // for FD
+#include "fd/fd_algorithm.h"                // for FDAlgorithm
+#include "fd/pyrocommon/core/parameters.h"  // for Parameters
+#include "fd/raw_fd.h"                      // for RawFD
+#include "table/column.h"                   // for Column
+#include "table/vertical.h"                 // for Vertical
+#include "test_fd_util.h"                   // for AlgorithmTest
 
 namespace tests {
 using ::testing::ContainerEq, ::testing::Eq;

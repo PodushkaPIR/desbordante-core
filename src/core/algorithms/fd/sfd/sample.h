@@ -1,8 +1,7 @@
 #pragma once
 
-#include <vector>                      // for vector
-
-#include <stddef.h>                    // for size_t
+#include <stddef.h>  // for size_t
+#include <vector>    // for vector
 
 #include "model/table/column.h"        // for Column
 #include "model/table/column_index.h"  // for ColumnIndex
@@ -10,8 +9,14 @@
 #include "model/table/vertical.h"      // for Vertical
 
 class RelationalSchema;
-namespace algos { class FrequencyHandler; }
-namespace model { class TypedColumnData; }
+
+namespace algos {
+class FrequencyHandler;
+}
+
+namespace model {
+class TypedColumnData;
+}
 
 namespace algos {
 

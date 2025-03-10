@@ -1,10 +1,10 @@
 #include "partition_tidlist.h"
 
-#include <algorithm>              // for sort
-#include <compare>                // for operator<
-#include <map>                    // for map
-#include <unordered_map>          // for unordered_map
-#include <vector>                 // for vector, operator==, operator<=>
+#include <algorithm>      // for sort
+#include <compare>        // for operator<
+#include <map>            // for map
+#include <unordered_map>  // for unordered_map
+#include <vector>         // for vector, operator==, operator<=>
 
 #include "cfd/model/cfd_types.h"  // for SimpleTIdList
 

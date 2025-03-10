@@ -5,7 +5,7 @@
 #include <string>         // for string
 #include <unordered_map>  // for unordered_map
 
-#include "type.h"         // for Type
+#include "type.h"  // for Type
 
 namespace algos {
 class Statistic {

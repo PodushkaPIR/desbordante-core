@@ -1,9 +1,9 @@
 #include "column_order.h"
 
+#include <assert.h>  // for assert
 #include <set>
 
-#include <assert.h>                                   // for assert
-#include <boost/dynamic_bitset/dynamic_bitset.hpp>    // for dynamic_bitset
+#include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
 
 #include "model/table/column_layout_relation_data.h"  // for ColumnLayoutRel...
 #include "model/table/relational_schema.h"            // for RelationalSchema

@@ -1,6 +1,6 @@
 #pragma once
 
-#include <vector>                                    // for vector
+#include <vector>  // for vector
 
 #include "algorithms/cfd/model/partition_tidlist.h"
 

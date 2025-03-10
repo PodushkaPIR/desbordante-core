@@ -1,8 +1,7 @@
 #include "dc/FastADC/util/cross_clue_set_builder.h"
 
-#include <bitset>                                             // for bitset
+#include <bitset>  // for bitset
 #include <stdexcept>
-
 #include <stdint.h>
 
 #include "dc/FastADC/model/pli_shard.h"                       // for Pli

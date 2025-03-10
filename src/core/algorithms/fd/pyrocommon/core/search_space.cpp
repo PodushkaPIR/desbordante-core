@@ -1,13 +1,13 @@
 #include "search_space.h"
 
-#include <algorithm>                                  // for all_of, remove_if
-#include <iterator>                                   // for insert_iterator
-#include <queue>                                      // for priority_queue
-#include <stdexcept>                                  // for runtime_error
+#include <algorithm>  // for all_of, remove_if
+#include <assert.h>   // for assert
+#include <iterator>   // for insert_iterator
+#include <queue>      // for priority_queue
+#include <stdexcept>  // for runtime_error
 
-#include <assert.h>                                   // for assert
-#include <boost/dynamic_bitset/dynamic_bitset.hpp>    // for dynamic_bitset
-#include <boost/format.hpp>                
+#include <boost/dynamic_bitset/dynamic_bitset.hpp>  // for dynamic_bitset
+#include <boost/format.hpp>
 #include <boost/optional/detail/optional_relops.hpp>  // for operator<=
 #include <boost/optional/optional.hpp>                // for get_pointer
 #include <easylogging++.h>                            // for Writer, LOG

@@ -1,18 +1,19 @@
 #pragma once
 
-#include <functional>                                 // for function
-#include <memory>                                     // for shared_ptr
-#include <unordered_map>                              // for unordered_map
-#include <utility>                                    // for move
-#include <vector>                                     // for vector
-
-#include <stddef.h>                                   // for size_t
+#include <functional>     // for function
+#include <memory>         // for shared_ptr
+#include <stddef.h>       // for size_t
+#include <unordered_map>  // for unordered_map
+#include <utility>        // for move
+#include <vector>         // for vector
 
 #include "algorithms/fd/fd_verifier/highlight.h"      // for Highlight
 #include "config/indices/type.h"                      // for IndicesType
 #include "model/table/dynamic_position_list_index.h"  // for DynPLI
 
-namespace model { struct DynamicTableData; }
+namespace model {
+struct DynamicTableData;
+}
 
 namespace algos::fd_verifier {
 

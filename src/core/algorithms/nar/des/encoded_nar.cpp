@@ -1,9 +1,9 @@
 #include "encoded_nar.h"
 
-#include <algorithm>                      // for generate_n, __sort_fn, sort
-#include <iterator>                       // for back_insert_iterator, back_...
-#include <numeric>                        // for iota
-#include <stdexcept>                      // for logic_error
+#include <algorithm>  // for generate_n, __sort_fn, sort
+#include <iterator>   // for back_insert_iterator, back_...
+#include <numeric>    // for iota
+#include <stdexcept>  // for logic_error
 
 #include "nar/des/encoded_value_range.h"  // for EncodedValueRange
 #include "nar/des/rng.h"                  // for RNG

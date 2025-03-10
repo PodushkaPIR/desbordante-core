@@ -1,6 +1,8 @@
 #pragma once
 
-namespace model { class PositionListIndex; }
+namespace model {
+class PositionListIndex;
+}
 
 class OrderedPartition {
 private:

@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>                      // for string
-#include <unordered_map>               // for unordered_map, operator==, _No...
-#include <vector>                      // for vector
-
-#include <stddef.h>                    // for size_t
+#include <stddef.h>       // for size_t
+#include <string>         // for string
+#include <unordered_map>  // for unordered_map, operator==, _No...
+#include <vector>         // for vector
 
 #include "model/table/column_index.h"  // for ColumnIndex
 
-namespace model { class TypedColumnData; }
+namespace model {
+class TypedColumnData;
+}
 
 namespace algos {
 

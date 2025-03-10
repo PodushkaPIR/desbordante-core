@@ -1,7 +1,7 @@
 #pragma once
 
-#include <memory>                                     // for unique_ptr
-#include <vector>                                     // for vector
+#include <memory>  // for unique_ptr
+#include <vector>  // for vector
 
 #include "algorithms/algorithm.h"                     // for Algorithm
 #include "dc/FastADC/providers/index_provider.h"      // for DoubleIndexProv...
