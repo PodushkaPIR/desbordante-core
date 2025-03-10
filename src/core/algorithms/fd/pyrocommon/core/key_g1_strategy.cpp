@@ -3,7 +3,7 @@
 #include <variant>                                   // for get, holds_alter...
 #include <vector>                                    // for vector
 
-#include "../model/pli_cache.h"                      // for PLICache
+#include "fd/pyrocommon/model/pli_cache.h"                      // for PLICache
 #include "fd/pyrocommon/core/dependency_consumer.h"  // for DependencyConsumer
 #include "fd/pyrocommon/core/dependency_strategy.h"  // for DependencyStrategy
 #include "fd/pyrocommon/core/parameters.h"           // for Parameters

@@ -3,7 +3,7 @@
 #include <unordered_map>
 #include <unordered_set>           // for unordered_set
 
-#include "../node_category.h"
+#include "fd/dfd/node_category.h"
 #include "model/table/vertical.h"
 #include "util/custom_hashes.h"
 

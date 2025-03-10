@@ -6,7 +6,7 @@
 #include <string>                               // for string
 #include <vector>                               // for vector
 
-#include "../model/agree_set_sample.h"          // for AgreeSetSample
+#include "fd/pyrocommon/model/agree_set_sample.h"          // for AgreeSetSample
 #include "dependency_consumer.h"                // for DependencyConsumer
 #include "parameters.h"                         // for Parameters
 #include "table/column_layout_relation_data.h"  // for ColumnLayoutRelationData

@@ -9,7 +9,7 @@
 #include <boost/format/free_funcs.hpp>               // for operator<<
 #include <easylogging++.h>                           // for Writer, CDEBUG, LOG
 
-#include "../model/pli_cache.h"                      // for PLICache
+#include "fd/pyrocommon/model/pli_cache.h"                      // for PLICache
 #include "fd/pyrocommon/core/dependency_consumer.h"  // for DependencyConsumer
 #include "fd/pyrocommon/core/dependency_strategy.h"  // for DependencyStrategy
 #include "fd/pyrocommon/core/parameters.h"           // for Parameters

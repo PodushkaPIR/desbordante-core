@@ -1,6 +1,6 @@
 #include "dependency_strategy.h"
 
-#include "../model/pli_cache.h"                    // for PLICache
+#include "fd/pyrocommon/model/pli_cache.h"                    // for PLICache
 #include "fd/pyrocommon/core/parameters.h"         // for Parameters
 #include "fd/pyrocommon/core/profiling_context.h"  // for ProfilingContext
 #include "fd/pyrocommon/model/agree_set_sample.h"  // for AgreeSetSample

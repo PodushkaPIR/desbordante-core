@@ -5,8 +5,8 @@
 #include <mutex>                   // for scoped_lock, mutex
 #include <string>                  // for string
 
-#include "../model/partial_fd.h"   // for PartialFD
-#include "../model/partial_key.h"  // for PartialKey
+#include "fd/pyrocommon/model/partial_fd.h"   // for PartialFD
+#include "fd/pyrocommon/model/partial_key.h"  // for PartialKey
 
 class Column;
 class Vertical;

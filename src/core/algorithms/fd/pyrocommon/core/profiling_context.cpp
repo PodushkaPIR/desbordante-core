@@ -10,8 +10,8 @@
 #include <boost/optional/optional.hpp>             // for get_pointer
 #include <easylogging++.h>                         // for Writer, LOG, CTRACE
 
-#include "../model/list_agree_set_sample.h"        // for ListAgreeSetSample
-#include "../model/pli_cache.h"                    // for PLICache
+#include "fd/pyrocommon/model/list_agree_set_sample.h"        // for ListAgreeSetSample
+#include "fd/pyrocommon/model/pli_cache.h"                    // for PLICache
 #include "caching_method.h"                        // for CachingMethod
 #include "custom_random.h"                         // for CustomRandom
 #include "fd/pyrocommon/core/parameters.h"         // for Parameters

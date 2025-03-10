@@ -8,8 +8,8 @@
 
 #include <boost/any.hpp>
 
-#include "algorithms/algorithm.h"
-#include "algorithms/algorithm_types.h"
+#include "algorithm.h"
+#include "algorithm_types.h"
 
 namespace algos {
 
