@@ -381,7 +381,7 @@ std::vector<std::size_t> get_rhs(std::size_t n, std::vector<std::size_t> const& 
 
 }  // namespace
 
-GfdMiner::GfdMiner() : Algorithm({}) {
+GfdMiner::GfdMiner() : Algorithm() {
     RegisterOptions();
     MakeOptionsAvailable(
             {config::names::kGraphData, config::names::kGfdK, config::names::kGfdSigma});
@@ -698,7 +698,7 @@ void GfdMiner::Initialize(std::set<std::string>& vertex_labels, std::set<std::st
             Embedding embedding{{boost::vertex(0, pattern), v}};
             embeddings_set.emplace_back(std::vector{embedding});
 
-            forbidden_rules_set.push_back({});
+            forbidden_rules_set.emplace_back();
         }
         for (std::pair<std::string const, std::string> const& attr : graph_attributes) {
             if (attr.first == "label") {
