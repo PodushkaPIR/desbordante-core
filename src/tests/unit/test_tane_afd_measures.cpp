@@ -4,6 +4,7 @@
 #include <gtest/gtest.h>
 
 #include "core/algorithms/algo_factory.h"
+#include "core/algorithms/fd/afd_metric/afd_metric_calculator.h"
 #include "core/algorithms/fd/tane/afd_measures.h"
 #include "core/algorithms/fd/tane/enums.h"
 #include "core/algorithms/fd/tane/tane.h"
@@ -37,10 +38,6 @@ struct TaneValidationParams {
     algos::AfdErrorMeasure error_measure;
     std::vector<AFD> afds;
     CSVConfig csv_config;
-
-    TaneValidationParams(algos::AfdErrorMeasure error_measure, std::vector<AFD>&& afds,
-                         CSVConfig const& csv_config)
-        : error_measure(error_measure), afds(afds), csv_config(csv_config) {}
 };
 
 struct ColumnErr {
@@ -51,9 +48,6 @@ struct ColumnErr {
 struct PdepSelfValidationParams {
     std::vector<ColumnErr> errors;
     CSVConfig csv_config;
-
-    PdepSelfValidationParams(std::vector<ColumnErr>&& errors, CSVConfig const& csv_config)
-        : errors(errors), csv_config(csv_config) {}
 };
 
 class TestTanePdepSelfValidation : public ::testing::TestWithParam<PdepSelfValidationParams> {};
@@ -66,10 +60,11 @@ TEST_P(TestTanePdepSelfValidation, SelfCalculationTest) {
     auto const& p = GetParam();
     double eps = 0.001;
     auto table = std::make_shared<CSVParser>(p.csv_config);
-    auto relation = ColumnLayoutRelationData::CreateFrom(*table, true);
+    auto relation = ColumnLayoutRelationData::CreateFrom(*table);
     for (auto const& [column_id, expected_error] : p.errors) {
-        auto const& column_pli = relation->GetColumnData(column_id).GetPositionListIndex();
+        auto const& column_pli = relation->GetColumnData(column_id).GetPLWSIndex();
         config::ErrorType error = algos::PdepSelf(column_pli);
+        error = algos::afd_metric_calculator::AFDMetricCalculator::CalculatePdepSelf(column_pli);
         EXPECT_NEAR(error, expected_error, eps)
                 << "column_id = " << column_id << "\n"
                 << "error = " << error << "\n"
@@ -81,19 +76,26 @@ TEST_P(TestTaneAfdMeasuresValidation, ErrorCalculationTest) {
     auto const& p = GetParam();
     double eps = 0.00001;
     auto table = std::make_shared<CSVParser>(p.csv_config);
-    auto relation = ColumnLayoutRelationData::CreateFrom(*table, true);
+    auto relation = ColumnLayoutRelationData::CreateFrom(*table);
     for (auto const& [lhs_id, rhs_id, expected_error] : p.afds) {
-        auto const& lhs = relation->GetColumnData(lhs_id).GetPositionListIndex();
-        auto const& rhs = relation->GetColumnData(rhs_id).GetPositionListIndex();
+        auto const& lhs = relation->GetColumnData(lhs_id).GetPLWSIndex();
+        auto const& rhs = relation->GetColumnData(rhs_id).GetPLWSIndex();
         config::ErrorType error;
         switch (p.error_measure) {
             case +algos::AfdErrorMeasure::pdep:
+                // error =
+                // algos::afd_metric_calculator::AFDMetricCalculator::CalculatePdepMeasure(lhs,
+                // lhs->Intersect(rhs).get());
                 error = algos::CalculatePdepMeasure(lhs, lhs->Intersect(rhs).get());
                 break;
             case +algos::AfdErrorMeasure::tau:
+                // error = algos::afd_metric_calculator::AFDMetricCalculator::CalculateTau(lhs, rhs,
+                // lhs->Intersect(rhs).get());
                 error = algos::CalculateTauMeasure(lhs, rhs, lhs->Intersect(rhs).get());
                 break;
             case +algos::AfdErrorMeasure::mu_plus:
+                // error = algos::afd_metric_calculator::AFDMetricCalculator::CalculateMuPlus(lhs,
+                // rhs, lhs->Intersect(rhs).get());
                 error = algos::CalculateMuPlusMeasure(lhs, rhs, lhs->Intersect(rhs).get());
                 break;
             case +algos::AfdErrorMeasure::rho:

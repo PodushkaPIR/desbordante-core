@@ -4,6 +4,7 @@
 #include <pybind11/pybind11.h>
 
 #include "python_bindings/ac/bind_ac.h"
+#include "python_bindings/afd_metric/bind_afd_metric_calculation.h"
 #include "python_bindings/ar/bind_ar.h"
 #include "python_bindings/bind_main_classes.h"
 #include "python_bindings/cfd/bind_cfd.h"
@@ -18,6 +19,7 @@
 #include "python_bindings/fd/bind_fd_verification.h"
 #include "python_bindings/gfd/bind_gfd.h"
 #include "python_bindings/gfd/bind_gfd_verification.h"
+#include "python_bindings/gspan/bind_gspan.h"
 #include "python_bindings/ind/bind_ind.h"
 #include "python_bindings/ind/bind_ind_verification.h"
 #include "python_bindings/md/bind_md.h"
@@ -67,9 +69,11 @@ PYBIND11_MODULE(desbordante, module, pybind11::mod_gil_not_used()) {
                            BindPfdVerification,
                            BindFastADC,
                            BindGfd,
+                           BindGSpan,
                            BindCFDVerification,
                            BindDDVerification,
-                           BindAODVerification}) {
+                           BindAODVerification,
+                           BindAfdMetricCalculation}) {
         bind_func(module);
     }
 }
