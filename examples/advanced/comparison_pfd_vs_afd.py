@@ -27,8 +27,8 @@ def get_pfds():
 pfds = OrderedSet(get_pfds())
 afds = OrderedSet(get_afds())
 
-print("pFDs \ AFDs =", stringify(pfds - afds))
-print("AFDs \ pFDs =", stringify(afds - pfds))
+print(r"pFDs \ AFDs =", stringify(pfds - afds))
+print(r"AFDs \ pFDs =", stringify(afds - pfds))
 print("AFDs ∩ pFDs =", stringify(afds & pfds))
 
 print("1 - PerValue([DeviceId] -> Data) =", 0.1714285714)
@@ -38,7 +38,7 @@ verifier_algo.load_data(table=(TABLE, ',', True))
 for fd in pfds - afds:
     verifier_algo.execute(lhs_indices=fd.lhs_indices, rhs_indices=[fd.rhs_index])
     fd_error = verifier_algo.get_error()
-    print(f"e({fd}) =", fd_error) # AFD error is signifcantly larger than PFD PerValue
+    print(f"e({fd}) =", fd_error) # AFD error is significantly larger than PFD PerValue
 
 print('In case of PerValue error measure, violations on data from the single "glitchy"')
-print('sensor device among many do not prevent dependecy from being found')
+print('sensor device among many do not prevent dependency from being found')

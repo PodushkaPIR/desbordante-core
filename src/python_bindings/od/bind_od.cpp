@@ -1,6 +1,7 @@
 #include "python_bindings/od/bind_od.h"
 
 #include <pybind11/pybind11.h>
+
 #include <pybind11/stl.h>
 
 #include "core/algorithms/od/fastod/fastod.h"
@@ -133,7 +134,7 @@ void BindOd(py::module_& main_module) {
                 std::vector<ListOD> res;
                 for (auto const& [lhs, rhs_list] : map_res) {
                     for (AttributeList const& rhs : rhs_list) {
-                        res.push_back({lhs, rhs});
+                        res.emplace_back(lhs, rhs);
                     }
                 }
                 return res;

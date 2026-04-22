@@ -4,6 +4,7 @@
 #include <string>
 
 #include "core/algorithms/cfd/enums.h"
+#include "core/algorithms/fd/afd_metric/afd_metric.h"
 #include "core/algorithms/fd/tane/enums.h"
 #include "core/algorithms/md/hymd/enums.h"
 #include "core/algorithms/metric/enums.h"
@@ -16,6 +17,9 @@ namespace config::descriptions {
 namespace details {
 std::string const kDMetricString =
         "metric to use\n" + util::EnumToAvailableValues<algos::metric::Metric>();
+std::string const kDAFDMetricString =
+        "AFD metric to calculate\n" +
+        util::EnumToAvailableValues<algos::afd_metric_calculator::AFDMetric>();
 std::string const kDMetricAlgorithmString =
         "MFD algorithm to use\n" + util::EnumToAvailableValues<algos::metric::MetricAlgo>();
 std::string const kDCfdSubstrategyString = "CFD lattice traversal strategy to use\n" +
@@ -168,6 +172,17 @@ constexpr auto kDGraphData = "Path to dot-file with graph";
 constexpr auto kDDoCollectViolations = "Flag which tells whether to collect violations or not";
 constexpr auto kDGfdK = "Max size of mined gfds";
 constexpr auto kDGfdSigma = "Min frequency of mined gfds";
+// gSpan
+constexpr auto kDGraphDatabase = "Path to file with collection of graphs";
+constexpr auto kDGSpanMinimumSupport =
+        "a minimum support value (a percentage represented by a value between 0 and 1)";
+constexpr auto kDOutputSingleVertices =
+        "if true, frequent subgraphs containing a single vertex will be output";
+constexpr auto kDMaxNumberOfEdges =
+        "an integer indicating a maximum number of edges for each frequent subgraph";
+constexpr auto kDOutputGraphIds = "output the ids of graph containing each frequent subgraph";
+constexpr auto kDGSpanOutputPath =
+        "path to output file for frequent subgraphs (if empty, no file is written)";
 // HyMD
 constexpr auto kDColumnMatches = "column matches to examine";
 constexpr auto kDLeftTable = "first table processed by the algorithm";
@@ -181,12 +196,14 @@ constexpr auto kDRightTable = "second table processed by the algorithm";
 // IND
 constexpr auto kDTables = "table collection processed by the algorithm";
 // Metric verifier
+auto const kDMetric = details::kDMetricString.c_str();
+auto const kDAFDMetric = details::kDAFDMetricString.c_str();
+constexpr auto kDRhsIndex = "RHS column index";
+constexpr auto kDParameter = "metric FD parameter";
 constexpr auto kDDistFromNullIsInfinity =
         "specify whether distance from NULL value is infinity "
         "(if not, it is 0)";
-auto const kDMetric = details::kDMetricString.c_str();
 auto const kDMetricAlgorithm = details::kDMetricAlgorithmString.c_str();
-constexpr auto kDParameter = "metric FD parameter";
 constexpr auto kDQGramLength = "q-gram length for cosine metric";
 // ND
 constexpr auto kDNDWeight = "Weight of ND to verify (positive integer)";
@@ -217,8 +234,8 @@ constexpr auto kDRatio =
 // UCC verifier
 constexpr auto kDUCCIndices = "column indices for UCC verification";
 // MD verifier
-constexpr auto kDMDLHS = "Left-hand side of Matching Dependancy";
-constexpr auto kDMDRHS = "Right-hand side of Matching Dependancy";
+constexpr auto kDMDLHS = "Left-hand side of Matching Dependency";
+constexpr auto kDMDRHS = "Right-hand side of Matching Dependency";
 // AOD verifier
 constexpr auto kDOcContext = "Context of the OC to verify";
 constexpr auto kDOcLeftIndex = "Index of the left attribute of the OC to verify";

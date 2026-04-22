@@ -28,10 +28,10 @@ classifiers = [
 urls = { homepage = "https://desbordante.unidata-platform.ru/", repository = "https://github.com/desbordante/desbordante-core", issues = "https://github.com/desbordante/desbordante-core/issues" }
 
 [tool.scikit-build.cmake.define]
-PYTHON = "INSTALL"
-UNPACK_DATASETS = "OFF"
-COMPILE_TESTS = "OFF"
-BUILD_NATIVE = "OFF"
+DESBORDANTE_BINDINGS = "INSTALL"
+DESBORDANTE_BUILD_NATIVE = "OFF"
+DESBORDANTE_BUILD_TESTS = "OFF"
+DESBORDANTE_UNPACK_DATASETS = "OFF"
 ASAN = "OFF"
 CMAKE_BUILD_TYPE = "Release"
 CPM_SOURCE_CACHE = {env="CPM_SOURCE_CACHE", default = "./cmake/cpm-cache"}
@@ -49,3 +49,152 @@ exclude = [
     "src/tests/*",
     "examples/*",
 ]
+
+[tool.typos]
+[tool.typos.files]
+extend-exclude = [
+    # We only want to check code for now, skip datasets.
+    "test_input_data/",
+]
+[tool.typos.default]
+extend-ignore-re = [
+    # C++ standard library
+    "countr_zero",
+
+    # These strings contain words that are often legitimate typos on their own,
+    # but they are not typos in the context here, they're just used as dummy strings.
+    '"(ba|helo|abd)"', # typos for "by/be", "hello", "and/bad"
+    "// Частоты: abc:2, abd:1",  # "abd" is a typo for "and/bad"
+
+    # "nd" is a common typo for "and", but Numerical Dependency, abbreviated as "ND",
+    # is a legitimate pattern type. These are the strings referring to it.
+    "# --- ND ---",
+    "// AC, ND",
+    "// ND",
+    "an ND",
+    "clusters violating ND",
+    "ND holds",
+    "ND verification",
+    "Weight of ND",
+    "7ND-93L",
+
+    # Academic references and Proper names
+    "BA thesis\\.pdf", # "BA" is Bachelor of Arts (typo for "BY" or "BE")
+    "Comput\\. J\\.", # "Comput" is short for Computer (typo for "Compute")
+    "Peter J\\. Hass", # "Hass" is a surname (typo for "Hash")
+]
+
+[tool.typos.default.extend-identifiers]
+# These are identifiers related to Numerical Dependencies, abbreviated as ND,
+# and "nd" is a common typo for "and", so we chose to explicitly list the identifiers
+# instead of blanket excluding "nd" from checking.
+bind_nd = "bind_nd"
+BindNd = "BindNd"
+bind_nd_verification = "bind_nd_verification"
+BindNdVerification = "BindNdVerification"
+kTestND = "kTestND"
+MakeNdNameTuple = "MakeNdNameTuple"
+nd = "nd"
+ND = "ND"
+nd1 = "nd1"
+nd2 = "nd2"
+nd_holds = "nd_holds"
+NDHolds = "NDHolds"
+nd_module = "nd_module"
+nd_verification = "nd_verification"
+nd_verification_datasets = "nd_verification_datasets"
+nd_verification_module = "nd_verification_module"
+nd_verifier = "nd_verifier"
+NDVerifier = "NDVerifier"
+NDVerifierHeavyDatasets = "NDVerifierHeavyDatasets"
+NDVerifierTestNullEqualNull = "NDVerifierTestNullEqualNull"
+NDVerifierTestSuite = "NDVerifierTestSuite"
+NDVerifyingParams = "NDVerifyingParams"
+TestND = "TestND"
+test_nd_verifier = "test_nd_verifier"
+TestNDVerifying = "TestNDVerifying"
+VerifyND = "VerifyND"
+verifying_nd = "verifying_nd"
+verifying_nd_1 = "verifying_nd_1"
+verifying_nd_1_output = "verifying_nd_1_output"
+verifying_nd_2 = "verifying_nd_2"
+verifying_nd_2_output = "verifying_nd_2_output"
+verifying_nd_3 = "verifying_nd_3"
+verifying_nd_3_output = "verifying_nd_3_output"
+
+[tool.typos.type.jupyter]
+extend-ignore-re = [
+    # Auto-generated notebook metadata
+    '\"id":\s*"[^"\n]*"', # Ignore auto-generated random alphanumeric IDs
+
+    # Code snippets and specific variables in notebooks
+    "ser\\.iloc\\[pos\\]", # "ser" is short for pandas Series
+    "flights_dd_dif_tabl", # "dif" / "tabl" are short for difference / table
+]
+
+[tool.ruff]
+# line-length: 120 instead of default 88
+# Reason: Examples often have long f-strings with column names, URLs, table data
+# that are more readable on one line than split across multiple lines.
+# Also allows for better formatted output in demonstration scripts.
+line-length = 120
+target-version = "py38"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "Q",   # quotes
+    "T",   # print statements
+    "D",   # docstrings
+    "S",   # bandit security
+    "I",   # sort imports properly
+    "UP",  # modernize Python syntax (safe for 3.8+)
+    "ISC", # good use of string concatenation
+    "ICN", # use common import conventions
+]
+# Ignore rules that are too strict for examples/notebooks:
+# - Q000: requires double quotes (examples use single quotes for consistency)
+# - Q001: single quote multiline strings (used for output formatting)
+# - Q002: move single-quoted strings to double (related to Q001)
+# - Q003: change outer quotes to avoid escaping (examples use escaped quotes)
+# - T201: warns about print() (examples use print for output demonstration)
+# - D100: missing docstring in public module (examples are scripts, not libraries)
+# - D101: missing docstring in public class (simple example classes)
+# - D102: missing docstring in public method (example methods prioritize clarity)
+# - D103: missing docstring in public function (simple helper functions)
+# - D104: missing docstring in public nested (helper functions in examples)
+# - D107: missing docstring in __init__ (simple init methods)
+# - D203: one blank line required before class docstring
+#         (conflicts with D211: no blank line required before class)
+# - D210: one-line docstring should fit on first line (formatting preference)
+# - D212: summary must start at first line of multiline docstring
+#         (conflicts with D213: summary must start at second line)
+# - D300: use triple double quotes (benchmark uses single quotes)
+# - D400: one-line docstring does not match summary (formatting preference)
+# - D413: bad multiline summary (formatting preference)
+# - D415: section underline (formatting preference)
+# - S101: use of assert detected (examples use assert for test demonstrations)
+# - S603: use of subprocess call (not a security issue in examples)
+ignore = [
+    "Q000", "Q001", "Q002", "Q003",
+    "T201",
+    "D100", "D101", "D102", "D103", "D104", "D107", "D203", "D210", "D212", "D213",
+    "D300", "D400", "D413", "D415",
+    "S101", "S603",
+]
+
+exclude = [
+    ".git",
+    "build/",
+]
+
+[tool.ruff.lint.per-file-ignores]
+# E702: Multiple statements on one line (e.g., G.add_node(); G.add_edge())
+"examples/**/*.py" = ["E501", "E702"]
+# Notebooks have generated cell code with unique scoping
+# E501: Long lines in cell outputs
+# E731: lambda assigned to variable (cell-specific pattern)
+# F401, F811, F821: Unused imports/redefinitions (cell scoping)
+"examples/notebooks/*.ipynb" = ["E501", "E731", "F401", "F811", "F821"]
