@@ -5,6 +5,7 @@
 
 #pragma once
 
+#include <cstddef>
 #include <functional>
 #include <list>
 #include <memory>

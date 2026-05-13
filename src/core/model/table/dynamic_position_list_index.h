@@ -1,6 +1,11 @@
 #pragma once
+#include <cstddef>
 #include <memory>
+#include <optional>
+#include <string>
 #include <unordered_map>
+#include <unordered_set>
+#include <utility>
 #include <vector>
 
 #include "core/algorithms/cind/condition_miners/position_lists_set.h"
