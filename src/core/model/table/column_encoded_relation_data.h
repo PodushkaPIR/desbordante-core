@@ -1,17 +1,17 @@
 #pragma once
 
 #include <cmath>
-#include <memory>
-#include <vector>
 #include <cstddef>
+#include <memory>
 #include <utility>
+#include <vector>
 
 #include "core/config/tabular_data/input_table_type.h"
+#include "core/model/table/relational_schema.h"
+#include "core/model/table/table_index.h"
 #include "encoded_column_data.h"
 #include "relation_data.h"
 #include "value_dictionary.h"
-#include "core/model/table/relational_schema.h"
-#include "core/model/table/table_index.h"
 
 namespace model {
 using ValueDictionaryType = std::shared_ptr<ValueDictionary>;

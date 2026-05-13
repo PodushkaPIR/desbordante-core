@@ -1,6 +1,5 @@
 #pragma once
 
-#include <boost/version.hpp>
 #include <cstddef>
 #include <string_view>
 #include <vector>

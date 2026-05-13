@@ -1,12 +1,11 @@
 #pragma once
 
+#include <cstddef>
 #include <unordered_set>
 #include <vector>
 
 #include <boost/dynamic_bitset.hpp>
 #include <boost/dynamic_bitset/dynamic_bitset.hpp>
-#include <unordered_set>
-#include <cstddef>
 
 #include "core/algorithms/fd/hycommon/column_combination_list.h"
 

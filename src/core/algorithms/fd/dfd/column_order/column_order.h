@@ -1,10 +1,10 @@
 #pragma once
 
-#include "core/model/table/column_data.h"
 #include <vector>
 
-#include "core/model/table/vertical.h"
+#include "core/model/table/column_data.h"
 #include "core/model/table/position_list_index.h"
+#include "core/model/table/vertical.h"
 
 class ColumnOrder {
 private:

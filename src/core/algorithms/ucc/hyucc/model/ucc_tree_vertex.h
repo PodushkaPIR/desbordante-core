@@ -1,14 +1,13 @@
 #pragma once
 
-#include <boost/dynamic_bitset.hpp>
+#include <algorithm>
 #include <cassert>
+#include <cstddef>
 #include <memory>
+#include <utility>
 #include <vector>
 
 #include <boost/dynamic_bitset.hpp>
-#include <algorithm>
-#include <cstddef>
-#include <utility>
 
 namespace algos::hyucc {
 

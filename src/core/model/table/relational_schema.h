@@ -5,9 +5,9 @@
 
 #pragma once
 
+#include <cstddef>
 #include <functional>
 #include <list>
-#include <boost/dynamic_bitset.hpp>
 #include <memory>
 #include <string>
 #include <unordered_set>
@@ -16,7 +16,6 @@
 #include <boost/dynamic_bitset.hpp>
 
 #include "core/util/bitset_utils.h"
-#include <cstddef>
 
 class Column;
 
