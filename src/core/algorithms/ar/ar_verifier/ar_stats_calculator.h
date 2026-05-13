@@ -1,12 +1,17 @@
 #pragma once
 
+#include <cstddef>
 #include <memory>
+#include <string>
+#include <unordered_map>
 #include <vector>
 
 #include "core/algorithms/ar/ar.h"
 #include "core/algorithms/ar/ar_verifier/enums.h"
 #include "core/algorithms/ar/ar_verifier/model/rule_coverage.h"
 #include "core/model/table/column_layout_relation_data.h"
+#include "core/model/table/position_list_index.h"
+#include "core/model/transaction/transactional_data.h"
 
 namespace algos::ar_verifier {
 class ARStatsCalculator {

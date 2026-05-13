@@ -1,7 +1,13 @@
 #pragma once
 
+#include <cstddef>
 #include <stdexcept>
+#include <string>
+#include <string_view>
+#include <utility>
+#include <vector>
 
+#include "core/algorithms/dc/model/column_operand.h"
 #include "core/algorithms/dc/model/dc.h"
 #include "core/algorithms/dc/model/operator.h"
 #include "core/algorithms/dc/model/predicate.h"

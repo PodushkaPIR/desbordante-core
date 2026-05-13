@@ -1,7 +1,9 @@
 #pragma once
 
 #include <algorithm>
+#include <cinttypes>
 #include <concepts>
+#include <cstddef>
 #include <stddef.h>
 #include <stdint.h>
 #include <string>

@@ -2,6 +2,9 @@
 
 #include <cstddef>
 #include <memory>
+#include <string>
+#include <unordered_map>
+#include <utility>
 #include <vector>
 
 #include "Metric.h"
@@ -9,6 +12,7 @@
 #include "core/algorithms/dd/dd.h"
 #include "core/algorithms/dd/dd_verifier/highlight.h"
 #include "core/config/tabular_data/input_table_type.h"
+#include "core/model/table/column_index.h"
 #include "core/model/table/column_layout_typed_relation_data.h"
 
 namespace algos::dd {
@@ -37,9 +41,9 @@ private:
     std::vector<std::pair<std::size_t, std::size_t>> GetRowsWhereLhsHolds() const;
 
     double CalculateDistance(model::ColumnIndex column_index,
-                             std::pair<std::size_t, std::size_t> const &tuple_pair) const;
+                             std::pair<std::size_t, std::size_t> const& tuple_pair) const;
 
-    void CheckDFOnRhs(std::vector<std::pair<std::size_t, std::size_t>> const &lhs);
+    void CheckDFOnRhs(std::vector<std::pair<std::size_t, std::size_t>> const& lhs);
 
     void VerifyDD();
 
@@ -71,6 +75,6 @@ public:
 
     bool DDHolds() const;
 
-    std::vector<Highlight> const &GetHighlights() const;
+    std::vector<Highlight> const& GetHighlights() const;
 };
 }  // namespace algos::dd
