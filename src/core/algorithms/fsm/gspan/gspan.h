@@ -1,18 +1,18 @@
 #pragma once
 
-#include <cmath>
-#include <vector>
 #include <climits>
+#include <cmath>
 #include <filesystem>
 #include <unordered_map>
 #include <unordered_set>
+#include <vector>
 
 #include "core/algorithms/algorithm.h"
+#include "core/algorithms/fsm/gspan/dfscode.h"
+#include "core/algorithms/fsm/gspan/extended_edge.h"
 #include "core/config/names_and_descriptions.h"
 #include "frequent_subgraph.h"
 #include "graph.h"
-#include "core/algorithms/fsm/gspan/dfscode.h"
-#include "core/algorithms/fsm/gspan/extended_edge.h"
 
 namespace algos {
 class GSpan : public Algorithm {

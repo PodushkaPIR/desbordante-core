@@ -1,7 +1,7 @@
 #pragma once
 
 #include <algorithm>
-#include <magic_enum/magic_enum.hpp>
+#include <array>
 #include <cstddef>
 #include <filesystem>
 #include <functional>
@@ -9,11 +9,13 @@
 #include <string>
 #include <unordered_map>
 #include <vector>
-#include <array>
+
+#include <magic_enum/magic_enum.hpp>
 
 #include "core/algorithms/algorithm.h"
 #include "core/algorithms/metric/aliases.h"
 #include "core/algorithms/metric/enums.h"
+#include "core/algorithms/metric/highlight.h"
 #include "core/algorithms/metric/highlight_calculator.h"
 #include "core/algorithms/metric/points.h"
 #include "core/algorithms/metric/points_calculator.h"
@@ -22,10 +24,9 @@
 #include "core/config/tabular_data/input_table_type.h"
 #include "core/model/table/column_layout_relation_data.h"
 #include "core/model/table/column_layout_typed_relation_data.h"
+#include "core/model/types/string_type.h"
 #include "core/util/convex_hull.h"
 #include "core/util/qgram_vector.h"
-#include "core/algorithms/metric/highlight.h"
-#include "core/model/types/string_type.h"
 
 namespace algos::metric {
 

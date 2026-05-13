@@ -1,14 +1,14 @@
 #pragma once
 
 #include <algorithm>
+#include <cinttypes>
 #include <concepts>
+#include <cstddef>
 #include <stddef.h>
 #include <stdint.h>
 #include <string>
 #include <unordered_map>
 #include <vector>
-#include <cinttypes>
-#include <cstddef>
 
 #include "core/algorithms/dc/FastADC/model/predicate.h"
 

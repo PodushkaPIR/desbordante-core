@@ -1,10 +1,10 @@
 #pragma once
 
-#include <memory>
-#include <vector>
 #include <cstddef>
+#include <memory>
 #include <string>
 #include <unordered_map>
+#include <vector>
 
 #include "core/algorithms/ar/ar.h"
 #include "core/algorithms/ar/ar_verifier/enums.h"

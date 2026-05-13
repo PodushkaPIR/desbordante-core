@@ -1,16 +1,16 @@
 #pragma once
 
 #include <assert.h>
-#include <stddef.h>
-#include <stdint.h>
-#include <string>
-#include <unordered_map>
-#include <utility>
-#include <vector>
 #include <cassert>
 #include <cinttypes>
 #include <cstddef>
+#include <stddef.h>
+#include <stdint.h>
+#include <string>
 #include <type_traits>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 #include "core/algorithms/dc/FastADC/misc/misc.h"
 #include "core/algorithms/dc/FastADC/providers/index_provider.h"
