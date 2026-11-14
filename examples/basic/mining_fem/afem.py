@@ -1,5 +1,6 @@
-import desbordante
 import textwrap
+
+import desbordante
 
 YELLOW = "\033[1;33m"
 CYAN = "\033[1;36m"
@@ -24,13 +25,14 @@ def banner(title):
 
 
 def read_sequence_file(path):
-    """Parses the "events|timestamp" text format used by Desbordante sequence
-    datasets. Only used here to pretty-print the dataset; the algorithm reads
-    the file itself via load_data."""
+    """Parse the "events|timestamp" text format used by Desbordante sequence datasets.
+
+    Only used here to pretty-print the dataset; the algorithm reads the file itself via load_data.
+    """
     rows = []
     with open(path) as f:
-        for line in f:
-            line = line.strip()
+        for raw_line in f:
+            line = raw_line.strip()
             if not line:
                 continue
             events_part, _, ts_part = line.partition("|")
@@ -51,8 +53,9 @@ def print_sequence_table(rows):
 
 
 def fmt_episode(structure, support):
-    parts = [("{" + fmt_events(event_set) + "}") if len(event_set) > 1
-             else fmt_events(event_set) for event_set in structure]
+    parts = [
+        ("{" + fmt_events(event_set) + "}") if len(event_set) > 1 else fmt_events(event_set) for event_set in structure
+    ]
     return " -> ".join(parts) + f"   (support: {support})"
 
 
@@ -77,13 +80,8 @@ printlns(
     "subsequence of events - that occurs often enough in a sequence of "
     "timestamped events."
 )
-printlns(
-    "AFEM (and the other FEM algorithms) mine sequential data."
-)
-prints(
-    "Frequent episode mining problem along with the core definitions and "
-    "concepts was introduced in:"
-)
+printlns("AFEM (and the other FEM algorithms) mine sequential data.")
+prints("Frequent episode mining problem along with the core definitions and concepts was introduced in:")
 print()
 print("    H. Mannila, H. Toivonen, A. I. Verkamo. Discovery of Frequent")
 print("    Episodes in Event Sequences. Data Mining and Knowledge Discovery")
@@ -131,10 +129,7 @@ print()
 print(f"{CYAN}Dataset{RESET}")
 print("-" * 80)
 
-printlns(
-    "Four kinds of events, numbered 1 to 4, occur over 11 timestamps "
-    "below."
-)
+printlns("Four kinds of events, numbered 1 to 4, occur over 11 timestamps below.")
 
 printlns(
     "The whole stream below is a single complex event sequence. {1, 2} at "

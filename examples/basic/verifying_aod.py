@@ -1,7 +1,8 @@
+import textwrap
+
 import desbordante
 import pandas as pd
 from tabulate import tabulate
-import textwrap
 
 # Auxiliary print functions
 
@@ -16,7 +17,7 @@ def printlns(s):
 
 
 def print_data_frame(data_frame, title=None):
-    print_table(data_frame, 'keys', title)
+    print_table(data_frame, "keys", title)
 
 
 def println_data_frame(data_frame, title=None):
@@ -28,7 +29,7 @@ def print_table(table, headers=None, title=None):
     if title is not None:
         print(title)
 
-    print(tabulate(table, headers=headers, tablefmt='psql'))
+    print(tabulate(table, headers=headers, tablefmt="psql"))
 
 
 def println_table(table, headers=None, title=None):
@@ -37,15 +38,14 @@ def println_table(table, headers=None, title=None):
 
 
 def print_verification_result(algo, od):
-    prints(
-        f"""Running `algo.execute()` on {od} produces the following results:""")
+    prints(f"""Running `algo.execute()` on {od} produces the following results:""")
     prints(f"    `algo.holds()`: {algo.holds()}")
     prints(f"    `algo.get_removal_set()`: {algo.get_removal_set()}")
     prints(f"    `algo.get_error()`: {algo.get_error()}")
 
 
 # Actual verification logic
-table = pd.read_csv('examples/datasets/salary.csv')
+table = pd.read_csv("examples/datasets/salary.csv")
 algo = desbordante.aod_verification.algorithms.Default()
 algo.load_data(table=table)
 
@@ -125,22 +125,18 @@ printlns("""You might also want to take a look at the set-based ODs mining examp
 printlns("Now, let's move to the set-based canonical OD verification via Desbordante.")
 
 prints("Let's start by verifying an exact OC that holds on the table above.")
-printlns(
-    """As we showed above, the OC `{'year'} : 'employee_grade'<= ~ 'avg_salary'` holds.""")
+printlns("""As we showed above, the OC `{'year'} : 'employee_grade'<= ~ 'avg_salary'` holds.""")
 
 # Indices of columns are zero-based
-algo.execute(oc_context=[0], oc_left_index=1,
-             oc_right_index=2, left_ordering='ascending')
-print_verification_result(
-    algo, f"OC {{'year'}}: 'employee_grade'<= ~ 'avg_salary'")
+algo.execute(oc_context=[0], oc_left_index=1, oc_right_index=2, left_ordering="ascending")
+print_verification_result(algo, "OC {'year'}: 'employee_grade'<= ~ 'avg_salary'")
 printlns("""Note that the error is zero and the removal set is empty. A removal set is a set of
 rows that should be removed for an OC (or OD) to hold exactly. In this case, the OC holds exactly,
 which is why the set is empty.""")
 
-printlns(
-    "Now let's verify the OFD {'employee_grade'} : [] -> 'year', which also holds exactly.")
+printlns("Now let's verify the OFD {'employee_grade'} : [] -> 'year', which also holds exactly.")
 algo.execute(ofd_context=[1], ofd_right_index=0)
-print_verification_result(algo, f"OFD {{'employee_grade'}}: [] -> 'year'")
+print_verification_result(algo, "OFD {'employee_grade'}: [] -> 'year'")
 printlns("""Note that the error once again is zero and the removal set is empty because the OFD holds
 exactly.""")
 
@@ -152,10 +148,8 @@ printlns("Note that the row with index 8 was added to the table.")
 # Need to recreate the algo object since calling load_data() twice is not supported yet
 algo = desbordante.aod_verification.algorithms.Default()
 algo.load_data(table=table)
-algo.execute(oc_context=[0], oc_left_index=1,
-             oc_right_index=2, left_ordering='ascending')
-print_verification_result(
-    algo, f"OC {{'year'}}: 'employee_grade'<= ~ 'avg_salary'")
+algo.execute(oc_context=[0], oc_left_index=1, oc_right_index=2, left_ordering="ascending")
+print_verification_result(algo, "OC {'year'}: 'employee_grade'<= ~ 'avg_salary'")
 printlns("""Note that now the OC does not hold exactly and that the removal set is {4}. This means
 that for the OC to hold exactly, it is enough to remove row number 4 (indexed from 0) from the
 table. Note that rows 8 and 4 are interchangeable in this sense because the problem with ordering
@@ -164,7 +158,7 @@ algorithm guarantees to return a minimal removal set in terms of size but does n
 one exactly if there are several candidates.""")
 
 algo.execute(ofd_context=[1], ofd_right_index=0)
-print_verification_result(algo, f"OFD {{'employee_grade'}}: [] -> 'year'")
+print_verification_result(algo, "OFD {'employee_grade'}: [] -> 'year'")
 printlns("""Note once again that the OFD does not hold exactly anymore and the removal set is not
 empty. By adding row 8 with the same value in the 'employee_grade' column as in row 5 but with a
 different value in the 'year' column, we broke the FD 'employee_grade'->'year' and thus broke the

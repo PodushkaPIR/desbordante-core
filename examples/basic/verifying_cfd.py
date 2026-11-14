@@ -1,22 +1,25 @@
 import desbordante
 import pandas as pd
 
-TABLE_PATH = 'examples/datasets/cfd_datasets/city.csv'
+TABLE_PATH = "examples/datasets/cfd_datasets/city.csv"
 
 MINIMUM_CONFIDENCE = 0.9  # Minimum confidence threshold for a CFD to hold
 
+
 class Colors:
-    GREEN_BG = '\033[1;42m'
-    GREEN_FG = '\033[1;32m'
-    RED_BG = '\033[1;41m'
-    RED_FG = '\033[1;31m'
-    BLUE_FG = '\033[1;34m'
-    YELLOW_BG = '\033[1;43m'
-    DEFAULT_BG = '\033[1;49m'
-    DEFAULT_FG = '\033[1;37m'
-    RESET = '\033[0m'
+    GREEN_BG = "\033[1;42m"
+    GREEN_FG = "\033[1;32m"
+    RED_BG = "\033[1;41m"
+    RED_FG = "\033[1;31m"
+    BLUE_FG = "\033[1;34m"
+    YELLOW_BG = "\033[1;43m"
+    DEFAULT_BG = "\033[1;49m"
+    DEFAULT_FG = "\033[1;37m"
+    RESET = "\033[0m"
+
 
 CFD = desbordante.cfd.CFD
+
 
 def explain_cfd_concept():
     """Explain what CFDs are with a real-world example."""
@@ -81,13 +84,13 @@ def demonstrate_algorithm_parameters():
     print(f"{Colors.BLUE_FG}=== Algorithm Parameters Explanation ==={Colors.RESET}\n")
 
     print("CFD verification parameters:")
-    print(f"* cfd_rule: the CFD to verify")
+    print("* cfd_rule: the CFD to verify")
     print("  - CFD object with LHS and RHS")
     print("  - Required parameter")
     print("  - Example: CFD(lhs=[(0, 'Los Angeles'), (3, '_')], rhs=(4, 'high')), where 0,3,4 are attribute indices")
     print()
 
-    print(f"* cfd_minconf: minimum confidence threshold")
+    print("* cfd_minconf: minimum confidence threshold")
     print("  - Lower values: more tolerant of violations")
     print("  - Range: 0.0 to 1.0")
     print()
@@ -154,12 +157,11 @@ def create_and_explain_dataset():
     print("This approach helps validate business rules and discover data quality issues.")
     print()
 
-
     return df
 
 
 def print_table_with_highlight(table, indices_to_highlight):
-    """Print table with highlighted rows"""
+    """Print table with highlighted rows."""
     if table.empty:
         print(table.to_string())
     else:
@@ -176,7 +178,6 @@ def print_table_with_highlight(table, indices_to_highlight):
 
 def print_cfd_metrics(df, cfd, verifier):
     """Print CFD verification metrics and violations."""
-
     print(f"Verifying with minimum confidence (cfd_minconf): {MINIMUM_CONFIDENCE}")
     verifier.execute(cfd_rule=cfd, cfd_minconf=MINIMUM_CONFIDENCE)
 
@@ -225,7 +226,7 @@ def display_violations(df, verifier, cfd):
 
 
 def scenario_find_rhs_violations(df):
-    """Scenario: Finding violations in RHS (right-hand side)"""
+    """Scenario: Finding violations in RHS (right-hand side)."""
     print(f"{Colors.BLUE_FG}=== Scenario 1: Finding RHS Violations ==={Colors.RESET}")
     print("Let's verify our first hypothesis: Los Angeles properties should consistently have high building costs.")
     print()
@@ -233,10 +234,7 @@ def scenario_find_rhs_violations(df):
     verifier = desbordante.cfd_verification.algorithms.Default()
     verifier.load_data(table=df)
 
-    cfd_to_verify = CFD(
-        lhs=[(0, "Los Angeles")],
-        rhs=(4, "high")
-    )
+    cfd_to_verify = CFD(lhs=[(0, "Los Angeles")], rhs=(4, "high"))
 
     print("CFD to verify: [City='Los Angeles'] -> BuildingCost='high'")
     print_cfd_metrics(df, cfd_to_verify, verifier)
@@ -245,7 +243,6 @@ def scenario_find_rhs_violations(df):
     print("This suggests either data quality issues or exceptions to the premium market rule.")
     print()
     print("Let's investigate and fix potential data quality issues:")
-
 
     fix_condition = (df["City"] == "Los Angeles") & (df["BuildingCost"] != "high")
     indices_to_highlight = df[fix_condition].index.tolist()
@@ -282,7 +279,7 @@ def scenario_find_rhs_violations(df):
 
 
 def scenario_find_lhs_violations(df):
-    """Scenario: Finding violations by examining LHS conditions"""
+    """Scenario: Finding violations by examining LHS conditions."""
     print(f"{Colors.BLUE_FG}=== Scenario 2: Analyzing Different LHS Conditions ==={Colors.RESET}")
 
     print("In this scenario, we'll explore how different LHS (Left-Hand Side) conditions")
@@ -302,7 +299,7 @@ def scenario_find_lhs_violations(df):
 
     cfd_house = CFD(
         lhs=[(3, "House")],  # BuildingType='House'
-        rhs=(4, "high")      # BuildingCost='high'
+        rhs=(4, "high"),  # BuildingCost='high'
     )
 
     print("CFD to verify: [BuildingType='House'] -> BuildingCost='high'")
@@ -321,7 +318,7 @@ def scenario_find_lhs_violations(df):
 
     cfd_ny_apartment = CFD(
         lhs=[(0, "New York"), (3, "Apartment")],  # City='New York' AND BuildingType='Apartment'
-        rhs=(4, "high")
+        rhs=(4, "high"),
     )
 
     print("CFD to verify: [City='New York' AND BuildingType='Apartment'] -> BuildingCost='high'")
@@ -339,7 +336,7 @@ def scenario_find_lhs_violations(df):
 
     cfd_apartment_general = CFD(
         lhs=[(3, "Apartment")],  # BuildingType='Apartment' only
-        rhs=(4, "high")
+        rhs=(4, "high"),
     )
 
     print("CFD to verify: [BuildingType='Apartment'] -> BuildingCost='high'")
@@ -352,7 +349,6 @@ def scenario_find_lhs_violations(df):
     print("  * Lesson: Single-attribute conditions can be too general for real-world data")
     print("  * Solution: Either add City constraints OR accept ~67% confidence for general trends")
     print()
-
 
     print(f"{Colors.BLUE_FG}=== Learning Summary: LHS Condition Design ==={Colors.RESET}")
     print("Key lessons from this scenario:")
@@ -396,7 +392,7 @@ def scenario_variable_and_mixed_cfds(df):
 
     cfd_street = CFD(
         lhs=[(1, None)],  # Street='_'
-        rhs=(4, None)     # BuildingCost='_'
+        rhs=(4, None),  # BuildingCost='_'
     )
 
     print("CFD to verify: (Street=_) -> (BuildingCost=_)")
@@ -418,7 +414,7 @@ def scenario_variable_and_mixed_cfds(df):
 
     cfd_ny_street = CFD(
         lhs=[(0, "New York"), (1, None)],  # City='New York' AND Street='_'
-        rhs=(4, None)                       # BuildingCost='_'
+        rhs=(4, None),  # BuildingCost='_'
     )
 
     print("CFD to verify: (City='New York' AND Street=_) -> (BuildingCost=_)")
@@ -487,5 +483,5 @@ def main():
     print()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

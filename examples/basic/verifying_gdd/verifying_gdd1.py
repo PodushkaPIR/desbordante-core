@@ -1,15 +1,14 @@
 from pathlib import Path
 
+import desbordante
 import matplotlib.image as mpimg
 import matplotlib.pyplot as plt
-
-import desbordante
-from desbordante.gdd import AttrConst, CmpOp as Op
+from desbordante.gdd import AttrConst, GddFromDotFile
+from desbordante.gdd import CmpOp as Op
 from desbordante.gdd import DistanceMetric as M
-from desbordante.gdd import GddFromDotFile
 
 
-class bcolors:
+class BColors:
     HEADER = "\033[95m"
     WARNING = "\033[93m"
     ENDC = "\033[0m"
@@ -294,70 +293,40 @@ def validate_gdds(gdds: list):
 
 
 def print_block(title: str, text: str) -> None:
-    print(f"{bcolors.HEADER}{title}{bcolors.ENDC}\n")
+    print(f"{BColors.HEADER}{title}{BColors.ENDC}\n")
     print(text)
 
 
 def main() -> None:
     print(PAPER_INFO)
 
-    print_block(
-        "Basic definition",
-        DEFINITION_INFO
-    )
-    print_block(
-        "Parameters",
-        PARAMETERS_INFO
-    )
-    print_block(
-        "Property graph definition",
-        GRAPH_DEFINITION
-    )
-    print_block(
-        "Graph pattern definition",
-        PATTERN_DEFINITION
-    )
-    print_block(
-        "Homomorphic match definition",
-        MATCHING_DEFINITION
-    )
-    print_block(
-        "GDD syntax and semantics",
-        GDD_DEFINITION
-    )
-    print_block(
-        "Six forms of distance constraints",
-        CONSTRAINTS_INFO
-    )
-    print_block(
-        "How these constraints are represented in Python",
-        API_INFO
-    )
+    print_block("Basic definition", DEFINITION_INFO)
+    print_block("Parameters", PARAMETERS_INFO)
+    print_block("Property graph definition", GRAPH_DEFINITION)
+    print_block("Graph pattern definition", PATTERN_DEFINITION)
+    print_block("Homomorphic match definition", MATCHING_DEFINITION)
+    print_block("GDD syntax and semantics", GDD_DEFINITION)
+    print_block("Six forms of distance constraints", CONSTRAINTS_INFO)
+    print_block("How these constraints are represented in Python", API_INFO)
 
-    print_block(
-        "Dataset",
-        GRAPH_INFO
-    )
+    print_block("Dataset", GRAPH_INFO)
 
     gdds = [gdd for _, _, gdd in SHOWCASES]
     valid_gdds = validate_gdds(gdds)
 
-    for i, (title, info, gdd) in enumerate(SHOWCASES):
-        print(f"{bcolors.HEADER}{title}{bcolors.ENDC}\n")
+    for title, info, gdd in SHOWCASES:
+        print(f"{BColors.HEADER}{title}{BColors.ENDC}\n")
         print(info)
 
-        print(f"{bcolors.HEADER}Desbordante > {bcolors.ENDC}", end="")
+        print(f"{BColors.HEADER}Desbordante > {BColors.ENDC}", end="")
         if gdd in valid_gdds:
             print("GDD holds.\n")
         else:
             print("GDD does not hold.\n")
 
-    print_block(
-        "What we learned",
-        OUTRO_INFO
-    )
+    print_block("What we learned", OUTRO_INFO)
 
-    print(f"{bcolors.WARNING}Close the image window to finish.{bcolors.ENDC}")
+    print(f"{BColors.WARNING}Close the image window to finish.{BColors.ENDC}")
     show_example(IMAGE_PATH)
 
 

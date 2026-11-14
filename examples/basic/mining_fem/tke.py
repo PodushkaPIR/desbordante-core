@@ -1,5 +1,6 @@
-import desbordante
 import textwrap
+
+import desbordante
 
 YELLOW = "\033[1;33m"
 CYAN = "\033[1;36m"
@@ -26,8 +27,8 @@ def banner(title):
 def read_sequence_file(path):
     rows = []
     with open(path) as f:
-        for line in f:
-            line = line.strip()
+        for raw_line in f:
+            line = raw_line.strip()
             if not line:
                 continue
             events_part, _, ts_part = line.partition("|")
@@ -48,8 +49,9 @@ def print_sequence_table(rows):
 
 
 def fmt_episode(structure, support):
-    parts = [("{" + fmt_events(event_set) + "}") if len(event_set) > 1
-             else fmt_events(event_set) for event_set in structure]
+    parts = [
+        ("{" + fmt_events(event_set) + "}") if len(event_set) > 1 else fmt_events(event_set) for event_set in structure
+    ]
     return " -> ".join(parts) + f"   (support: {support})"
 
 
@@ -119,9 +121,7 @@ print()
 print(f"{CYAN}Dataset{RESET}")
 print("-" * 80)
 
-printlns(
-    "The same event sequence used in examples/basic/mining_fem/afem.py."
-)
+printlns("The same event sequence used in examples/basic/mining_fem/afem.py.")
 
 rows = read_sequence_file(DATASET)
 print_sequence_table(rows)
@@ -151,9 +151,7 @@ print()
 print(f"{CYAN}Example{RESET}")
 print("-" * 80)
 
-printlns(
-    "Let's search the sequence above for its top-3 most frequent episodes."
-)
+printlns("Let's search the sequence above for its top-3 most frequent episodes.")
 
 episodes_k3 = mine_tke(DATASET, episodes_num=3, window_size=2)
 print("  top-3 episodes (window_size=2):")

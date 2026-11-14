@@ -1306,13 +1306,13 @@ Num distinct rhs values: 2
 
 '''
 
-snapshots['test_example[basic/mining_ac.py-None-mining_ac_output] mining_ac_output'] = '''This example is dedicated to Fuzzy Algebraic Constraints (AC). The definition and algorithm 
-are based on article "B-HUNT: Automatic Discovery of Fuzzy Algebraic Constraints in Relational 
+snapshots['test_example[basic/mining_ac.py-None-mining_ac_output] mining_ac_output'] = '''This example is dedicated to Fuzzy Algebraic Constraints (AC). The definition and algorithm
+are based on article "B-HUNT: Automatic Discovery of Fuzzy Algebraic Constraints in Relational
 Data" by Paul G. Brown & Peter J. Haas presented at VLDB in 2003.
 
-First of all, let's figure out what AC is. However, to avoid going too deep, we will give you 
-a simple definition without formalization. AC represents the results of applying binary 
-operations between two table columns, with values grouped into meaningful intervals. 
+First of all, let's figure out what AC is. However, to avoid going too deep, we will give you
+a simple definition without formalization. AC represents the results of applying binary
+operations between two table columns, with values grouped into meaningful intervals.
 Let's illustrate this with an example.
 
 We have a table examples/datasets/player_stats.csv with the following data:
@@ -1336,8 +1336,8 @@ Let\'s apply binary operation "+" to the Strength and Agility columns and observ
 Rows in which the result of the chosen operation (+) is \x1b[1;41moutside\x1b[1;49m of discovered ranges:
 \x1b[1;46mNone\x1b[1;49m
 
-As shown, the sum of Strength and Agility falls within either the (4, 5) or (22, 24) ranges. 
-This pattern may emerge because player characters with similar combined attribute values 
+As shown, the sum of Strength and Agility falls within either the (4, 5) or (22, 24) ranges.
+This pattern may emerge because player characters with similar combined attribute values
 likely belong to the same tier.
 
 
@@ -1356,35 +1356,35 @@ bumps_limit
 iterations_limit
 ac_seed
 \x1b[0m
-\x1b[1;42mWeight\x1b[0m accepts values in the range (0, 1]. 
-Values closer to 1 force the algorithm to produce fewer larger intervals (up to a single 
+\x1b[1;42mWeight\x1b[0m accepts values in the range (0, 1].
+Values closer to 1 force the algorithm to produce fewer larger intervals (up to a single
 interval covering all values).
 Values closer to 0 force the algorithm to produce smaller intervals.
 
-\x1b[1;42mFuzziness\x1b[0m belongs to (0,1) range while \x1b[1;42mp_fuzz\x1b[0m belongs to [0,1] range. These parameters 
+\x1b[1;42mFuzziness\x1b[0m belongs to (0,1) range while \x1b[1;42mp_fuzz\x1b[0m belongs to [0,1] range. These parameters
 control precision and the number of considered rows.
-Fuzziness values closer to 0 and p_fuzz values closer to 1 force the algorithm to include 
+Fuzziness values closer to 0 and p_fuzz values closer to 1 force the algorithm to include
 more rows (higher accuracy).
-Fuzziness values closer to 1 and p_fuzz values closer to 0 force the algorithm to include 
+Fuzziness values closer to 1 and p_fuzz values closer to 0 force the algorithm to include
 fewer rows (higher chance of skipping rows, lower precision, but faster execution).
 
-\x1b[1;42mBumps_limit\x1b[0m accepts only natural numbers from the range [1, inf) and limits the number of 
+\x1b[1;42mBumps_limit\x1b[0m accepts only natural numbers from the range [1, inf) and limits the number of
 intervals for all column pairs. To set bumps_limit to inf you should use the 0 value.
 
-\x1b[1;42mIterations_limit\x1b[0m accepts only natural numbers. 
+\x1b[1;42mIterations_limit\x1b[0m accepts only natural numbers.
 Lower values (close to 1) reduce accuracy due to algorithm performing fewer iterations.
 
-\x1b[1;42mAC_seed\x1b[0m accepts only natural numbers. 
-B-HUNT is a randomized algorithm that accepts the seed parameter (AC_seed). Fixing this 
-parameter ensures reproducible results, which are necessary for verifying results during 
-testing of the algorithm. Furthermore, we need to fix it in this example for demonstration 
-purposes; otherwise, we may obtain a different number of intervals with different boundaries 
+\x1b[1;42mAC_seed\x1b[0m accepts only natural numbers.
+B-HUNT is a randomized algorithm that accepts the seed parameter (AC_seed). Fixing this
+parameter ensures reproducible results, which are necessary for verifying results during
+testing of the algorithm. Furthermore, we need to fix it in this example for demonstration
+purposes; otherwise, we may obtain a different number of intervals with different boundaries
 that will not correspond to the text we wrote for our output.
 
-Let's proceed to a visual example. We will use dataset from this path: 
+Let's proceed to a visual example. We will use dataset from this path:
 examples/datasets/cargo_march.csv.
 For default parameters we will use those values:
-binary operation is "-", weight - 0.1, fuzziness - 0.2, p_fuzz - 0.85, bumps_limit - 0, 
+binary operation is "-", weight - 0.1, fuzziness - 0.2, p_fuzz - 0.85, bumps_limit - 0,
 iterations_limit - 4, AC_seed - 11.
 
 Let's see the result of the algorithm with these parameters.
@@ -1408,20 +1408,20 @@ Dispatch date: 11
 Delivery date: 22
 Difference: 11
 
-You can see that the algorithm creates two intervals for the binary operation "-": (2-7) and 
-(15-22). This means that the difference between the dispatch date and delivery date always 
-falls within these intervals, except for three rows where the difference lies outside the 
+You can see that the algorithm creates two intervals for the binary operation "-": (2-7) and
+(15-22). This means that the difference between the dispatch date and delivery date always
+falls within these intervals, except for three rows where the difference lies outside the
 discovered ranges. From this, we can infer that:
 \x1b[1;33mPackages for some addresses are typically delivered within 7 days.\x1b[0m
 \x1b[1;33mPackages for some addresses take up to 22 days.\x1b[0m
 
-Why these two intervals? To answer this question, more context is needed; that is, we should 
-look into the underlying data. We can imagine several reasons for this result, such as: 1) 
+Why these two intervals? To answer this question, more context is needed; that is, we should
+look into the underlying data. We can imagine several reasons for this result, such as: 1)
 nearby addresses versus far addresses; 2) air shipping versus regular shipping.
 
-There are three parcels that fall outside of these delivery intervals. Why? This is a point 
-for further investigation, which requires additional context. There are many possible reasons 
-for this: 1) on these dates there was a workers' strike in some regions; or 2) an incorrect 
+There are three parcels that fall outside of these delivery intervals. Why? This is a point
+for further investigation, which requires additional context. There are many possible reasons
+for this: 1) on these dates there was a workers' strike in some regions; or 2) an incorrect
 address was specified, which increased the delivery time; or 3) it is just a typo in the table.
 
 Now we reduce the value of the parameter weight to 0.05.
@@ -1432,19 +1432,19 @@ Now we reduce the value of the parameter weight to 0.05.
 Rows in which the result of the chosen operation (-) is \x1b[1;41moutside\x1b[1;49m of discovered ranges:
 \x1b[1;46mNone\x1b[1;49m
 
-You can see that the number of intervals increases, and there is no longer any data outside of 
+You can see that the number of intervals increases, and there is no longer any data outside of
 the discovered ranges.
-However, with this number of intervals, it is difficult to draw immediate conclusions about the 
-delivery date. In this case, a detailed analysis of other attributes might enable more meaningful 
-predictions for delivery times. For example, it may be a good idea to partition data by the region 
-attribute (or by month/quarter) and consider each partition individually. 
+However, with this number of intervals, it is difficult to draw immediate conclusions about the
+delivery date. In this case, a detailed analysis of other attributes might enable more meaningful
+predictions for delivery times. For example, it may be a good idea to partition data by the region
+attribute (or by month/quarter) and consider each partition individually.
 
-Another option is to try to find a parameter combination that will result in a smaller number of 
-intervals. Next, remember that the algorithm is randomized (unless you run it with the exact 
+Another option is to try to find a parameter combination that will result in a smaller number of
+intervals. Next, remember that the algorithm is randomized (unless you run it with the exact
 settings) — it can skip some rows, so you can also try to alter the seed.
 
 Finally, cleaning up the data by removing duplicate and incomplete rows might also help.
-Thus, the quantity and quality of the intervals are the user's responsibility. It may take several 
+Thus, the quantity and quality of the intervals are the user's responsibility. It may take several
 attempts to achieve something interesting. Experiment!
 '''
 
@@ -5012,7 +5012,7 @@ Now we can see that the same DC we examined on the previous dataset doesn't hold
 The issue is that for the last record (Texas, 5000, 0.05), there are people in Texas with a lower salary
 but a higher tax rate.
 
-Such pairs of records that contradict a DC are called violations. We can retrieve these 
+Such pairs of records that contradict a DC are called violations. We can retrieve these
 violations from the algorithm object. In this case, the following pairs are the violations:
 (8, 11), (9, 11), (10, 11), where each number is an index of a record in the table.
 
@@ -5166,7 +5166,7 @@ the store location.
 
 To address this, we refine the dependency
 by adding a constraint on the product_category.
-Next DD, which we are going to check: 
+Next DD, which we are going to check:
 
 \x1b[1;33mstore_name [0, 0] ; category [0, 0] -> stock_quantity [0, 25]\x1b[0m
 
@@ -5271,8 +5271,8 @@ in the salaries_dd.csv table.
 8            9         HR             2                 2
 9           10      Sales             4                 6
 
-We will pass to the validator a function to calculate the normalized 
-distance, which is defined as (distance between pair of fields) / (maximum 
+We will pass to the validator a function to calculate the normalized
+distance, which is defined as (distance between pair of fields) / (maximum
 distance among all field pairs).
 
 This \x1b[1;32mDD holds.\x1b[0m

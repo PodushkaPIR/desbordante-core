@@ -4,13 +4,13 @@ import pandas as pd
 LHS = 8
 RHS = 9
 
-PATH = 'examples/datasets/LineItem.csv'
-SEP = '|'
+PATH = "examples/datasets/LineItem.csv"
+SEP = "|"
 
-BOLD = '\033[1m'
-YELLOW = '\033[93m'
-GREEN = '\033[92m'
-DEFAULT = '\033[0m'
+BOLD = "\033[1m"
+YELLOW = "\033[93m"
+GREEN = "\033[92m"
+DEFAULT = "\033[0m"
 
 print(f"""{BOLD}{YELLOW}Preliminaries{DEFAULT}
 Functional dependencies (FDs) are a classic concept in databases.
@@ -87,18 +87,16 @@ plausible database table tracking the statuses of various shipments.
 Here is a sample of the records:""")
 print()
 
-DEMONSTRATION_COLUMNS = ['ORDERKEY', 'RETURNFLAG', 'LINESTATUS', 'SHIPDATE',
-                         'RECEIPTDATE', 'SHIPMODE']
+DEMONSTRATION_COLUMNS = ["ORDERKEY", "RETURNFLAG", "LINESTATUS", "SHIPDATE", "RECEIPTDATE", "SHIPMODE"]
 DEMONSTRATION_ROW_INDICES = [0, 1, 2, 3, 10, 100, 101, 102, 500, 533, 534, 535]
 df = pd.read_csv(PATH, header=0, sep=SEP)
-print(df[DEMONSTRATION_COLUMNS].iloc[DEMONSTRATION_ROW_INDICES].to_string(
-    index=False))
+print(df[DEMONSTRATION_COLUMNS].iloc[DEMONSTRATION_ROW_INDICES].to_string(index=False))
 print()
 print("""SHIPDATE here represents the date shipping started, with RECEIPTDATE \
 being
 the date an item was or is projected to be received.\n""")
 
-print(f'{GREEN}RETURNFLAG and LINESTATUS values{DEFAULT}')
+print(f"{GREEN}RETURNFLAG and LINESTATUS values{DEFAULT}")
 print("""Let's take a closer look at two other columns: RETURNFLAG and \
 LINESTATUS. We
 will inspect their value distributions.""")
@@ -132,14 +130,14 @@ calc = desb.afd_metric_calculation.algorithms.AFDMetricCalculator()
 calc.load_data(table=(PATH, SEP, True))
 measure_values = {}
 
-for measure in ['rho', 'pdep', 'tau', 'mu_plus', 'fi', 'g1', 'g2', 'g3']:
+for measure in ["rho", "pdep", "tau", "mu_plus", "fi", "g1", "g2", "g3"]:
     calc.execute(lhs_indices=[LHS], rhs_indices=[RHS], metric=measure)
     value = calc.get_result()
-    print(f'{GREEN}{measure}{DEFAULT} = {value:.6f}')
+    print(f"{GREEN}{measure}{DEFAULT} = {value:.6f}")
     measure_values[measure] = value
 print()
 
-print('Notice that none of them return 1, but many are quite close, >0.95.')
+print("Notice that none of them return 1, but many are quite close, >0.95.")
 print()
 
 print("""We see the value for g2 being much lower than the others, with rho's \
@@ -176,15 +174,15 @@ For educational purposes, let's try to roughly explain why the measure values
 ended up being what they are, in accordance with the explanations given at the
 start.
 
-{GREEN}g2{DEFAULT} (measure value is {measure_values['g2']:.6f}, error is \
-{1 - measure_values['g2']:.6f})
+{GREEN}g2{DEFAULT} (measure value is {measure_values["g2"]:.6f}, error is \
+{1 - measure_values["g2"]:.6f})
 Firstly, the g2 measure reports a value around 50% because most records (i.e.
 all that have the "N" return flag) participate in a violating pair, with the
-precise error value being {1 - measure_values['g2']:.6f}. The g2 measure's \
+precise error value being {1 - measure_values["g2"]:.6f}. The g2 measure's \
 criterion ends up being far
 too strict for this case.
 
-{GREEN}rho{DEFAULT} (measure value is {measure_values['rho']:.6f})
+{GREEN}rho{DEFAULT} (measure value is {measure_values["rho"]:.6f})
 The rho measure has already been explained. This measure only takes into account
 how many unique value combinations there are, and with there being \
 {len(lhs_value_counts)} RETURNFLAG
@@ -192,28 +190,28 @@ values, and {len(combined_value_counts)} possible combinations of RETURNFLAG \
 and LINESTATUS, the measure's
 value is exactly the ratio.
 
-{GREEN}g3{DEFAULT} (measure value is {measure_values['g3']:.6f}, error is \
-{1 - measure_values['g3']:.6f})
+{GREEN}g3{DEFAULT} (measure value is {measure_values["g3"]:.6f}, error is \
+{1 - measure_values["g3"]:.6f})
 Only three records need to be taken out for there to be an exact FD from
 RETURNFLAG to LINESTATUS.
 
-{GREEN}g1{DEFAULT} (measure value is {measure_values['g1']:.6f}, error is \
-{1 - measure_values['g1']:.6f})
+{GREEN}g1{DEFAULT} (measure value is {measure_values["g1"]:.6f}, error is \
+{1 - measure_values["g1"]:.6f})
 The share of violating record pairs is small.
 
-{GREEN}fi{DEFAULT} (measure value is {measure_values['fi']:.6f}, error is \
-{1 - measure_values['fi']:.6f})
+{GREEN}fi{DEFAULT} (measure value is {measure_values["fi"]:.6f}, error is \
+{1 - measure_values["fi"]:.6f})
 When observing "A" and "R", we know the return flag is "F", and when observing
 "N" we can be pretty confident that the return flag is "O".
 
-{GREEN}pdep{DEFAULT} (measure value is {measure_values['pdep']:.6f})
+{GREEN}pdep{DEFAULT} (measure value is {measure_values["pdep"]:.6f})
 When taking two records, if they have the same RETURNFLAG value, we know the
 LINESTATUS for "A" and "R" is certainly "F". If RETURNFLAG for both is "N", it
 is very likely that their LINESTATUS values are both "O", and there is also a
 small chance that both records have "F" as their LINESTATUS.
 
-{GREEN}tau{DEFAULT} (measure value is {measure_values['tau']:.6f}, error is \
-{1 - measure_values['tau']:.6f})
+{GREEN}tau{DEFAULT} (measure value is {measure_values["tau"]:.6f}, error is \
+{1 - measure_values["tau"]:.6f})
 For the precise guess strategy, see the article. Basically, we guess a value X
 with probability P if X's share is P.
 
@@ -233,8 +231,8 @@ to be "O" and be correct.
 Thus, the probability of the second guess remaining incorrect is quite low, so
 the measure's value ends up being high.
 
-{GREEN}mu_plus{DEFAULT} (measure value is {measure_values['mu_plus']:.6f}, \
-error is {1 - measure_values['mu_plus']:.6f})
+{GREEN}mu_plus{DEFAULT} (measure value is {measure_values["mu_plus"]:.6f}, \
+error is {1 - measure_values["mu_plus"]:.6f})
 There are only three unique values of RETURNFLAG with there being {len(df)} \
 records,
 thus the tau error is barely adjusted.\n""")
@@ -254,4 +252,3 @@ print(f"""{YELLOW}{BOLD}Other examples{DEFAULT}
     {GREEN}examples/basic/verifying_fd_afd.py{DEFAULT}
 - Discovering CFDs (another way to generalize FDs).
     {GREEN}examples/basic/mining_cfd.py{DEFAULT}""")
-

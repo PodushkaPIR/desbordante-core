@@ -1,5 +1,6 @@
-import desbordante
 import textwrap
+
+import desbordante
 
 YELLOW = "\033[1;33m"
 CYAN = "\033[1;36m"
@@ -26,8 +27,8 @@ def banner(title):
 def read_sequence_file(path):
     rows = []
     with open(path) as f:
-        for line in f:
-            line = line.strip()
+        for raw_line in f:
+            line = raw_line.strip()
             if not line:
                 continue
             events_part, _, ts_part = line.partition("|")
@@ -48,8 +49,9 @@ def print_sequence_table(rows):
 
 
 def fmt_episode(structure, support):
-    parts = [("{" + fmt_events(event_set) + "}") if len(event_set) > 1
-             else fmt_events(event_set) for event_set in structure]
+    parts = [
+        ("{" + fmt_events(event_set) + "}") if len(event_set) > 1 else fmt_events(event_set) for event_set in structure
+    ]
     return " -> ".join(parts) + f"   (support: {support})"
 
 
@@ -98,10 +100,7 @@ print("    P. Fournier-Viger, M. S. Nawaz, Y. He, Y. Wu, F. Nouioua, U. Yun.")
 print("    MaxFEM: Mining Maximal Frequent Episodes in Complex Event")
 print("    Sequences. MIWAI 2022, pp. 86-98.")
 print()
-printlns(
-    "Read the AFEM example first if you have not already: it introduces "
-    "the terms this example builds on."
-)
+printlns("Read the AFEM example first if you have not already: it introduces the terms this example builds on.")
 
 print(f"{CYAN}Key definitions{RESET}")
 print("-" * 80)
@@ -120,9 +119,7 @@ print()
 print(f"{CYAN}Dataset{RESET}")
 print("-" * 80)
 
-printlns(
-    "The same event sequence used in examples/basic/mining_fem/afem.py."
-)
+printlns("The same event sequence used in examples/basic/mining_fem/afem.py.")
 
 rows = read_sequence_file(DATASET)
 print_sequence_table(rows)
