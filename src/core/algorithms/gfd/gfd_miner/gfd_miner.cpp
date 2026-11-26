@@ -19,7 +19,6 @@
 #include "core/algorithms/gfd/comparator.h"
 #include "core/config/option_using.h"
 #include "core/util/logger.h"
-#include "core/util/timed_invoke.h"
 
 namespace algos {
 
@@ -397,15 +396,14 @@ void GfdMiner::RegisterOptions() {
 
 void GfdMiner::LoadDataInternal() {
     std::ifstream f(graph_path_);
-    graph_ = parser::graph_parser::ReadGraph(f);
+    graph_ = parser::graph_parser::gfd::ReadGraph(f);
 }
 
 void GfdMiner::ResetState() {}
 
-unsigned long long GfdMiner::ExecuteInternal() {
-    std::size_t elapsed_time = util::TimedInvoke(&GfdMiner::MineGfds, this);
+void GfdMiner::ExecuteInternal() {
+    MineGfds();
     LOG_DEBUG("Mined GFDs: {}", gfds_.size());
-    return elapsed_time;
 }
 
 bool GfdMiner::CheckToken(model::Gfd::Token const& token, std::string& tok,

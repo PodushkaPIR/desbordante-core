@@ -1,7 +1,8 @@
+import textwrap
+
 import desbordante
 import pandas as pd
 from tabulate import tabulate
-import textwrap
 
 GREEN = "\033[1;42m"
 RED = "\033[1;41m"
@@ -35,8 +36,7 @@ def print_table(df, title):
 def verify(lhs, rhs, lhs_indices, rhs_indices, cond_vals=None):
     algo = desbordante.cind_verification.algorithms.Default()
     algo.load_data(tables=[lhs, rhs])
-    kwargs = {"lhs_indices": lhs_indices, "rhs_indices": rhs_indices,
-              "condition_type": "group"}
+    kwargs = {"lhs_indices": lhs_indices, "rhs_indices": rhs_indices, "condition_type": "group"}
     if cond_vals:
         kwargs["cind_condition_values"] = cond_vals
     algo.execute(**kwargs)
@@ -45,8 +45,7 @@ def verify(lhs, rhs, lhs_indices, rhs_indices, cond_vals=None):
 
 def print_result(algo):
     tag = f"{GREEN} holds {RESET}" if algo.holds() else f"{RED} does not hold {RESET}"
-    print(f"  {tag}  validity = {algo.get_real_validity():.3f}   "
-          f"completeness = {algo.get_real_completeness():.3f}")
+    print(f"  {tag}  validity = {algo.get_real_validity():.3f}   completeness = {algo.get_real_completeness():.3f}")
 
 
 def print_violations(algo, df, indices):
@@ -55,8 +54,9 @@ def print_violations(algo, df, indices):
         return
     print(f"  {n} violating cluster(s):")
     for i, cl in enumerate(algo.get_violating_clusters(), start=1):
-        print(f"  {BLUE} #{i} {RESET}  basket_rows = {list(cl.basket_rows)}  "
-              f"violating_rows = {list(cl.violating_rows)}")
+        print(
+            f"  {BLUE} #{i} {RESET}  basket_rows = {list(cl.basket_rows)}  violating_rows = {list(cl.violating_rows)}"
+        )
         for rid in cl.violating_rows:
             vals = " ".join(str(df.iloc[rid, idx]) for idx in indices)
             print(f"      row {rid}: {vals}")
@@ -86,7 +86,7 @@ prints(
     "A Conditional Inclusion Dependency extends an IND by restricting the "
     "rule to R1 rows that match a pattern on the remaining columns of R1 "
     "(the conditional attributes). Pattern entries are either concrete "
-    "values or a wildcard (\"_\" or \"-\") meaning any value. An "
+    'values or a wildcard ("_" or "-") meaning any value. An '
     "all-wildcard pattern reduces a CIND to a plain IND."
 )
 print()
@@ -148,10 +148,23 @@ printlns(
     " a second row about Buddy Roosevelt to en."
 )
 
-en_dup = pd.concat([en, pd.DataFrame([{
-    "pid": "Buddy Roosevelt", "cent": 18, "birthplace": "NY",
-    "deathplace": "NY", "desc": "Actor",
-}])], ignore_index=True)
+en_dup = pd.concat(
+    [
+        en,
+        pd.DataFrame(
+            [
+                {
+                    "pid": "Buddy Roosevelt",
+                    "cent": 18,
+                    "birthplace": "NY",
+                    "deathplace": "NY",
+                    "desc": "Actor",
+                }
+            ]
+        ),
+    ],
+    ignore_index=True,
+)
 print_table(en_dup, "en (extended):")
 
 algo = verify(en_dup, de, [0], [0], cond_vals=["_", "_", "_", "Actor"])
@@ -166,9 +179,7 @@ printlns(
     "whether to fix the data or refine the condition."
 )
 
-printlns(
-    "Both metrics also drop to 0.5. Plugging this scenario into the formulas:"
-)
+printlns("Both metrics also drop to 0.5. Plugging this scenario into the formulas:")
 print("  |matching LHS rows|                 = 2   { Cecil, Buddy }")
 print("  |matching LHS rows included in RHS| = 1   { Cecil }")
 print("  |all included LHS rows|             = 2   { Cecil, Mel Sheppard }")
@@ -192,18 +203,12 @@ print("  CIND: en[pid] subseteq de[pid] | (desc = 'Actor')")
 print_result(algo)
 print()
 
-printlns(
-    "Only Cecil Kellaway passes the filter, and they are in de, so the CIND "
-    "holds exactly."
-)
+printlns("Only Cecil Kellaway passes the filter, and they are in de, so the CIND holds exactly.")
 
 
 banner("Scenario 4. Partial validity, then a data fix")
 
-printlns(
-    "Conditioning on cent = 18 selects three en table rows, but only two of "
-    "their pids are in de."
-)
+printlns("Conditioning on cent = 18 selects three en table rows, but only two of their pids are in de.")
 
 algo = verify(en, de, [0], [0], cond_vals=["18", "_", "_", "_"])
 print("  CIND: en[pid] subseteq de[pid] | (cent = '18')")
@@ -215,10 +220,7 @@ printlns("The cluster points at Buddy Roosevelt: present in en, absent from de."
 print("-" * 80)
 print()
 
-printlns(
-    "Now, a harder case: desc = 'Olympic' selects Sante Gaiardoni, who is not in "
-    "de at all."
-)
+printlns("Now, a harder case: desc = 'Olympic' selects Sante Gaiardoni, who is not in de at all.")
 
 cond_olympic = ["_", "_", "_", "Olympic"]
 algo = verify(en, de, [0], [0], cond_vals=cond_olympic)
@@ -228,10 +230,23 @@ print_violations(algo, en, [0])
 
 printlns("Let's treat it as a gap in de and fix data by adding the missing entry.")
 
-de_fixed = pd.concat([de, pd.DataFrame([{
-    "pid": "Sante Gaiardoni", "cent": 19, "birthplace": "-",
-    "deathplace": "-", "desc": "Olympionike",
-}])], ignore_index=True)
+de_fixed = pd.concat(
+    [
+        de,
+        pd.DataFrame(
+            [
+                {
+                    "pid": "Sante Gaiardoni",
+                    "cent": 19,
+                    "birthplace": "-",
+                    "deathplace": "-",
+                    "desc": "Olympionike",
+                }
+            ]
+        ),
+    ],
+    ignore_index=True,
+)
 print_table(de_fixed, "de (patched):")
 
 algo = verify(en, de_fixed, [0], [0], cond_vals=cond_olympic)
@@ -256,9 +271,8 @@ printlns(
 try:
     bad = desbordante.cind_verification.algorithms.Default()
     bad.load_data(tables=[en, de])
-    bad.execute(lhs_indices=[0], rhs_indices=[0],
-                cind_condition_values=["18", "_"])
-except Exception as e:
+    bad.execute(lhs_indices=[0], rhs_indices=[0], cind_condition_values=["18", "_"])
+except RuntimeError as e:
     print(f"  caught: {e}")
 print()
 
@@ -266,7 +280,7 @@ print()
 banner("See also")
 
 print("Related primitives in Desbordante:")
-print("  * CIND mining           -  examples/basic/mining_cind.py")
+print("  * CIND mining           -  examples/basic/mining_cind_1.py")
 print("  * IND mining            -  examples/basic/mining_ind.py")
 print("  * AIND mining           -  examples/basic/mining_aind.py")
 print("  * IND/AIND verification -  examples/basic/verifying_ind_aind.py")

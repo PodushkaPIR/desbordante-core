@@ -7,7 +7,9 @@
 #include <gtest/gtest.h>
 
 #include "core/algorithms/algo_factory.h"
+#include "core/algorithms/ucc/hpivalid/hpivalid.h"
 #include "core/algorithms/ucc/hyucc/hyucc.h"
+#include "core/algorithms/ucc/pyroucc/pyroucc.h"
 #include "core/algorithms/ucc/ucc.h"
 #include "core/algorithms/ucc/ucc_algorithm.h"
 #include "core/config/names.h"
@@ -31,10 +33,10 @@ namespace {
 // ARAlgorithmTest for example).
 template <typename AlgorithmUnderTest>
 class UCCAlgorithmTest : public ::testing::Test {
-    static config::ThreadNumType threads_;
+    config::ThreadNumType threads_;
 
 protected:
-    static void SetThreadsParam(config::ThreadNumType threads) noexcept {
+    void SetThreadsParam(config::ThreadNumType threads) noexcept {
         assert(threads > 0);
         threads_ = threads;
     }
@@ -62,7 +64,7 @@ protected:
     }
 
 public:
-    static algos::StdParamsMap GetParamMap(CSVConfig const& csv_config) {
+    algos::StdParamsMap GetParamMap(CSVConfig const& csv_config) const {
         using namespace config::names;
         // Here we return StdParamsMap with option kThreads but some algorithms does not need this
         // option (PyroUCC for example). This does not generate errors, because when creating the
@@ -71,76 +73,73 @@ public:
         return {{kCsvConfig, csv_config}, {kThreads, threads_}};
     }
 
-    static std::unique_ptr<algos::UCCAlgorithm> CreateAlgorithmInstance(
+    std::unique_ptr<algos::UCCAlgorithm> const CreateAlgorithmInstance(
             CSVConfig const& csv_config) {
         return algos::CreateAndLoadAlgorithm<AlgorithmUnderTest>(GetParamMap(csv_config));
     }
 
     inline static std::vector<CSVConfigHash> const kLightDatasets = {
-        {kWdcAstronomical, 2089541732445U},
-        {kWdcSymbols, 1},
-        {kWdcScience, 2658842082150U},
-        {kWdcSatellites, 5208443370856032U},
-        {kWdcAppearances, 82369238361U},
-        {kWdcAstrology, 79554241843163108U},
-        {kWdcGame, 2555214540772530U},
-        {kWdcKepler, 82426217315737U},
-        {kWdcPlanetz, 2555214540772530U},
-        {kWdcAge, 2658842082150U},
-        {kTestWide, 2555250373874U},
-        {kAbalone, 16581571148699134255U},
-        {kIris, 1},
-        {kAdult, 1},
-        {kBreastCancer, 16854900230774656828U},
-        // Possibly heavy datasets, if another less efficient algorithm than HyUCC is not
-        // able to process these move them to kHeavyDatasets
-        {kNeighbors10k, 170971924188219U},
+            {kWdcAstronomical, 2089541732445U},
+            {kWdcSymbols, 1},
+            {kWdcScience, 2658842082150U},
+            {kWdcSatellites, 5208443370856032U},
+            {kWdcAppearances, 82369238361U},
+            {kWdcAstrology, 79554241843163108U},
+            {kWdcGame, 2555214540772530U},
+            {kWdcKepler, 82426217315737U},
+            {kWdcPlanetz, 2555214540772530U},
+            {kWdcAge, 2658842082150U},
+            {kTestWide, 2555250373874U},
+            {kAbalone, 16581571148699134255U},
+            {kIris, 1},
+            {kAdult, 1},
+            {kBreastCancer, 16854900230774656828U},
+            // Possibly heavy datasets, if another less efficient algorithm than HyUCC is not
+            // able to process these move them to kHeavyDatasets
+            {kNeighbors10k, 170971924188219U},
 #if 0
-        {kNeighbors50k, 1},
+            {kNeighbors50k, 1},
 #endif
-        {kNeighbors100k, 170971924188219U},
-        {kCIPublicHighway10k, 82369238361U},
-        {kCIPublicHighway700, 82369238361U},
+            {kNeighbors100k, 170971924188219U},
+            {kCIPublicHighway10k, 82369238361U},
+            {kCIPublicHighway700, 82369238361U},
     };
 
     inline static std::vector<CSVConfigHash> const kHeavyDatasets = {
-        {kEpicVitals, 1},
-        {kEpicMeds, 59037771758954037U},
-        {kIowa1kk, 2654435863U},
+            {kEpicVitals, 1},
+            {kEpicMeds, 59037771758954037U},
+            {kIowa1kk, 2654435863U},
 #if 0
-        {kFdReduced30, 275990379954778425U},
-        {kFlight1k, 2512091017708538662U},
-        {kPlista1k, 1},
-        {kLetter, 1},
+            {kFdReduced30, 275990379954778425U},
+            {kFlight1k, 2512091017708538662U},
+            {kPlista1k, 1},
+            {kLetter, 1},
 #endif
     };
 };
-
-template <typename AlgorithmUnderTest>
-config::ThreadNumType UCCAlgorithmTest<AlgorithmUnderTest>::threads_ = 1;
 
 }  // namespace
 
 TYPED_TEST_SUITE_P(UCCAlgorithmTest);
 
 TYPED_TEST_P(UCCAlgorithmTest, ConsistentHashOnLightDatasets) {
-    TestFixture::SetThreadsParam(1);
-    TestFixture::PerformConsistentHashTestOn(TestFixture::kLightDatasets);
+    this->SetThreadsParam(1);
+    this->PerformConsistentHashTestOn(TestFixture::kLightDatasets);
 }
 
 TYPED_TEST_P(UCCAlgorithmTest, ConsistentHashOnHeavyDatasets) {
-    TestFixture::SetThreadsParam(1);
-    TestFixture::PerformConsistentHashTestOn(TestFixture::kHeavyDatasets);
+    this->SetThreadsParam(1);
+    this->PerformConsistentHashTestOn(TestFixture::kHeavyDatasets);
 }
 
 TYPED_TEST_P(UCCAlgorithmTest, ConsistentHashOnLightDatasetsParallel) {
-    TestFixture::SetThreadsParam(4);
-    TestFixture::PerformConsistentHashTestOn(TestFixture::kLightDatasets);
+    this->SetThreadsParam(4);
+    this->PerformConsistentHashTestOn(TestFixture::kLightDatasets);
 }
 
 TYPED_TEST_P(UCCAlgorithmTest, ConsistentHashOnHeavyDatasetsParallel) {
-    TestFixture::SetThreadsParam(4);
-    TestFixture::PerformConsistentHashTestOn(TestFixture::kHeavyDatasets);
+    this->SetThreadsParam(4);
+    this->PerformConsistentHashTestOn(TestFixture::kHeavyDatasets);
 }
 
 REGISTER_TYPED_TEST_SUITE_P(UCCAlgorithmTest, ConsistentHashOnLightDatasets,

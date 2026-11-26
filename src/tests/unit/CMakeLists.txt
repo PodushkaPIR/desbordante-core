@@ -46,40 +46,24 @@ desbordante_add_test(
     ${DESBORDANTE_PREFIX}::ar::verifier
     ${DESBORDANTE_PREFIX}::testlib::common
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     gmock
     Boost::headers
 )
 
 # --- CFD ---
 desbordante_add_test(
-    cfd.algos
+    cfd.fdfirst
     SRCS
-    test_cfd_algos.cpp
+    test_fdfirst.cpp
     LIBS
-    ${DESBORDANTE_PREFIX}::cfd
+    ${DESBORDANTE_PREFIX}::cfd::fdfirst
     ${DESBORDANTE_PREFIX}::model::table
     ${DESBORDANTE_PREFIX}::model::types
     ${DESBORDANTE_PREFIX}::testlib::common
-    ${DESBORDANTE_PREFIX}::cfd::model
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     Boost::headers
 )
 
-desbordante_add_test(
-    cfd.relation_data
-    SRCS
-    test_cfd_relation_data.cpp
-    LIBS
-    ${DESBORDANTE_PREFIX}::model::types
-    ${DESBORDANTE_PREFIX}::model::table
-    ${DESBORDANTE_PREFIX}::testlib::common
-    ${DESBORDANTE_PREFIX}::parser::csv
-    ${DESBORDANTE_PREFIX}::cfd::util
-    ${DESBORDANTE_PREFIX}::cfd::model
-    Boost::headers
-)
 desbordante_add_test(
     cfd.verifier
     SRCS
@@ -90,8 +74,33 @@ desbordante_add_test(
     ${DESBORDANTE_PREFIX}::model::table
     ${DESBORDANTE_PREFIX}::testlib::common
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     Boost::headers
+)
+
+# --- CIND ---
+desbordante_add_test(
+    cind.verifier
+    SRCS
+    test_cind_verifier.cpp
+    LIBS
+    Boost::headers
+    ${DESBORDANTE_PREFIX}::model::table
+    ${DESBORDANTE_PREFIX}::testlib::common
+    ${DESBORDANTE_PREFIX}::cind::verifier
+    ${DESBORDANTE_PREFIX}::ind::verifier
+    ${DESBORDANTE_PREFIX}::ind
+)
+
+desbordante_add_test(
+    cind.algorithms
+    SRCS
+    test_cind_algorithms.cpp
+    LIBS
+    Boost::headers
+    ${DESBORDANTE_PREFIX}::model::table
+    ${DESBORDANTE_PREFIX}::testlib::common
+    ${DESBORDANTE_PREFIX}::cind
+    ${DESBORDANTE_PREFIX}::ind
 )
 
 # --- CSV ---
@@ -131,7 +140,6 @@ desbordante_add_test(
     ${DESBORDANTE_PREFIX}::model::types
     ${DESBORDANTE_PREFIX}::model::table
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     gmock
     Boost::headers
 )
@@ -185,7 +193,6 @@ desbordante_add_test(
     ${DESBORDANTE_PREFIX}::testlib::common
     ${DESBORDANTE_PREFIX}::algos
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     Boost::headers
 )
 
@@ -208,8 +215,8 @@ desbordante_add_test(
     ${DESBORDANTE_PREFIX}::fd::tane::pfd
     ${DESBORDANTE_PREFIX}::fd::tane
     ${DESBORDANTE_PREFIX}::fd
+    ${DESBORDANTE_PREFIX}::afd
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     gmock
     Boost::headers
 )
@@ -221,24 +228,12 @@ desbordante_add_test(
     LIBS
     ${DESBORDANTE_PREFIX}::testlib::common
     ${DESBORDANTE_PREFIX}::fd
+    ${DESBORDANTE_PREFIX}::afd
     ${DESBORDANTE_PREFIX}::fd::euler
     ${DESBORDANTE_PREFIX}::model::table
     ${DESBORDANTE_PREFIX}::model::types
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     gmock
-    Boost::headers
-)
-desbordante_add_test(
-    fd.afd_metric
-    SRCS
-    test_afd_metric_calculator.cpp
-    LIBS
-    ${DESBORDANTE_PREFIX}::fd::afd_metric
-    ${DESBORDANTE_PREFIX}::testlib::common
-    ${DESBORDANTE_PREFIX}::model::table
-    ${DESBORDANTE_PREFIX}::model::types
-    spdlog::spdlog_header_only
     Boost::headers
 )
 desbordante_add_test(
@@ -254,7 +249,6 @@ desbordante_add_test(
     ${DESBORDANTE_PREFIX}::fd::mine
     ${DESBORDANTE_PREFIX}::testlib::common
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     gmock
     Boost::headers
 )
@@ -264,12 +258,12 @@ desbordante_add_test(
     test_pfdtane.cpp
     LIBS
     ${DESBORDANTE_PREFIX}::fd
+    ${DESBORDANTE_PREFIX}::afd
     ${DESBORDANTE_PREFIX}::fd::tane::pfd
     ${DESBORDANTE_PREFIX}::testlib::common
     ${DESBORDANTE_PREFIX}::model::table
     ${DESBORDANTE_PREFIX}::model::types
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     Boost::headers
 )
 desbordante_add_test(
@@ -281,7 +275,6 @@ desbordante_add_test(
     ${DESBORDANTE_PREFIX}::testlib::common
     ${DESBORDANTE_PREFIX}::algos
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     Boost::headers
 )
 desbordante_add_test(
@@ -294,7 +287,6 @@ desbordante_add_test(
     ${DESBORDANTE_PREFIX}::model::table
     ${DESBORDANTE_PREFIX}::model::types
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     Boost::headers
 )
 desbordante_add_test(
@@ -303,12 +295,12 @@ desbordante_add_test(
     test_tane_afd_measures.cpp
     LIBS
     ${DESBORDANTE_PREFIX}::fd
+    ${DESBORDANTE_PREFIX}::afd
     ${DESBORDANTE_PREFIX}::fd::tane
     ${DESBORDANTE_PREFIX}::testlib::common
     ${DESBORDANTE_PREFIX}::model::table
     ${DESBORDANTE_PREFIX}::model::types
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     Boost::headers
 )
 desbordante_add_test(
@@ -322,7 +314,6 @@ desbordante_add_test(
     ${DESBORDANTE_PREFIX}::testlib::common
     ${DESBORDANTE_PREFIX}::algos
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     Boost::headers
 )
 desbordante_add_test(
@@ -335,7 +326,96 @@ desbordante_add_test(
     ${DESBORDANTE_PREFIX}::algos
     ${DESBORDANTE_PREFIX}::testlib::common
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
+    Boost::headers
+)
+
+# --- GDD ---
+desbordante_add_test(
+    gdd.validator
+    SRCS
+    test_gdd_validator.cpp
+    test_gdd_constraint_satisfaction.cpp
+    LIBS
+    ${DESBORDANTE_PREFIX}::gdd
+    ${DESBORDANTE_PREFIX}::gdd::validator
+    spdlog::spdlog_header_only
+    gmock
+    Boost::headers
+)
+
+# --- FEM ---
+desbordante_add_test(
+    fem.maxfem
+    SRCS
+    test_maxfem_algorithm.cpp
+    LIBS
+    ${DESBORDANTE_PREFIX}::fem::maxfem
+    ${DESBORDANTE_PREFIX}::model::sequence
+    ${DESBORDANTE_PREFIX}::testlib::common
+    ${DESBORDANTE_PREFIX}::algos
+    ${DESBORDANTE_PREFIX}::parser::sequence
+    spdlog::spdlog_header_only
+    gmock
+    Boost::headers
+)
+
+desbordante_add_test(
+    fem.afem
+    SRCS
+    test_afem_algorithm.cpp
+    LIBS
+    ${DESBORDANTE_PREFIX}::fem::afem
+    ${DESBORDANTE_PREFIX}::model::sequence
+    ${DESBORDANTE_PREFIX}::testlib::common
+    ${DESBORDANTE_PREFIX}::algos
+    ${DESBORDANTE_PREFIX}::parser::sequence
+    spdlog::spdlog_header_only
+    gmock
+    Boost::headers
+)
+
+desbordante_add_test(
+    fem.tke
+    SRCS
+    test_tke_algorithm.cpp
+    LIBS
+    ${DESBORDANTE_PREFIX}::fem::tke
+    ${DESBORDANTE_PREFIX}::model::sequence
+    ${DESBORDANTE_PREFIX}::testlib::common
+    ${DESBORDANTE_PREFIX}::algos
+    ${DESBORDANTE_PREFIX}::parser::sequence
+    spdlog::spdlog_header_only
+    gmock
+    Boost::headers
+)
+
+# --- AFD ---
+desbordante_add_test(
+    afd.metric_calc
+    SRCS
+    test_afd_metric_calculator.cpp
+    LIBS
+    ${DESBORDANTE_PREFIX}::afd::metric_calc
+    ${DESBORDANTE_PREFIX}::testlib::common
+    ${DESBORDANTE_PREFIX}::model::table
+    ${DESBORDANTE_PREFIX}::model::types
+    spdlog::spdlog_header_only
+    Boost::headers
+)
+
+desbordante_add_test(
+    afd.algos
+    SRCS
+    test_afd_algorithm.cpp
+    LIBS
+    ${DESBORDANTE_PREFIX}::model::table
+    ${DESBORDANTE_PREFIX}::model::types
+    ${DESBORDANTE_PREFIX}::testlib::common
+    ${DESBORDANTE_PREFIX}::fd::tane::pfd
+    ${DESBORDANTE_PREFIX}::fd::tane
+    ${DESBORDANTE_PREFIX}::afd
+    spdlog::spdlog_header_only
+    gmock
     Boost::headers
 )
 
@@ -348,7 +428,6 @@ desbordante_add_test(
     ${DESBORDANTE_PREFIX}::gfd::miner
     ${DESBORDANTE_PREFIX}::testlib::gfd::paths
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     gmock
     Boost::headers
 )
@@ -360,7 +439,6 @@ desbordante_add_test(
     ${DESBORDANTE_PREFIX}::gfd::validator
     ${DESBORDANTE_PREFIX}::testlib::gfd::paths
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     gmock
     Boost::headers
 )
@@ -375,7 +453,6 @@ desbordante_add_test(
     ${DESBORDANTE_PREFIX}::testlib::common
     ${DESBORDANTE_PREFIX}::algos
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     gmock
     Boost::headers
 )
@@ -395,7 +472,6 @@ desbordante_add_test(
     ${DESBORDANTE_PREFIX}::ind::mind
     ${DESBORDANTE_PREFIX}::ind::faida
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     Boost::headers
 )
 desbordante_add_test(
@@ -408,7 +484,6 @@ desbordante_add_test(
     ${DESBORDANTE_PREFIX}::ind::faida
     ${DESBORDANTE_PREFIX}::testlib::ind
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     Boost::headers
 )
 desbordante_add_test(
@@ -420,7 +495,6 @@ desbordante_add_test(
     ${DESBORDANTE_PREFIX}::testlib::common
     ${DESBORDANTE_PREFIX}::algos
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     Boost::headers
 )
 
@@ -466,7 +540,6 @@ desbordante_add_test(
     ${DESBORDANTE_PREFIX}::model::types
     ${DESBORDANTE_PREFIX}::testlib::common
     ${DESBORDANTE_PREFIX}::parser::csv
-    magic_enum::magic_enum
     Boost::headers
 )
 
@@ -479,7 +552,6 @@ desbordante_add_test(
     ${DESBORDANTE_PREFIX}::nd::verifier
     ${DESBORDANTE_PREFIX}::testlib::common
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     Boost::headers
     ${DESBORDANTE_PREFIX}::model::types
 )
@@ -493,7 +565,6 @@ desbordante_add_test(
     ${DESBORDANTE_PREFIX}::md::hy
     ${DESBORDANTE_PREFIX}::testlib::common
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     Boost::headers
     ${DESBORDANTE_PREFIX}::model::table
     ${DESBORDANTE_PREFIX}::model::types
@@ -505,7 +576,6 @@ desbordante_add_test(
     LIBS
     ${DESBORDANTE_PREFIX}::md::hy::preprocessing
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     Boost::headers
     ${DESBORDANTE_PREFIX}::model::table
     ${DESBORDANTE_PREFIX}::model::types
@@ -518,7 +588,6 @@ desbordante_add_test(
     ${DESBORDANTE_PREFIX}::md::verifier
     ${DESBORDANTE_PREFIX}::testlib::common
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     Boost::headers
     ${DESBORDANTE_PREFIX}::model::table
     ${DESBORDANTE_PREFIX}::model::types
@@ -533,7 +602,6 @@ desbordante_add_test(
     ${DESBORDANTE_PREFIX}::metric::verifier
     ${DESBORDANTE_PREFIX}::testlib::common
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     Boost::headers
     ${DESBORDANTE_PREFIX}::model::types
 )
@@ -547,7 +615,6 @@ desbordante_add_test(
     ${DESBORDANTE_PREFIX}::od::fast
     ${DESBORDANTE_PREFIX}::testlib::common
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     Boost::headers
     ${DESBORDANTE_PREFIX}::model::types
 )
@@ -559,7 +626,6 @@ desbordante_add_test(
     ${DESBORDANTE_PREFIX}::od::order
     ${DESBORDANTE_PREFIX}::testlib::common
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     Boost::headers
     ${DESBORDANTE_PREFIX}::model::types
 )
@@ -572,9 +638,28 @@ desbordante_add_test(
     ${DESBORDANTE_PREFIX}::od::fast
     ${DESBORDANTE_PREFIX}::testlib::common
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     Boost::headers
     ${DESBORDANTE_PREFIX}::model::types
+)
+
+# --- PAC ---
+desbordante_add_test(
+    pac.domain_pac_verifier
+    SRCS
+    test_domain_pac_verifier.cpp
+    LIBS
+    ${DESBORDANTE_PREFIX}::pac::verifier::domain_pac_verifier
+    ${DESBORDANTE_PREFIX}::testlib::common
+    spdlog::spdlog_header_only
+    magic_enum::magic_enum
+    gmock
+    Boost::headers
+    ${DESBORDANTE_PREFIX}::model::types
+)
+
+# --- Static map ---
+desbordante_add_test(
+    static_map SRCS test_static_map.cpp LIBS ${DESBORDANTE_PREFIX}::testlib::common
 )
 
 # --- UCC ---
@@ -592,7 +677,6 @@ desbordante_add_test(
     ${DESBORDANTE_PREFIX}::ucc::pyro
     ${DESBORDANTE_PREFIX}::ucc::hpivalid
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     gmock
     Boost::headers
     ${DESBORDANTE_PREFIX}::fd::hy::model
@@ -607,10 +691,20 @@ desbordante_add_test(
     ${DESBORDANTE_PREFIX}::testlib::common
     ${DESBORDANTE_PREFIX}::model::table
     spdlog::spdlog_header_only
-    magic_enum::magic_enum
     Boost::headers
     ${DESBORDANTE_PREFIX}::model::types
     ${DESBORDANTE_PREFIX}::fd::hy::model
+)
+
+# --- SD ---
+desbordante_add_test(
+    sd.verifier
+    SRCS
+    test_sd_verifier.cpp
+    LIBS
+    ${DESBORDANTE_PREFIX}::sd::verifier
+    Boost::headers
+    spdlog::spdlog_header_only
 )
 
 # --- Util ---

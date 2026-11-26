@@ -21,6 +21,10 @@ if(POLICY CMP0175)
     cmake_policy(SET CMP0175 NEW)
 endif()
 
+# ---- Default flags ----
+set(CMAKE_CXX_FLAGS_DEBUG_INIT "-O0")
+set(CMAKE_CXX_FLAGS_RELEASE_INIT "-O3")
+
 # ---- Project ----
 
 project(
@@ -54,14 +58,7 @@ option(DESBORDANTE_BUILD_TESTS "Build tests" ON)
 # This option only takes effect if DESBORDANTE_BUILD_TESTS or DESBORDANTE_BUILD_BENCHMARKS is ON
 option(DESBORDANTE_FETCH_DATASETS "Fetch datasets for tests or benchmarks" ON)
 option(DESBORDANTE_GDB_SYMBOLS "Include debug information for use by GDB" OFF)
-# ---- Vertical Hashing Optimization ----
-# Performance/functionality trade-off:
-# - Disabled by default for maximum performance
-# - Enabled for wide datasets (>32 columns) with potential performance penalty
-option(DESBORDANTE_SAFE_VERTICAL_HASHING
-       "Enable safe vertical hashing mode. Allows processing wide datasets (>32 columns) \
-    at the cost of reduced performance. Recommended for exploratory data analysis." OFF
-)
+option(DESBORDANTE_CI_REDUCED_DEBUG_INFO "Use reduced debug info intended for CI builds" OFF)
 option(DESBORDANTE_UNPACK_DATASETS "Unpack datasets" ON)
 option(DESBORDANTE_USE_LTO "Build using interprocedural optimization" OFF)
 
@@ -118,10 +115,14 @@ if(DESBORDANTE_BUILD_NATIVE)
     string(JOIN ";" BUILD_OPTS "${BUILD_OPTS}" "-march=native")
 endif()
 
-# RELEASE build options
-string(JOIN ";" RELEASE_BUILD_OPTS "${BUILD_OPTS}" "-O3")
-
+set(RELEASE_BUILD_OPTS ${BUILD_OPTS})
 set(DEBUG_BUILD_OPTS "${BUILD_OPTS}")
+
+if(DESBORDANTE_CI_REDUCED_DEBUG_INFO)
+    set(DESBORDANTE_DEBUG_INFO_FLAG "-g1")
+else()
+    set(DESBORDANTE_DEBUG_INFO_FLAG "-g")
+endif()
 
 # Set common DEBUG build options
 string(
@@ -129,7 +130,7 @@ string(
     ";"
     DEBUG_BUILD_OPTS
     "${DEBUG_BUILD_OPTS}"
-    "-g"
+    "${DESBORDANTE_DEBUG_INFO_FLAG}"
     "-Wall"
     "-Wextra"
     "-Werror"
@@ -144,7 +145,7 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "Clang" AND CMAKE_CXX_COMPILER_VERSION VERSION
                     "Suppressing deprecated declaration warnings. "
                     "Consider using another version of Clang."
     )
-    list(APPEND DEBUG_BUILD_OPTS "-Wno-deprecated-declarations")
+    list(APPEND DEBUG_BUILD_OPTS "-Wno-error=deprecated-declarations")
 endif()
 
 if(ASAN)
@@ -169,7 +170,6 @@ if(ASAN)
         ";"
         DEBUG_BUILD_OPTS
         "${DEBUG_BUILD_OPTS}"
-        "-O1"
         "-Wno-error" # Use of -Werror is discouraged with sanitizers
         # See https://gcc.gnu.org/onlinedocs/gcc/Instrumentation-Options.html#index-fsanitize_003dbuiltin
         "${ASAN_OPTS}"
@@ -196,11 +196,8 @@ elseif(UBSAN)
                "-fsanitize-ignorelist=${CMAKE_SOURCE_DIR}/ub_sanitizer_ignore_list.txt"
         )
     endif()
-    string(JOIN ";" DEBUG_BUILD_OPTS "${DEBUG_BUILD_OPTS}" "-O1" "${UBSAN_OPTS}")
+    string(JOIN ";" DEBUG_BUILD_OPTS "${DEBUG_BUILD_OPTS}" "${UBSAN_OPTS}")
     set(DEBUG_LINK_OPTS "${UBSAN_OPTS}")
-else()
-    # No sanitizer, just debug build
-    string(JOIN ";" DEBUG_BUILD_OPTS "${DEBUG_BUILD_OPTS}" "-O0")
 endif()
 
 if(DESBORDANTE_GDB_SYMBOLS)

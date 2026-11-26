@@ -28,11 +28,10 @@ jobs:
           fetch-depth: 0
       - name: Pull clang-format
         run: |
-          sudo add-apt-repository 'deb http://apt.llvm.org/noble/ llvm-toolchain-noble-22 main'
-          wget https://apt.llvm.org/llvm-snapshot.gpg.key
-          sudo apt-key add llvm-snapshot.gpg.key
+          sudo add-apt-repository 'deb http://apt.llvm.org/resolute/ llvm-toolchain-resolute-23 main'
+          wget -qO- https://apt.llvm.org/llvm-snapshot.gpg.key | sudo tee /etc/apt/trusted.gpg.d/apt.llvm.org.asc
           sudo apt-get update
-          sudo apt-get install -y clang-format-22
+          sudo apt-get install -y clang-format-23
       - name: Check formatting
         run: |
           set +e
@@ -44,7 +43,7 @@ jobs:
             exit 0
           fi
 
-          formatterOutput=$( git diff -U0 origin/$GITHUB_BASE_REF...HEAD -- $files | clang-format-diff-22 -p 1)
+          formatterOutput=$( git diff -U0 origin/$GITHUB_BASE_REF...HEAD -- $files | clang-format-diff-23 -p 1)
 
           if [ "$formatterOutput" != "" ]
           then
@@ -66,8 +65,10 @@ jobs:
       - uses: ZedThree/clang-tidy-review@v0.23.1
         id: review
         with:
-          apt_packages: python3-dev,libboost1.88-all-dev
-          cmake_command: cmake . -B build -DCMAKE_BUILD_TYPE=Debug -Dgtest_disable_pthreads=OFF -DDESBORDANTE_BINDINGS=BUILD -DDESBORDANTE_BUILD_BENCHMARKS=ON -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCPM_SOURCE_CACHE=cmake/cpm-cache
+          # Using Clang for compile commands generation to avoid parsing issues
+          # https://clangd.llvm.org/design/compile-commands#subtle-parsing-problems
+          apt_packages: python3-dev,libboost1.88-all-dev,clang
+          cmake_command: cmake . -B build -DCMAKE_BUILD_TYPE=Debug -Dgtest_disable_pthreads=OFF -DDESBORDANTE_BINDINGS=BUILD -DDESBORDANTE_BUILD_BENCHMARKS=ON -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCPM_SOURCE_CACHE=cmake/cpm-cache -DCMAKE_CXX_COMPILER=clang++
           build_dir: build
           config_file: '.clang-tidy'
           include: "*.c,*.cc,*.cpp,*.cxx"

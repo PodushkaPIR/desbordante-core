@@ -11,7 +11,6 @@
 #include "core/algorithms/cind/cind.h"
 #include "core/algorithms/cind/cind_algorithm.h"
 #include "core/algorithms/cind/condition.h"
-#include "core/algorithms/ind/mining_algorithms.h"
 #include "python_bindings/py_util/bind_primitive.h"
 
 namespace py = pybind11;
@@ -76,7 +75,8 @@ void BindCind(py::module_& main_module) {
                      return result;
                  })
             .def("get_condition_attributes",
-                 [](CIND const& cind) { return VectorToTuple(cind.conditional_attributes); });
+                 [](CIND const& cind) { return VectorToTuple(cind.conditional_attributes); })
+            .def("get_ind_string", [](CIND const& cind) { return cind.ind.ToLongString(); });
 
     BindPrimitiveNoBase<CindAlgorithm>(cind_module, "Cinderella")
             .def("get_cinds", &CindAlgorithm::CINDList);

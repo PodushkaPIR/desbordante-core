@@ -34,12 +34,12 @@ void GfdHandler::RegisterOptions() {
 
 void GfdHandler::LoadDataInternal() {
     std::ifstream f(graph_path_);
-    graph_ = parser::graph_parser::ReadGraph(f);
+    graph_ = parser::graph_parser::gfd::ReadGraph(f);
     f.close();
     for (auto const& path : gfd_paths_) {
         auto gfd_path = path;
         f.open(gfd_path);
-        model::Gfd gfd = parser::graph_parser::ReadGfd(f);
+        model::Gfd gfd = parser::graph_parser::gfd::ReadGfd(f);
         f.close();
         gfds_.push_back(gfd);
     }
@@ -47,15 +47,10 @@ void GfdHandler::LoadDataInternal() {
 
 void GfdHandler::ResetState() {}
 
-unsigned long long GfdHandler::ExecuteInternal() {
-    auto start_time = std::chrono::system_clock::now();
-
+void GfdHandler::ExecuteInternal() {
     result_ = GenerateSatisfiedGfds(graph_, gfds_);
 
-    auto elapsed_milliseconds = std::chrono::duration_cast<std::chrono::milliseconds>(
-            std::chrono::system_clock::now() - start_time);
     LOG_DEBUG("Satisfied GFDs: {}/{}", result_.size(), gfds_.size());
-    return elapsed_milliseconds.count();
 }
 
 }  // namespace algos

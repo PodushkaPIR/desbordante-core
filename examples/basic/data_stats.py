@@ -2,7 +2,7 @@ import desbordante as db
 
 # Parameters for data_stats.load_data(...)
 DATASET_PATH = "examples/datasets/Workshop.csv"
-SEPARATOR = ','
+SEPARATOR = ","
 HAS_HEADER = True
 
 
@@ -37,7 +37,7 @@ def main() -> None:
     table_methods = {
         "Columns with null": data_stats.get_columns_with_null,
         "Columns with all unique values": data_stats.get_columns_with_all_unique_values,
-        "Number of columns": data_stats.get_number_of_columns
+        "Number of columns": data_stats.get_number_of_columns,
     }
 
     num_cols = data_stats.get_number_of_columns()
@@ -45,7 +45,7 @@ def main() -> None:
     # Stats for a whole table
     for description, method in table_methods.items():
         res = method()
-        if type(res) == set:
+        if type(res) is set:
             res = sorted(res)
         if res is not None:
             print(f"{description}: {res}")
@@ -56,7 +56,7 @@ def main() -> None:
         print(f"Column num: {i}")
         for description, method in column_methods.items():
             res = method(i)
-            if type(res) == set:
+            if type(res) is set:
                 res = sorted(res)
             if res is not None:
                 print(f"{description}: {res}")

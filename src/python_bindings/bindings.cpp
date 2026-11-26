@@ -18,8 +18,11 @@
 #include "python_bindings/dd/bind_dd_verification.h"
 #include "python_bindings/dd/bind_split.h"
 #include "python_bindings/dynamic/bind_dynamic_fd_verification.h"
+#include "python_bindings/fd/bind_afd.h"
 #include "python_bindings/fd/bind_fd.h"
 #include "python_bindings/fd/bind_fd_verification.h"
+#include "python_bindings/fem/bind_fem.h"
+#include "python_bindings/gdd/bind_gdd_verification.h"
 #include "python_bindings/gfd/bind_gfd.h"
 #include "python_bindings/gfd/bind_gfd_verification.h"
 #include "python_bindings/gspan/bind_gspan.h"
@@ -33,8 +36,12 @@
 #include "python_bindings/nd/bind_nd_verification.h"
 #include "python_bindings/od/bind_od.h"
 #include "python_bindings/od/bind_od_verification.h"
+#include "python_bindings/pac/bind_pac.h"
+#include "python_bindings/pac/bind_pac_verification.h"
 #include "python_bindings/pfd/bind_pfd_verification.h"
 #include "python_bindings/py_util/logging.h"
+#include "python_bindings/py_util/py_custom_metrics.h"
+#include "python_bindings/sd/bind_sd_verification.h"
 #include "python_bindings/sfd/bind_sfd.h"
 #include "python_bindings/statistics/bind_statistics.h"
 #include "python_bindings/ucc/bind_ucc.h"
@@ -46,14 +53,17 @@ PYBIND11_MODULE(desbordante, module, pybind11::mod_gil_not_used()) {
     using namespace pybind11::literals;
     for (auto bind_func : {BindMainClasses,
                            BindDataTypes,
+                           BindCustomMetrics,
                            BindLogging,
                            BindFd,
+                           BindAfd,
                            BindCfd,
                            BindAr,
                            BindUcc,
                            BindAc,
                            BindOd,
                            BindNd,
+                           BindFem,
                            BindFdVerification,
                            BindMfdVerification,
                            BindNar,
@@ -64,9 +74,11 @@ PYBIND11_MODULE(desbordante, module, pybind11::mod_gil_not_used()) {
                            BindCind,
                            BindCindVerification,
                            BindGfdVerification,
+                           BindGddVerification,
                            BindSplit,
                            BindDynamicFdVerification,
                            BindNdVerification,
+                           BindSDVerification,
                            BindSFD,
                            BindMd,
                            BindMDVerification,
@@ -79,7 +91,9 @@ PYBIND11_MODULE(desbordante, module, pybind11::mod_gil_not_used()) {
                            BindCFDVerification,
                            BindDDVerification,
                            BindAODVerification,
-                           BindAfdMetricCalculation}) {
+                           BindAfdMetricCalculation,
+                           BindPAC,
+                           BindPACVerification}) {
         bind_func(module);
     }
 }
